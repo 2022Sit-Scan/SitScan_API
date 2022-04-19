@@ -14,8 +14,7 @@ class CreateMesasTable extends Migration
     public function up()
     {
         Schema::create('mesas', function (Blueprint $table) {
-            $table->id('mesa_id'); //preguntar como elegir la columna que quiero que sea id y en users para que sea email
-            $table->string('mesa_id');
+            $table->increments('mesa_id');
             $table->String('numero_mesa');
             $table->String('codigoQR');
             $table->integer('establecimiento_id');

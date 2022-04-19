@@ -17,6 +17,7 @@ class CreatePedidosTable extends Migration
             $table->increments('id');
             $table->integer('establecimiento_id');
             $table->integer('producto_id');
+            $table->integer('cantidad');
             $table->integer('mesa_id');
             $table->boolean('estado');
             $table->string('nombreCliente')->nullable();
