@@ -1,12 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use App\Models\Establecimiento;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class Usuario extends Authenticatable
 {
     use Notifiable;
 
@@ -16,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'password','rol','establecimiento_id'
+        'email', 'password','establecimiento_id','rol'
     ];
 
     /**
@@ -28,12 +29,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    public function establecimientos(){
+        return $this->hasMany(Establecimiento::class)->withTimestamps();
+    }
+
 }
