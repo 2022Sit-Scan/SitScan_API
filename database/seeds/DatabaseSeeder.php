@@ -4,7 +4,7 @@ use App\Models\Mesa;
 use App\Models\Carta;
 use App\Models\Pedido;
 use App\Models\Usuario;
-use App\Model\Categoria;
+use App\Models\Categoria;
 use App\Models\Alergeno;
 use App\Models\Producto;
 use App\Models\Establecimiento;
@@ -22,18 +22,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        Alergeno::truncate();
-        Carta::truncate();
-        Categoria::truncate();
-        Establecimiento::truncate();
-        Mesa::truncate();
-        Pedido::truncate();
-        Producto::truncate();
-        Usuario::truncate();
-        DB::table('establecimiento_producto')->truncate();
-        DB::table('pedido_producto')->truncate();
-        DB::table('carta_producto')->truncate();
-        DB::table('producto_alergeno')->truncate();
+        // Alergeno::truncate();
+        // Carta::truncate();
+        // Categoria::truncate();
+        // Establecimiento::truncate();
+        // Mesa::truncate();
+        // Pedido::truncate();
+        // Producto::truncate();
+        // Usuario::truncate();
+        // DB::table('establecimiento_producto')->truncate();
+        // DB::table('pedido_producto')->truncate();
+        // DB::table('carta_producto')->truncate();
+        // DB::table('producto_alergeno')->truncate();
 
         //crea 20 usuarios
         $cantUsuarios = 20;
@@ -59,30 +59,34 @@ class DatabaseSeeder extends Seeder
           $cantPedidos = 100;
           factory(Pedido::class,$cantPedidos)->create();
 
+           //crea 40 categorias
+           $cantCategorias = 40;
+           factory(Categoria::class,$cantCategorias)->create();
+ 
+
           //crea 10 alergenos
           $cantAlergenos = 10;
           factory(Alergeno::class,$cantAlergenos)->create();
  
-          //crea 40 categorias
-          $cantCategorias = 40;
-          factory(Categoria::class,$cantCategorias)->create();
-
+         
         //crea 30 productos por establecimiento (precio)
         $productos_establecimiento=30;
         for ($i=0; $i<$productos_establecimiento;$i++)
         {
             $producto = Producto::all()->random();
             $establecimiento = Establecimiento::all()->random()->id;
-            $producto->producto()->attach($establecimiento)->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
+            $producto->establecimientos()->attach($establecimiento);
+
+           // ->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')])
         }
 
-         //crea 5 pedidos por establecimiento
-         $pedidos_establecimiento=5;
+         //crea 30 productos por establecimiento
+         $pedidos_establecimiento=30;
          for ($i=0; $i<$pedidos_establecimiento;$i++)
          {
-             $pedido = Pedido::all()->random();
+             $producto = Producto::all()->random();
              $establecimiento = Establecimiento::all()->random()->id;
-             $pedido->producto()->attach($establecimiento);
+             $producto->establecimientos()->attach($establecimiento);
          }
 
           //crea 30 productos por carta
@@ -91,7 +95,7 @@ class DatabaseSeeder extends Seeder
         {
             $producto = Producto::all()->random();
             $carta = Carta::all()->random()->id;
-            $producto->producto()->attach($carta);
+            $producto->cartas()->attach($carta);
         }
 
         //crea 5 alergenos por producto
@@ -101,13 +105,8 @@ class DatabaseSeeder extends Seeder
         {
             $producto = Producto::all()->random();
             $alergeno = Alergeno::all()->random()->id;
-            $producto->producto()->attach($alergeno);
+            $producto->alergenos()->attach($alergeno);
         }
-
-
-
-
-
           Schema::enableForeignKeyConstraints(); 
     }
 }

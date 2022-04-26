@@ -17,9 +17,9 @@ class CreateAlergenosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('urlImagen');
-            $table->integer('productos_id')->unsigned();
+            $table->integer('producto_id')->unsigned();
             $table->timestamps();
-            $table->foreign('productos_id')
+            $table->foreign('producto_id')
                     ->references('id')
                     ->on('productos');
         });

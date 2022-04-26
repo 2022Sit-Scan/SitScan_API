@@ -26,8 +26,8 @@ trait ApiResponser
         }
         
         $collection = $this->paginateCollection($collection);
-        $transformer = $collection->first()->transformer;
-        $collection = $this->transformData($collection, $transformer);
+      //  $transformer = $collection->first()->transformer;
+      //  $collection = $this->transformData($collection, $transformer);
 
         return $this->successResponse(['data' => $collection], $code);
     }
@@ -76,11 +76,11 @@ trait ApiResponser
         return $paginated;
     }
 
-    protected function transformData($data, $transformer)
-	{
-		$transformation = fractal($data, new $transformer);
+    // protected function transformData($data, $transformer)
+	// {
+	// 	$transformation = fractal($data, new $transformer);
 
-		return $transformation->toArray();
-	}
+	// 	return $transformation->toArray();
+	// }
     
 }

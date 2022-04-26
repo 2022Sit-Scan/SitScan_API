@@ -12,4 +12,7 @@ class Carta extends Model
     public function establecimientos(){
         return $this->hasOne(Establecimiento::class)->withTimestamps();
     }
+    public function productos(){
+        return $this->belongsToMany(Producto::class)->withTimestamps();
+    }
 }

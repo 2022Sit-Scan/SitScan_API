@@ -2,13 +2,14 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+
+use App\Models\Mesa;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Mesa::class, function (Faker $faker) {
     return [
-        'numero_mesa'=>rand(10),
+        'numero_mesa'=>rand(0,10),
         'codigoQR'=>'https://codigoQR',
-        'establecimiento_id'=>rand(10)
+        'establecimiento_id'=>rand(0,10)
     ];
 });

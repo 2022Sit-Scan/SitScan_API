@@ -17,7 +17,7 @@ class CreateProductosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('urlImagen');
-            $table->string('descipcion')->nullable();
+            $table->string('descripcion')->nullable();
             $table->integer('carta_id')->unsigned();
             $table->timestamps();
             $table->foreign('carta_id')
