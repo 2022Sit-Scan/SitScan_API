@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Alergeno extends Model
 {
     protected $fillable = [
-        'nombre', 'urlImagen','productos_id'
+        'nombre', 'urlImagen','producto_id'
      ];
 
      public function productos(){
