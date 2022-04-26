@@ -17,11 +17,11 @@ class CreateMesasTable extends Migration
             $table->increments('mesa_id');
             $table->String('numero_mesa');
             $table->String('codigoQR');
-            $table->integer('establecimiento_id');
+            $table->integer('establecimiento_id')->unsigned();
             $table->timestamps();
             $table->foreign('establecimiento_id')
                     ->references('id')
-                    ->on('establecimeientos');
+                    ->on('establecimientos');
         });
     }
 

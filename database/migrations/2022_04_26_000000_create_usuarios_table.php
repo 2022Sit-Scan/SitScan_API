@@ -23,7 +23,7 @@ class CreateUsuariosTable extends Migration
             $table->timestamps();
             $table->foreign('establecimiento_id')
                     ->references('id')
-                    ->on('establecimeientos');
+                    ->on('establecimientos');
         });
     }
 
