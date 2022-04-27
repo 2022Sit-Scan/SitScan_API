@@ -15,5 +15,6 @@ $factory->define(Producto::class, function (Faker $faker) {
         'urlImagen'=>$imagenesUrl[rand(0,4)] ,
         'descripcion'=>$faker->paragraph(1),
         'carta_id'=> rand(0,10),
+        'categoria_id'=>rand(0,10),
     ];
 });

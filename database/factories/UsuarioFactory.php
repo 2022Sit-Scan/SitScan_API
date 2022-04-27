@@ -20,12 +20,12 @@ use Faker\Generator as Faker;
 
 $factory->define(Usuario::class, function (Faker $faker) {
 
-$rol = ['GERENTE', 'CAMARERO'];
+$rol = ['GERENTE', 'CAMARERO','ADMINISTRADOR'];
 
     return [
         'email' => $faker->safeEmail,
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'establecimiento_id'=> rand(0,10),
-        'rol'=> $rol[rand(0,1)],
+        'rol'=> $rol[rand(0,2)],
     ];
 });

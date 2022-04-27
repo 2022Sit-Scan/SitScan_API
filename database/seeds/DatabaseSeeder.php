@@ -22,18 +22,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Schema::disableForeignKeyConstraints();
-        // Alergeno::truncate();
-        // Carta::truncate();
-        // Categoria::truncate();
-        // Establecimiento::truncate();
-        // Mesa::truncate();
-        // Pedido::truncate();
-        // Producto::truncate();
-        // Usuario::truncate();
-        // DB::table('establecimiento_producto')->truncate();
-        // DB::table('pedido_producto')->truncate();
-        // DB::table('carta_producto')->truncate();
-        // DB::table('producto_alergeno')->truncate();
+        Alergeno::truncate();
+        Carta::truncate();
+        Categoria::truncate();
+        Establecimiento::truncate();
+        Mesa::truncate();
+        Pedido::truncate();
+        Producto::truncate();
+        Usuario::truncate();
+        DB::table('establecimiento_producto')->truncate();
+        DB::table('pedido_producto')->truncate();
+        DB::table('carta_producto')->truncate();
+        DB::table('alergeno_producto')->truncate();
 
         //crea 20 usuarios
         $cantUsuarios = 20;
@@ -103,9 +103,9 @@ class DatabaseSeeder extends Seeder
 
         for ($i=0; $i<$alergenos_producto;$i++)
         {
-            $producto = Producto::all()->random();
-            $alergeno = Alergeno::all()->random()->id;
-            $producto->alergenos()->attach($alergeno);
+            $producto = Producto::all()->random()->id;
+            $alergeno = Alergeno::all()->random();
+            $alergeno->productos()->attach($producto);
         }
           Schema::enableForeignKeyConstraints(); 
     }
