@@ -12,7 +12,7 @@ class Mesa extends Model
     ];
 
     public function establecimientos(){
-        return $this->hasMany(Establecimiento::class)->withTimestamps();
+        return $this->belongsTo(Establecimiento::class)->withTimestamps();
     }
     
     public function pedidos(){

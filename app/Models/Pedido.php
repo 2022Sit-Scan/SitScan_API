@@ -11,7 +11,7 @@ class Pedido extends Model
     ];
 
     public function mesas(){
-        return $this->hasMany(Mesa::class,'mesa_id')->withTimestamps();
+        return $this->belongsTo(Mesa::class,'mesa_id')->withTimestamps();
     }
 
     public function establecimientos(){

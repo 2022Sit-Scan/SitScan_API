@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PedidoProducto extends Migration
+class AlergenoProducto extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class PedidoProducto extends Migration
      */
     public function up()
     {
-        Schema::create('pedido_producto', function (Blueprint $table) {
+        Schema::create('alergeno_producto', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('pedido_id')->unsigned();
             $table->integer('producto_id')->unsigned();
-           
+            $table->integer('alergeno_id')->unsigned();
             $table->timestamps();
-            $table->foreign('pedido_id')
+            $table->foreign('alergeno_id')
                     ->references('id')
-                    ->on('pedidos')->onDelete('cascade');
+                    ->on('alergenos')->onDelete('cascade');
             $table->foreign('producto_id')
                     ->references('id')
                     ->on('productos')->onDelete('cascade');
@@ -35,6 +34,6 @@ class PedidoProducto extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pedido_producto');
+        Schema::dropIfExists('alergeno_producto');
     }
 }

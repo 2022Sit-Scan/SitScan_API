@@ -18,7 +18,7 @@ class CreateUsuariosTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('establecimiento_id')->unsigned();
-            $table->enum('rol', ['GERENTE', 'CAMARERO']);
+            $table->enum('rol', ['GERENTE', 'CAMARERO', 'ADMINISTRADOR']);
             $table->rememberToken();
             $table->timestamps();
             $table->foreign('establecimiento_id')
