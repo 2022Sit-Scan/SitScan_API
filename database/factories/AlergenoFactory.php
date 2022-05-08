@@ -12,6 +12,6 @@ $factory->define(Alergeno::class, function (Faker $faker) {
     return [
         'nombre'=>$faker->name,
         'urlImagen'=>$imagenesUrl[rand(0,4)] ,
-        'producto_id'=>rand(0,10)
+        
     ];
 });
