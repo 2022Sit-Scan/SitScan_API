@@ -18,12 +18,8 @@ class CreateProductosTable extends Migration
             $table->string('nombre');
             $table->string('urlImagen');
             $table->string('descripcion')->nullable();
-            $table->integer('carta_id')->unsigned();
             $table->integer('categoria_id')->unsigned();
             $table->timestamps();
-            $table->foreign('carta_id')
-                    ->references('id')
-                    ->on('cartas');
             $table->foreign('categoria_id')
                     ->references('id')
                     ->on('categorias');

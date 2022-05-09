@@ -38,6 +38,7 @@ class DatabaseSeeder extends Seeder
         //crea 20 usuarios
         $cantUsuarios = 20;
         factory(Usuario::class,$cantUsuarios)->create();
+        
 
         //crea 10 establecimientos
         $cantEstablecimientos = 10;
