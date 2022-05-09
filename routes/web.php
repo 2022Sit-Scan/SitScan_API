@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +11,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => ['auth']], function() {
+
+    Route::get('/', 'Usuario\UsuarioController@index');
+
+    /* definiendo rutas sueltas
+    Route::get('/indice', 'UsuarioController@index');
+    Route::post('/crear', 'Usuario\UsuarioController@store');*/
+
+    // definiendo rutas con controlador de recursos
+    Route::resource('users', 'Usuario\UsuarioController');
+    Route::resource('posts', 'Post\PostController')->except(['create']);
+    Route::resource('comments', 'CommentController');
 });
+
+Auth::routes();
+
+//esta ruta esta protegida desde el __construct del controlador
+Route::get('/home', 'HomeController@index')->name('home');
