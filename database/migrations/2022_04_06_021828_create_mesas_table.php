@@ -15,7 +15,7 @@ class CreateMesasTable extends Migration
     {
         Schema::create('mesas', function (Blueprint $table) {
             $table->increments('mesa_id');
-            $table->String('numero_mesa');
+            $table->integer('numero_mesa');
             $table->String('codigoQR');
             $table->integer('establecimiento_id')->unsigned();
             $table->timestamps();

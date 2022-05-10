@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+/*Route::middleware('auth:api')->get('login', function (Request $request) {
+    return $request->user();
+});*/
+/*Route::apiResource('users', 'User\UserController'); // ya no salen edit ni create
+Route::apiResource('products', 'Product\ProductController', ['only' => ['index', 'show']]);
 
-Route::apiResource('productos', 'ProductoController');
+Route::producto('login', 'User\UserController@login');*/
+
+Route::apiResource('productos', 'Producto\ProductoController');
