@@ -11,6 +11,6 @@
     <p>
         <a href="{{ route('users.index') }}">Regresar al listado de usuarios</a>
         {{-- otra forma, usando el helper action
-        <a href="{{ action('UsuarioController@index') }}">Regresar al listado de usuarios</a> --}}
+        <a href="{{ action('UserController@index') }}">Regresar al listado de usuarios</a> --}}
     </p>
 @endsection

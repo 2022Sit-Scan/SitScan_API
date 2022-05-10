@@ -32,7 +32,7 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param  \App\Usuario  $user
      * @return \Illuminate\Http\Response
      */
     public function show(Usuario $user)
@@ -83,13 +83,12 @@ class UsuarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param  \App\Usuario  $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Usuario $user)
     {
         $rules = [
-            'name' => 'min:5|max:255',
             'email' => ['email', Rule::unique('users')->ignore($user->id)],
             'password' => 'nullable|min:6', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
         ];
@@ -115,7 +114,7 @@ class UsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param  \App\Usuario  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(Usuario $user)

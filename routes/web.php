@@ -16,13 +16,13 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/', 'Usuario\UsuarioController@index');
 
     /* definiendo rutas sueltas
-    Route::get('/indice', 'UsuarioController@index');
-    Route::post('/crear', 'Usuario\UsuarioController@store');*/
+    Route::get('/indice', 'UserController@index');
+    Route::producto('/crear', 'User\UserController@store');*/
 
     // definiendo rutas con controlador de recursos
     Route::resource('users', 'Usuario\UsuarioController');
-    Route::resource('posts', 'Post\PostController')->except(['create']);
-    Route::resource('comments', 'CommentController');
+     Route::resource('productos', 'Producto\ProductoController')->except(['create']);
+    // Route::resource('comments', 'CommentController');
 });
 
 Auth::routes();

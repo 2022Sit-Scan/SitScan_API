@@ -36,6 +36,13 @@ class DatabaseSeeder extends Seeder
         DB::table('alergeno_producto')->truncate();
 
         //crea 20 usuarios
+        Usuario::create([
+            'email' => 'roberto@escuelaestech.es',
+            'establecimiento_id'=>1,
+            'password' => bcrypt('laravel'),
+            'rol'=>'ADMINISTRADOR',
+        ]);
+        
         $cantUsuarios = 20;
         factory(Usuario::class,$cantUsuarios)->create();
         

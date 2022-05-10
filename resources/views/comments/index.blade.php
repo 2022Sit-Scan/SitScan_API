@@ -17,7 +17,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col" class="w-55">Texto</th>
-            <th scope="col">Post</th>
+            <th scope="col">producto</th>
             <th scope="col">Usuario</th>
             <th scope="col">Acciones</th>
         </tr>
@@ -27,12 +27,12 @@
         <tr>
             <th scope="row">{{ $comment->id }}</th>
             <td>{{ $comment->body }}</td>
-            <td>{{ $comment->post_id }}</td>
+            <td>{{ $comment->producto_id }}</td>
             <td>{{ $comment->user->name }}</td>
             <td>
                 <a href="{{ route('comments.show', $comment) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('comments.edit', $comment) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
-                <form action="{{ route('comments.destroy', $comment) }}" method="POST">
+                <form action="{{ route('comments.destroy', $comment) }}" method="producto">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-link"><span class="oi oi-trash"></span></button>
