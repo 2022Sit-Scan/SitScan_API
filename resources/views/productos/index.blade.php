@@ -9,14 +9,12 @@
                 <h1>Lista de productos</h1>             
                 <p><a href="#" class="btn btn-primary">Crear producto</a></p>
                 
-                @includeWhen($view == 'index', 'productos._filters')
-                
                 <table class="table">
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Título</th>
-                        <th scope="col">Autor</th>
+                        <th scope="col">Nombre Producto</th>
+                        <th scope="col">Descripcion</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     </thead>
@@ -24,8 +22,8 @@
                     @foreach($productos as $producto)
                     <tr>
                         <th scope="row">{{ $producto->id }}</th>
-                        <td>{{ $producto->title }}</td>
-                        <td>{{ $producto->author->name }}</td>
+                        <td>{{ $producto->nombre }}</td>
+                        <td>{{ $producto->descripcion }}</td>
                         <td>
                                 {{--<a href="{{ route('productos.update', $producto) }}" class="btn btn-default">Editar</a>
                                 <a href="#">Reportar problema</a>--}}
@@ -36,7 +34,6 @@
                     </tbody>
                 </table>
 
-                {{ $productos->links() }}
             </div>
         </div>
     </div>
