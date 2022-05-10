@@ -25,10 +25,10 @@
                 <div class="row row-filters ">
                     <div class="col-md-12">
                             <div class="btn-group mr-3 mb-3">
-                                <select name="user" id="user" class="select-field">
+                                <select name="usuario" id="usuario" class="select-field">
                                     <option value="all" selected>Elija el usuario</option>    
-                                    @foreach($users as $user)                        
-                                    <option value="{{ $user->id }}" {{ $comment->user->id == $user->id ? ' selected' : '' }}>{{ $user->name }}</option>
+                                    @foreach($usuarios as $usuario)                        
+                                    <option value="{{ $usuario->id }}" {{ $comment->usuario->id == $usuario->id ? ' selected' : '' }}>{{ $usuario->name }}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -19,7 +19,7 @@
 		</div>
 		@endif
 	
-		<form method="POST" action="{{ url('users') }}">
+		<form method="POST" action="{{ url('usuarios') }}">
 			{{ csrf_field() }}
 
 			<div class="form-group">

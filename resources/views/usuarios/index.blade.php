@@ -6,11 +6,11 @@
     <div class="d-flex justify-content-between align-items-end mb-3">
         <h1 class="pb-1">@yield('title')</h1>
         <p>
-            <a href="{{ route('users.create') }}" class="btn btn-primary">Nuevo usuario</a>
+            <a href="{{ route('usuarios.create') }}" class="btn btn-primary">Nuevo usuario</a>
         </p>
     </div>
 
-    @if ($users->isNotEmpty())
+    @if ($usuarios->isNotEmpty())
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -21,15 +21,15 @@
         </tr>
         </thead>
         <tbody>
-        @foreach($users as $user)
+        @foreach($usuarios as $usuario)
         <tr>
-            <th scope="row">{{ $user->id }}</th>
-            <td>{{ $user->name }}</td>
-            <td>{{ $user->email }}</td>
+            <th scope="row">{{ $usuario->id }}</th>
+            <td>{{ $usuario->name }}</td>
+            <td>{{ $usuario->email }}</td>
             <td>
-                <a href="{{ route('users.show', $user) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
-                <a href="{{ route('users.edit', $user) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
-                <form action="{{ route('users.destroy', $user) }}" method="POST">
+                <a href="{{ route('usuarios.show', $usuario) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
+                <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
+                <form action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-link"><span class="oi oi-trash"></span></button>

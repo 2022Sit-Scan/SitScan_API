@@ -28,7 +28,7 @@
             <th scope="row">{{ $comment->id }}</th>
             <td>{{ $comment->body }}</td>
             <td>{{ $comment->producto_id }}</td>
-            <td>{{ $comment->user->name }}</td>
+            <td>{{ $comment->usuario->name }}</td>
             <td>
                 <a href="{{ route('comments.show', $comment) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('comments.edit', $comment) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>

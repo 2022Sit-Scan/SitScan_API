@@ -16,19 +16,19 @@
         </div>
     @endif
 
-    <form method="POST" action="{{ url("users/{$user->id}") }}">
+    <form method="POST" action="{{ url("usuarios/{$usuario->id}") }}">
         {{ method_field('PUT') }}
         {{ csrf_field() }}
 
         <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name', $user->name) }}">
+        <input type="text" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name', $usuario->name) }}">
         {{-- otra forma de comprobar los errores 
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror--}}
         <br>
         <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email', $user->email) }}">
+        <input type="email" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email', $usuario->email) }}">
         <br>
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password" placeholder="Mayor a 6 caracteres">
@@ -37,7 +37,7 @@
     </form>
 
     <p>
-        <a href="{{ route('users.index') }}">Regresar al listado de usuarios</a>
+        <a href="{{ route('usuarios.index') }}">Regresar al listado de usuarios</a>
         {{-- otra forma 
         <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a>--}}
     </p>

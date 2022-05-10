@@ -19,30 +19,30 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $users = Usuario::all();
+        $usuarios = Usuario::all();
 
-        //$title = 'Users List';
+        //$title = 'usuarios List';
 
- //     return view('users.index')
- //         ->with('users', User::all())
+ //     return view('usuarios.index')
+ //         ->with('usuarios', usuario::all())
  //         ->with('title', 'Listado de usuarios');
-        return view('users.index', compact('users'));
+        return view('usuarios.index', compact('usuarios'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Usuario  $user
+     * @param  \App\Usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function show(Usuario $user)
+    public function show(Usuario $usuario)
     {
-        return view('users.show', compact('user'));
+        return view('usuarios.show', compact('usuario'));
     }
 
     public function create()
     {
-        return view('users.create');
+        return view('usuarios.create');
     }
 
     /**
@@ -55,7 +55,7 @@ class UsuarioController extends Controller
     {
 		$rules = [
             'name' => 'required|min:5|max:255',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email|unique:usuarios,email',
             'password' => 'required|min:6',
         ];
         $messages = [
@@ -71,25 +71,25 @@ class UsuarioController extends Controller
             'password' => bcrypt($validatedData['password'])
         ]);
 
-        return redirect()->route('users.index');
+        return redirect()->route('usuarios.index');
     }
 
-    public function edit(Usuario $user)
+    public function edit(Usuario $usuario)
     {
-        return view('users.edit', ['user' => $user]);
+        return view('usuarios.edit', ['usuario' => $usuario]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Usuario  $user
+     * @param  \App\Usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usuario $user)
+    public function update(Request $request, Usuario $usuario)
     {
         $rules = [
-            'email' => ['email', Rule::unique('users')->ignore($user->id)],
+            'email' => ['email', Rule::unique('usuarios')->ignore($usuario->id)],
             'password' => 'nullable|min:6', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
         ];
         
@@ -101,26 +101,26 @@ class UsuarioController extends Controller
             unset($validatedData['password']);
         }
 
-        $user->fill($validatedData);
+        $usuario->fill($validatedData);
 
-        if(!$user->isDirty()){
-            return redirect()->route('users.edit', ['user' => $user])->withErrors(['errors' => 'Debes cambiar al menos 1 campo']);
+        if(!$usuario->isDirty()){
+            return redirect()->route('usuarios.edit', ['usuario' => $usuario])->withErrors(['errors' => 'Debes cambiar al menos 1 campo']);
         }
 
-        $user->update($validatedData);
-        return redirect()->route('users.show', ['user' => $user]);
+        $usuario->update($validatedData);
+        return redirect()->route('usuarios.show', ['usuario' => $usuario]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Usuario  $user
+     * @param  \App\Usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuario $user)
+    public function destroy(Usuario $usuario)
     {
-        $user->delete();
+        $usuario->delete();
 
-        return redirect()->route('users.index');
+        return redirect()->route('usuarios.index');
     }
 }

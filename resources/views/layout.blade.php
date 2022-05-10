@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>@yield('title') - 2º DAM</title>
+    <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/users') }}">Usuarios</a>
+                    <a class="nav-link" href="{{ url('/usuarios') }}">Usuarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
@@ -52,7 +52,7 @@
              @else
                  <li class="nav-item dropdown">
                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                         {{ Auth::user()->name }}
+                         {{ Auth::user()->email }}
                      </a>
 
                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

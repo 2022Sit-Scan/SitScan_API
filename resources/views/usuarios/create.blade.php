@@ -18,7 +18,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ url('users') }}">
+            <form method="POST" action="{{ url('usuarios') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group">
@@ -37,7 +37,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Crear usuario</button>
-                <a href="{{ route('users.index') }}" class="btn btn-link">Regresar al listado de usuarios</a>
+                <a href="{{ route('usuarios.index') }}" class="btn btn-link">Regresar al listado de usuarios</a>
             </form>
         </div>
     </div>

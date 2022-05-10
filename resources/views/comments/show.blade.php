@@ -5,7 +5,7 @@
 @section('content')
     <h1>Comentario #{{ $comment->id }}</h1>
 
-    <p>Usuario que lo envio: {{ $comment->user->name }}</p>
+    <p>Usuario que lo envio: {{ $comment->usuario->name }}</p>
     <p>producto: {{ $comment->producto_id }}</p>
 
     <p>

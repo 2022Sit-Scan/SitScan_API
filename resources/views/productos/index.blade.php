@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Lista de productos')
+@section('title', 'Lista de Productos')
 
 @section('content')
     <div class="container">
