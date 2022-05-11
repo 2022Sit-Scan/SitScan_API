@@ -15,6 +15,8 @@
                         <th scope="col">#</th>
                         <th scope="col">Nombre Producto</th>
                         <th scope="col">Descripcion</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Url Imagen</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     </thead>
@@ -24,6 +26,8 @@
                         <th scope="row">{{ $producto->id }}</th>
                         <td>{{ $producto->nombre }}</td>
                         <td>{{ $producto->descripcion }}</td>
+                        <td>{{ $producto->categoria_id }}</td>
+                        <td>{{ $producto->urlImagen }}</td>
                         <td>
                                 {{--<a href="{{ route('productos.update', $producto) }}" class="btn btn-default">Editar</a>
                                 <a href="#">Reportar problema</a>--}}

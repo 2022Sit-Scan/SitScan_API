@@ -35,7 +35,7 @@
                     <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/comments') }}">Comentarios</a>
+                    <a class="nav-link" href="{{ url('/categorias') }}">Categorias</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">

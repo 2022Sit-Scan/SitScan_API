@@ -8,9 +8,16 @@ use App\Http\Controllers\Controller;
 
 class ProductoController extends Controller
 {
-    public function index()
-    {
-        $productos = Producto::all();
-        return view('productos.index', compact('productos'));
+
+    public function index(Request $request){
+
+        if( $request->is('api/*')){
+        return $this->showAll(Producto::all());
+        }
+        else{
+            $productos = Producto::all();
+         return view('productos.index', compact('productos'));
+        }
     }
+    
 }

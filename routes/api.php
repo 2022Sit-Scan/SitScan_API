@@ -23,3 +23,5 @@ Route::apiResource('products', 'Product\ProductController', ['only' => ['index',
 Route::producto('login', 'usuario\usuarioController@login');*/
 
 Route::apiResource('productos', 'Producto\ProductoController');
+
+Route::apiResource('categorias', 'Categoria\CategoriaController');
