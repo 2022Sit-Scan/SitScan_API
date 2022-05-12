@@ -11,7 +11,7 @@ class Categoria extends Model
      ];
 
      public function productos(){
-        return $this->hasOne(Producto::class)->withTimestamps();
+        return $this->hasMany(Producto::class)->withTimestamps();
     }
 
     public function parent(){

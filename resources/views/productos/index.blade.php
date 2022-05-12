@@ -26,7 +26,7 @@
                         <th scope="row">{{ $producto->id }}</th>
                         <td>{{ $producto->nombre }}</td>
                         <td>{{ $producto->descripcion }}</td>
-                        <td>{{ $producto->categoria_id }}</td>
+                        <td>{{ $producto->categoria->nombre }}</td>
                         <td>{{ $producto->urlImagen }}</td>
                         <td>
                                 {{--<a href="{{ route('productos.update', $producto) }}" class="btn btn-default">Editar</a>
@@ -37,7 +37,7 @@
                     @endforeach
                     </tbody>
                 </table>
-
+                {{$productos->links()}}
             </div>
         </div>
     </div>

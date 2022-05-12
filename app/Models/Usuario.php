@@ -29,8 +29,9 @@ class Usuario extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function establecimientos(){
-        return $this->hasMany(Establecimiento::class)->withTimestamps();
+    public function establecimiento(){
+
+        return $this->belongsTo(Establecimiento::class);
     }
 
 }

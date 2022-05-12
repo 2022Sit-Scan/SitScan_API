@@ -11,7 +11,7 @@ class Mesa extends Model
         'numero_mesa', 'codigoQR', 'establecimiento_id',
     ];
 
-    public function establecimientos(){
+    public function establecimiento(){
         return $this->belongsTo(Establecimiento::class)->withTimestamps();
     }
     

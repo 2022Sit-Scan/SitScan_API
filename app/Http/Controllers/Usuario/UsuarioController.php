@@ -21,6 +21,10 @@ class UsuarioController extends Controller
     {
         $usuarios = Usuario::all();
 
+        // foreach ($usuarios as $usurio){
+        //     $usuario
+        // }
+
         //$title = 'usuarios List';
 
  //     return view('usuarios.index')

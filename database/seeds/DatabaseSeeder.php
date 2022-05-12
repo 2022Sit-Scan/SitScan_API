@@ -35,12 +35,7 @@ class DatabaseSeeder extends Seeder
         DB::table('carta_producto')->truncate();
         DB::table('alergeno_producto')->truncate();
 
-        Usuario::create([
-            'email' => 'roberto@escuelaestech.es',
-            'establecimiento_id'=>1,
-            'password' => bcrypt('laravel'),
-            'rol'=>'ADMINISTRADOR',
-        ]);
+       
         
         $this->call (CategoriaSeeder::class);
         $this->call (EstablecimientoSeeder::class);

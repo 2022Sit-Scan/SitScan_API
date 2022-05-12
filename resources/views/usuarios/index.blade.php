@@ -26,7 +26,7 @@
         <tr>
             <th scope="row">{{ $usuario->id }}</th>
             <td>{{ $usuario->email }}</td>
-            <td>{{ $usuario->establecimiento_id }}</td>
+            <td>{{ $usuario->establecimiento->nombre }}</td>
             <td>{{ $usuario->password }}</td>
             <td>{{ $usuario->rol }}</td>
             <td>
