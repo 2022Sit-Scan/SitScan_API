@@ -44,6 +44,7 @@ class DatabaseSeeder extends Seeder
         $this->call (ProductoSeeder::class);
         $this->call (AlergenoSeeder::class);
         $this->call (UsuarioSeeder::class);
+        $this->call (PedidoProductoSeeder::class);
 
         //crea 20 usuarios
         // $cantUsuarios = 20;
