@@ -15,7 +15,7 @@ class UsuarioSeeder extends Seeder
         DB::table('usuarios')
         ->insert([
             'email' => 'roberto@escuelaestech.es',
-            'establecimiento_id'=>1,
+            'establecimiento_id'=>0,
             'password' => bcrypt('laravel'),
             'rol'=>'ADMINISTRADOR',
         ]);

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Mesa;
+namespace App\Http\Controllers\Carta;
 
-use App\Models\Mesa;
+use App\Models\Carta;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class MesaController extends Controller
+class CartaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +16,14 @@ class MesaController extends Controller
     public function index(Request $request)
     {
         if( $request->is('api/*')){
-            return $this->showAll(Mesa::all());
+            return $this->showAll(Carta::all());
             }
             else{
-                $mesas = Mesa::all();
-             return view('mesas.index', compact('mesas'));
+                $cartas = Carta::all();
+             return view('cartas.index', compact('cartas'));
             }
     }
+
     /**
      * Show the form for creating a new resource.
      *

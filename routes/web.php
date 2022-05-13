@@ -23,6 +23,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('usuarios', 'Usuario\UsuarioController');
      Route::resource('productos', 'Producto\ProductoController');
      Route::resource('categorias', 'Categoria\CategoriaController');
+     Route::resource('alergenos', 'Alergeno\AlergenoController');
+     Route::resource('cartas', 'Carta\CartaController');
+     Route::resource('mesas', 'Mesa\MesaController');
     // Route::resource('comments', 'CommentController');
 });
 

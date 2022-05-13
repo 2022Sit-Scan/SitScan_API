@@ -19,6 +19,7 @@
             <th scope="col">Establecimiento</th>
             <th scope="col" class="w-55">Password</th>
             <th scope="col">Rol</th>
+            <th scope="col">Acciones</th>
         </tr>
         </thead>
         <tbody>
@@ -27,7 +28,7 @@
         <tr>
             <th scope="row">{{ $usuario->id }}</th>
             <td>{{ $usuario->email }}</td>
-            <td>{{ $usuario->establecimiento->nombre }}</td>
+            <td>@if($usuario->establecimiento_id != 0){{ $usuario->establecimiento->nombre }}@endif</td>
             <td>{{ $usuario->password }}</td>
             <td>{{ $usuario->rol }}</td>
             <td>

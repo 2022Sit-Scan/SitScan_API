@@ -22,6 +22,10 @@ Route::apiResource('products', 'Product\ProductController', ['only' => ['index',
 
 Route::producto('login', 'usuario\usuarioController@login');*/
 
-Route::apiResource('productos', 'Producto\ProductoController');
+Route::apiResource('alergenos', 'Alergenos\AlergenosController');
+Route::apiResource('cartas', 'Cartas\CartasController');
+Route::apiResource('mesas', 'Mesas\MesasController');
 
+Route::apiResource('productos', 'Producto\ProductoController');
 Route::apiResource('categorias', 'Categoria\CategoriaController');
+

@@ -10,7 +10,7 @@ class Carta extends Model
         'nombre', 'establecimiento_id',
     ];
     public function establecimiento(){
-        return $this->belongsTo(Establecimiento::class)->withTimestamps();
+        return $this->belongsTo(Establecimiento::class);
     }
     public function productos(){
         return $this->belongsToMany(Producto::class)->withTimestamps();

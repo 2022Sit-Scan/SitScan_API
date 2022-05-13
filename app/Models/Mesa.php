@@ -12,7 +12,7 @@ class Mesa extends Model
     ];
 
     public function establecimiento(){
-        return $this->belongsTo(Establecimiento::class)->withTimestamps();
+        return $this->belongsTo(Establecimiento::class);
     }
     
     public function pedidos(){

@@ -25,7 +25,7 @@ class CreatePedidosTable extends Migration
                     ->references('id')
                     ->on('establecimientos');
             $table->foreign('mesa_id')
-                    ->references('mesa_id')
+                    ->references('id')
                     ->on('mesas');        
         });
     }

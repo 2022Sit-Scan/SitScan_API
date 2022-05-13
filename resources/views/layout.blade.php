@@ -37,6 +37,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/categorias') }}">Categorias</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/alergenos') }}">Alergenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/cartas') }}">Cartas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/mesas') }}">Mesas</a>
+                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
