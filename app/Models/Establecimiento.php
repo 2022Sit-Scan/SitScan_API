@@ -3,7 +3,10 @@
 namespace App\Models;
 
 use App\Models\Mesa;
+use App\Models\Carta;
+use App\Models\Pedido;
 use App\Models\Usuario;
+use App\Models\Producto;
 use Illuminate\Database\Eloquent\Model;
 
 class Establecimiento extends Model
@@ -12,7 +15,7 @@ class Establecimiento extends Model
         'nombre', 'urlLogo',
     ];
     public function mesas(){
-        return $this->hasMany(Mesa::class,'mesa_id')->withTimestamps();
+        return $this->hasMany(Mesa::class)->withTimestamps();
     }
 
     public function usuarios(){

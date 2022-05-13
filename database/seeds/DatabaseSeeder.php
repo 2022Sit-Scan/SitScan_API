@@ -81,14 +81,14 @@ class DatabaseSeeder extends Seeder
  
          
         // //crea 30 productos por establecimiento (precio)
-        // $productos_establecimiento=30;
+        
+        // $productos_establecimiento=200;
         // for ($i=0; $i<$productos_establecimiento;$i++)
         // {
-        //     $producto = Producto::all()->random();
+        //     $producto = Producto::all();
         //     $establecimiento = Establecimiento::all()->random()->id;
-        //     $producto->establecimientos()->attach($establecimiento);
-
-        //    // ->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')])
+        //     $producto->establecimientos()->attach($establecimiento) 
+        //     ->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
         // }
 
         //  //crea 30 productos por establecimiento
@@ -101,23 +101,25 @@ class DatabaseSeeder extends Seeder
         //  }
 
         //   //crea 30 productos por carta
-        // $productos_carta =30;
-        // for ($i=0; $i<$productos_carta;$i++)
-        // {
-        //     $producto = Producto::all()->random();
-        //     $carta = Carta::all()->random()->id;
-        //     $producto->cartas()->attach($carta);
-        // }
+        $productos_carta =30;
+        for ($i=0; $i<$productos_carta;$i++)
+        {
+            $producto = Producto::all()->random();
+            $carta = Carta::all()->random()->id;
+            $producto->cartas()->attach($carta);
+        }
 
         // //crea 5 alergenos por producto
-        // $alergenos_producto =5;
 
-        // for ($i=0; $i<$alergenos_producto;$i++)
-        // {
-        //     $producto = Producto::all()->random()->id;
-        //     $alergeno = Alergeno::all()->random();
-        //     $alergeno->productos()->attach($producto);
-        // }
+        $alergenos_producto =5;
+
+        for ($i=0; $i<$alergenos_producto;$i++)
+        {
+            $producto = Producto::all()->random()->id;
+            $alergeno = Alergeno::all()->random();
+            $alergeno->productos()->attach($producto);
+        }
+
           Schema::enableForeignKeyConstraints(); 
     }
 }

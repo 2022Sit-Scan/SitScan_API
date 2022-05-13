@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Pedido;
 use App\Models\Establecimiento;
 use Illuminate\Database\Eloquent\Model;
 

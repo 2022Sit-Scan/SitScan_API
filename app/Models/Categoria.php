@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Producto;
 use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model

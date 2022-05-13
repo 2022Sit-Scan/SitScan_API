@@ -2,7 +2,11 @@
 
 namespace App\Models;
 
+use App\Models\Carta;
 use App\Models\Pedido;
+use App\Models\Alergeno;
+use App\Models\Categoria;
+use App\Models\Establecimiento;
 use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Producto;
+use App\Models\Establecimiento;
 use Illuminate\Database\Eloquent\Model;
 
 class Carta extends Model
