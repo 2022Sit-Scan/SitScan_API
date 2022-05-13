@@ -10,7 +10,7 @@
         </p>
     </div>
 
-    @if ($usuarios->isNotEmpty())
+    @if ($usuarios != "")
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -22,6 +22,7 @@
         </tr>
         </thead>
         <tbody>
+            
         @foreach($usuarios as $usuario)
         <tr>
             <th scope="row">{{ $usuario->id }}</th>
