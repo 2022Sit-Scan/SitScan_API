@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Producto;
 use Illuminate\Database\Eloquent\Model;
 
 class Pedido extends Model
@@ -10,11 +11,14 @@ class Pedido extends Model
         'establecimiento_id', 'producto_id', 'cantidad', 'mesa_id', 'estado', 'nombreCliente',
     ];
 
-    public function mesas(){
+    public function mesa(){
         return $this->belongsTo(Mesa::class,'mesa_id')->withTimestamps();
     }
 
-    public function establecimientos(){
-        return $this->belongsToMany(Establecimiento::class)->withTimestamps();
+    public function establecimiento(){
+        return $this->belongsTo(Establecimiento::class)->withTimestamps();
+    }
+    public function productos(){
+        return $this->belongsToMany(Producto::class)->withTimestamps();
     }
 }

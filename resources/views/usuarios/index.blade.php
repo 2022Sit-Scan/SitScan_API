@@ -10,22 +10,26 @@
         </p>
     </div>
 
-    @if ($usuarios->isNotEmpty())
+    @if ($usuarios != "")
     <table class="table">
         <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Nombre</th>
             <th scope="col">Correo</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">Establecimiento</th>
+            <th scope="col" class="w-55">Password</th>
+            <th scope="col">Rol</th>
         </tr>
         </thead>
         <tbody>
+            
         @foreach($usuarios as $usuario)
         <tr>
             <th scope="row">{{ $usuario->id }}</th>
-            <td>{{ $usuario->name }}</td>
             <td>{{ $usuario->email }}</td>
+            <td>{{ $usuario->establecimiento->nombre }}</td>
+            <td>{{ $usuario->password }}</td>
+            <td>{{ $usuario->rol }}</td>
             <td>
                 <a href="{{ route('usuarios.show', $usuario) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>

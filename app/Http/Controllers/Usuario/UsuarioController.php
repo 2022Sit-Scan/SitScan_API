@@ -8,6 +8,7 @@ use App\Models\Usuario;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UsuarioController extends Controller
 {
@@ -19,7 +20,23 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        $usuarios = Usuario::all();
+        $administrador = Auth::user();
+        if ($administrador->rol == "GERENTE"){
+            $usuarios = Usuario::all()->where('establecimiento_id',$administrador->establecimiento_id); 
+        }
+        else if ($administrador->rol == "ADMINISTRADOR")
+        {
+            $usuarios = Usuario::all();
+        }
+        else {
+            $usuarios = "";
+        }
+       
+        
+
+        // foreach ($usuarios as $usurio){
+        //     $usuario
+        // }
 
         //$title = 'usuarios List';
 

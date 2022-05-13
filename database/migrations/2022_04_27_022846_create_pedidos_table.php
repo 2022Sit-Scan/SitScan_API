@@ -16,7 +16,6 @@ class CreatePedidosTable extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('establecimiento_id')->unsigned();
-            $table->integer('producto_id')->unsigned();
             $table->integer('cantidad');
             $table->integer('mesa_id')->unsigned();
             $table->boolean('estado');
@@ -25,9 +24,6 @@ class CreatePedidosTable extends Migration
             $table->foreign('establecimiento_id')
                     ->references('id')
                     ->on('establecimientos');
-            $table->foreign('producto_id')
-                    ->references('id')
-                    ->on('productos');
             $table->foreign('mesa_id')
                     ->references('mesa_id')
                     ->on('mesas');        

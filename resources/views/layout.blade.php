@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/comments') }}">Comentarios</a>
+                    <a class="nav-link" href="{{ url('/categorias') }}">Categorias</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -52,7 +52,7 @@
              @else
                  <li class="nav-item dropdown">
                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                         {{ Auth::user()->email }}
+                         {{ Auth::user()->email }} {{ Auth::user()->rol }}
                      </a>
 
                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

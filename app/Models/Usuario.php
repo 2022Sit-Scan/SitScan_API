@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use App\Scopes\ActiveScope;
 use App\Models\Establecimiento;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -29,8 +31,14 @@ class Usuario extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function establecimientos(){
-        return $this->hasMany(Establecimiento::class)->withTimestamps();
+    public function establecimiento(){
+
+        return $this->belongsTo(Establecimiento::class);
     }
 
+    protected static function boot()
+{
+    parent::boot();
+    static::addGlobalScope(new ActiveScope);
+}
 }

@@ -11,15 +11,15 @@ class Categoria extends Model
      ];
 
      public function productos(){
-        return $this->hasOne(Producto::class)->withTimestamps();
+        return $this->hasMany(Producto::class)->withTimestamps();
     }
 
     public function parent(){
-        return $this->belongsTo(Categoria::class)->withTimestamps();
+        return $this->belongsTo(Categoria::class,'id','categoriaPadre');
     }
 
     public function catHijos(){
-        return $this->hasMany(Categoria::class,'parent_id')->withTimestamps();
+        return $this->hasMany(Categoria::class,'id','categoriaPadre');
     }
     
 

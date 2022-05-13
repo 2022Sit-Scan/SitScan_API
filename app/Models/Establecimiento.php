@@ -21,10 +21,10 @@ class Establecimiento extends Model
     public function pedidos(){
         return $this->hasMany(Pedido::class)->withTimestamps();
     }
-    public function cartas(){
+    public function carta(){
         return $this->hasOne(Carta::class)->withTimestamps();
     }
     public function productos(){
-        return $this->belongsToMany(Producto::class)->withTimestamps();
+        return $this->belongsToMany(Producto::class);
     }
 }

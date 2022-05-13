@@ -35,6 +35,8 @@ class DatabaseSeeder extends Seeder
         DB::table('carta_producto')->truncate();
         DB::table('alergeno_producto')->truncate();
 
+       
+        
         $this->call (CategoriaSeeder::class);
         $this->call (EstablecimientoSeeder::class);
         $this->call (CartaSeeder::class);

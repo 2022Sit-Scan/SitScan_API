@@ -21,7 +21,8 @@ Route::group(['middleware' => ['auth']], function() {
 
     // definiendo rutas con controlador de recursos
     Route::resource('usuarios', 'Usuario\UsuarioController');
-     Route::resource('productos', 'Producto\ProductoController')->except(['create']);
+     Route::resource('productos', 'Producto\ProductoController');
+     Route::resource('categorias', 'Categoria\CategoriaController');
     // Route::resource('comments', 'CommentController');
 });
 
