@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Producto;
+namespace App\Http\Controllers\Establecimiento;
 
-use App\Models\Producto;
+use App\Models\Establecimiento;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ProductoController extends Controller
+class EstablecimientoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,13 +16,14 @@ class ProductoController extends Controller
     public function index(Request $request)
     {
         if( $request->is('api/*')){
-            return $this->showAll(Producto::all());
+            return $this->showAll(Establecimiento::all());
             }
             else{
-                $productos = Producto::all();
-             return view('productos.index', compact('productos'));
+                $establecimientos = Establecimiento::all();
+             return view('establecimientos.index', compact('establecimientos'));
             }
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -84,10 +85,10 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Producto $producto)
+    public function destroy(Establecimiento $establecimiento)
     {
-        $producto->delete();
+        $establecimiento->delete();
 
-        return redirect()->route('productos.index');
+        return redirect()->route('establecimientos.index');
     }
 }

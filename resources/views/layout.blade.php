@@ -28,6 +28,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
+                 @if ( Auth::user()->rol == 'ADMINISTRADOR')
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/usuarios') }}">Usuarios</a>
                 </li>
@@ -46,6 +47,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/mesas') }}">Mesas</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/establecimientos') }}">Establecimientos</a>
+                </li>
+                @elseif (Auth::user()->rol == 'GERENTE')
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/precios') }}">Lista de Precios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/#') }}">Añadir Producto</a>    
+                </li>
+                @else
+               
+                @endif
             </ul>
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->

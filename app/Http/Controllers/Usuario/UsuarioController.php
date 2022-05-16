@@ -31,15 +31,11 @@ class UsuarioController extends Controller
         else {
             $usuarios = "";
         }
-       
-        
-
         // foreach ($usuarios as $usurio){
         //     $usuario
         // }
 
         //$title = 'usuarios List';
-
  //     return view('usuarios.index')
  //         ->with('usuarios', usuario::all())
  //         ->with('title', 'Listado de usuarios');

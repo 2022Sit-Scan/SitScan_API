@@ -28,4 +28,5 @@ Route::apiResource('mesas', 'Mesas\MesasController');
 
 Route::apiResource('productos', 'Producto\ProductoController');
 Route::apiResource('categorias', 'Categoria\CategoriaController');
+Route::apiResource('establecimientos', 'Establecimiento\EstablecimientoController');
 

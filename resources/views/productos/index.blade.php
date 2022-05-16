@@ -29,15 +29,19 @@
                         <td>{{ $producto->categoria->nombre }}</td>
                         <td>{{ $producto->urlImagen }}</td>
                         <td>
-                                {{--<a href="{{ route('productos.update', $producto) }}" class="btn btn-default">Editar</a>
-                                <a href="#">Reportar problema</a>--}}
-                                <a href="{{ route('productos.destroy', $producto) }}" class="btn btn-default">Eliminar</a> 
+                            <a href="{{ route('productos.show', $producto) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
+                            <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
+                            <form action="{{ route('productos.destroy', $producto) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-link"><span class="oi oi-trash"></span></button>
+                            </form>   
                         </td>
                     </tr>
                     @endforeach
                     </tbody>
                 </table>
-                {{$productos->links()}}
+               
             </div>
         </div>
     </div>

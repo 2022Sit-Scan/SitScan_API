@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
         $this->call (ProductoSeeder::class);
         $this->call (AlergenoSeeder::class);
         $this->call (UsuarioSeeder::class);
-        $this->call (PedidoProductoSeeder::class);
+      //  $this->call (PedidoProductoSeeder::class);
 
         //crea 20 usuarios
         // $cantUsuarios = 20;
@@ -85,20 +85,20 @@ class DatabaseSeeder extends Seeder
         // $productos_establecimiento=200;
         // for ($i=0; $i<$productos_establecimiento;$i++)
         // {
-        //     $producto = Producto::all();
-        //     $establecimiento = Establecimiento::all()->random()->id;
-        //     $producto->establecimientos()->attach($establecimiento) 
+        //     $producto = Producto::all()->random()->id;
+        //     $establecimiento = Establecimiento::all();
+        //     $establecimiento->productos()->attach($producto) 
         //     ->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
         // }
 
-        //  //crea 30 productos por establecimiento
-        //  $pedidos_establecimiento=30;
-        //  for ($i=0; $i<$pedidos_establecimiento;$i++)
-        //  {
-        //      $producto = Producto::all()->random();
-        //      $establecimiento = Establecimiento::all()->random()->id;
-        //      $producto->establecimientos()->attach($establecimiento);
-        //  }
+         //crea 30 productos por establecimiento
+         $pedidos_establecimiento=200;
+         for ($i=0; $i<$pedidos_establecimiento;$i++)
+         {
+             $producto = Producto::all()->random();
+             $establecimiento = Establecimiento::all()->random()->id;
+             $producto->establecimientos()->attach($establecimiento)->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
+         }
 
         //   //crea 30 productos por carta
         $productos_carta =30;
@@ -111,7 +111,7 @@ class DatabaseSeeder extends Seeder
 
         // //crea 5 alergenos por producto
 
-        $alergenos_producto =5;
+        $alergenos_producto =20;
 
         for ($i=0; $i<$alergenos_producto;$i++)
         {
