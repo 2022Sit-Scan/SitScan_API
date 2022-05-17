@@ -46,41 +46,11 @@ class DatabaseSeeder extends Seeder
         $this->call (UsuarioSeeder::class);
       //  $this->call (PedidoProductoSeeder::class);
 
-        //crea 20 usuarios
-        // $cantUsuarios = 20;
-        // factory(Usuario::class,$cantUsuarios)->create();
+       
 
-        // //crea 10 establecimientos
-        // $cantEstablecimientos = 10;
-        // factory(Establecimiento::class,$cantEstablecimientos)->create();
-
-        //  //crea 100 mesas
-        //  $cantMesas = 100;
-        //  factory(Mesa::class,$cantMesas)->create();
-
-        //  //crea 10 cartas
-        //  $cantCartas = 10;
-        //  factory(Carta::class,$cantCartas)->create();
-
-        //   //crea 1000 productos
-        //   $cantProductos = 1000;
-        //   factory(Producto::class,$cantProductos)->create();
-
-        //   //crea 100 pedidos
+        //   //crea 250 pedidos
           $cantPedidos = 250;
           factory(Pedido::class,$cantPedidos)->create();
-
-        //    //crea 40 categorias
-        //    $cantCategorias = 40;
-        //    factory(Categoria::class,$cantCategorias)->create();
- 
-
-        //   //crea 10 alergenos
-        //   $cantAlergenos = 10;
-        //   factory(Alergeno::class,$cantAlergenos)->create();
- 
-         
-      
 
           //   //crea 30 productos por carta
           $productos_carta =30;
@@ -122,11 +92,6 @@ class DatabaseSeeder extends Seeder
             $pedido->productos()->attach($producto);
         }
 
-        
-       
-      
-
-      
          Schema::enableForeignKeyConstraints(); 
     }
 }

@@ -14,11 +14,11 @@ class Pedido extends Model
     ];
 
     public function mesa(){
-        return $this->belongsTo(Mesa::class)->withTimestamps();
+        return $this->belongsTo(Mesa::class);
     }
 
     public function establecimiento(){
-        return $this->belongsTo(Establecimiento::class)->withTimestamps();
+        return $this->belongsTo(Establecimiento::class);
     }
     public function productos(){
         return $this->belongsToMany(Producto::class)->withTimestamps();
