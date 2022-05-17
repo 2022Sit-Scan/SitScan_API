@@ -67,8 +67,8 @@ class DatabaseSeeder extends Seeder
         //   factory(Producto::class,$cantProductos)->create();
 
         //   //crea 100 pedidos
-        //   $cantPedidos = 100;
-        //   factory(Pedido::class,$cantPedidos)->create();
+          $cantPedidos = 250;
+          factory(Pedido::class,$cantPedidos)->create();
 
         //    //crea 40 categorias
         //    $cantCategorias = 40;
@@ -80,36 +80,18 @@ class DatabaseSeeder extends Seeder
         //   factory(Alergeno::class,$cantAlergenos)->create();
  
          
-        // //crea 30 productos por establecimiento (precio)
-        
-        // $productos_establecimiento=200;
-        // for ($i=0; $i<$productos_establecimiento;$i++)
-        // {
-        //     $producto = Producto::all()->random()->id;
-        //     $establecimiento = Establecimiento::all();
-        //     $establecimiento->productos()->attach($producto) 
-        //     ->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
-        // }
+      
 
-         //crea 30 productos por establecimiento
-         $pedidos_establecimiento=200;
-         for ($i=0; $i<$pedidos_establecimiento;$i++)
-         {
-             $producto = Producto::all()->random();
-             $establecimiento = Establecimiento::all()->random()->id;
-             $producto->establecimientos()->attach($establecimiento)->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
-         }
-
-        //   //crea 30 productos por carta
-        $productos_carta =30;
-        for ($i=0; $i<$productos_carta;$i++)
-        {
-            $producto = Producto::all()->random();
-            $carta = Carta::all()->random()->id;
-            $producto->cartas()->attach($carta);
-        }
-
-        // //crea 5 alergenos por producto
+          //   //crea 30 productos por carta
+          $productos_carta =30;
+          for ($i=0; $i<$productos_carta;$i++)
+          {
+              $producto = Producto::all()->random();
+              $carta = Carta::all()->random()->id;
+              $producto->cartas()->attach($carta);
+          }
+          
+            // //crea 5 alergenos por producto
 
         $alergenos_producto =20;
 
@@ -120,6 +102,31 @@ class DatabaseSeeder extends Seeder
             $alergeno->productos()->attach($producto);
         }
 
-          Schema::enableForeignKeyConstraints(); 
+           // //crea todos los productos por establecimiento (precio)
+           $establecimientos = Establecimiento::all();
+           
+        factory(Producto::class)->create()->each(
+            function($product) use ($establecimientos){
+                $randomestablecimientos = $establecimientos->pluck('id');
+                $product->establecimientos()->attach($randomestablecimientos,['precio'=>mt_rand(2.5,10.5)]);
+            }
+        );
+
+        //pedido producto
+        $pedido_producto =20;
+
+        for ($i=0; $i<$pedido_producto;$i++)
+        {
+            $producto = Producto::all()->random()->id;
+            $pedido = Pedido::all()->random();
+            $pedido->productos()->attach($producto);
+        }
+
+        
+       
+      
+
+      
+         Schema::enableForeignKeyConstraints(); 
     }
 }
