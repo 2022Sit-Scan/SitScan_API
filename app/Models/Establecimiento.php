@@ -28,6 +28,6 @@ class Establecimiento extends Model
         return $this->hasOne(Carta::class)->withTimestamps();
     }
     public function productos(){
-        return $this->belongsToMany(Producto::class);
+        return $this->belongsToMany(Producto::class)->withPivot('precio');
     }
 }

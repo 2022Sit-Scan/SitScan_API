@@ -55,7 +55,7 @@
                 </li>
                 @elseif (Auth::user()->rol == 'GERENTE')
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/listaPrecios') }}">Lista de Precios</a>
+                    <a class="nav-link" href="{{ url('/listaprecios') }}">Lista de Precios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/#') }}">Añadir Producto</a>    

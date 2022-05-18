@@ -16,7 +16,7 @@ class Producto extends Model
     ];
 
     public function establecimientos(){
-        return $this->belongsToMany(Establecimiento::class)->withTimestamps()->withPivot('precio');
+        return $this->belongsToMany(Establecimiento::class)->withTimestamps();
     }
     public function alergenos(){
         return $this->belongsToMany(Alergeno::class)->withTimestamps();

@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Establecimiento;
 
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
 use App\Models\Establecimiento;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class EstablecimientoProductoController extends Controller
@@ -15,11 +16,14 @@ class EstablecimientoProductoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Establecimiento $establecimiento)
+    public function index()
     {
+       
         $administrador = Auth::user();
         if ($administrador->rol == "GERENTE"){
-            $establecimientoProductos = $establecimiento->with('productos')->where('establecimiento_id',$administrador->establecimiento_id); 
+            $establecimientoProductos = Establecimiento::all()->load('productos');
+            // ->where('establecimiento_id',$administrador->establecimiento_id); 
+            //  dd($establecimientoProductos);
         }
         else if ($administrador->rol == "ADMINISTRADOR")
         {
@@ -29,7 +33,7 @@ class EstablecimientoProductoController extends Controller
             $usuarios = "";
         }
 
-        return view('listaPrecios.index', compact('$establecimientoProductos'));
+        return view('listaPrecios.index', compact('establecimientoProductos'));
     }
 
     /**

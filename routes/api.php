@@ -22,9 +22,9 @@ Route::apiResource('products', 'Product\ProductController', ['only' => ['index',
 
 Route::producto('login', 'usuario\usuarioController@login');*/
 
-Route::apiResource('alergenos', 'Alergenos\AlergenosController');
-Route::apiResource('cartas', 'Cartas\CartasController');
-Route::apiResource('mesas', 'Mesas\MesasController');
+Route::apiResource('alergenos', 'Alergeno\AlergenoController');
+Route::apiResource('cartas', 'Carta\CartaController');
+Route::apiResource('mesas', 'Mesa\MesaController');
 Route::apiResource('productos', 'Producto\ProductoController');
 Route::apiResource('categorias', 'Categoria\CategoriaController');
 Route::apiResource('establecimientos', 'Establecimiento\EstablecimientoController');
