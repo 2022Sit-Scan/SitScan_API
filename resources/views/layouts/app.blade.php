@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -74,12 +75,15 @@
             </div>
         </nav>
         
-        
-        <main class="py-4">
-            <img src="/imagenes/imagenes/tapa_imagen_1.png" id="tapa" alt="Tapa"/>
+        <img src="/imagenes/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa"/>
+        <main class="py-4 c">
+            
+            
+            
             @yield('content')
-            <img src="/imagenes/imagenes/bandeja_imagen.png" id="bandeja" alt="Bandeja"/>
+            
         </main>
+        <img src="/imagenes/imagenes/bandeja_imagen.png" class="bandeja" alt="Bandeja"/>
     </div>
 </body>
 </html>
