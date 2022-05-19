@@ -21,8 +21,8 @@ class EstablecimientoProductoController extends Controller
        
         $administrador = Auth::user();
         if ($administrador->rol == "GERENTE"){
-            $establecimientoProductos = Establecimiento::all()->load('productos');
-            // ->where('establecimiento_id',$administrador->establecimiento_id); 
+            $establecimientoProductos = Establecimiento::all()->load('productos')
+            ->where('id',$administrador->establecimiento_id); 
             //  dd($establecimientoProductos);
         }
         else if ($administrador->rol == "ADMINISTRADOR")

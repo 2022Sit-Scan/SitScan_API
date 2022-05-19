@@ -15,21 +15,20 @@
         <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Establecimiento</th>
             <th scope="col">Producto</th>
             <th scope="col">Precio</th>
             <th scope="col">Acciones</th> 
         </tr>
         </thead>
         <tbody>
-           
+           {{--  {{dd($establecimientoProductos)}}  --}}
         @foreach($establecimientoProductos as $establecimientoProducto)
+         @foreach($establecimientoProducto->productos as $establec)
         <tr>
-        
-            <th scope="row">{{ $establecimientoProducto->id }}</th>
-            <td>{{ $establecimientoProducto->establecimiento }}</td>
-            <td>{{ $establecimientoProducto->producto_id }}</td>
-            <td>{{ $establecimientoProducto->precio }}</td>
+            
+            <th scope="row">{{ $establec->id }}</th>
+            <td>{{ $establec->nombre }}</td>
+            <td>{{ $establec->pivot->precio }}</td>
             <td>
                 <a href="{{ route('listaprecios.show', $establecimientoProducto) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('listaprecios.edit', $establecimientoProducto) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
@@ -40,6 +39,7 @@
                 </form>                
             </td>
         </tr>
+            @endforeach
         @endforeach
         </tbody>
     </table>
