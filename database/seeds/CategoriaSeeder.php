@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Agua y refrescos',
-            'urlImagen' => 'aguayrefrescosimage',
+            'urlImagen' => 'categorias/aguayrefrescos',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -26,7 +26,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Zumos y batidos',
-            'urlImagen' => 'zumosybatidosimage',
+            'urlImagen' => 'categorias/zumosybatidos',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -35,7 +35,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Destilados',
-            'urlImagen' => 'destiladosimage',
+            'urlImagen' => 'categorias/destilados',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -44,7 +44,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cervezas',
-            'urlImagen' => 'cervezasimage',
+            'urlImagen' => 'categorias/cervezas',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -53,7 +53,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cafes',
-            'urlImagen' => 'cafesimage',
+            'urlImagen' => 'categorias/cafes',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -62,7 +62,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Postres',
-            'urlImagen' => 'postresimage',
+            'urlImagen' => 'categorias/postres',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -71,7 +71,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Ron',
-            'urlImagen' => 'ronimage',
+            'urlImagen' => 'categorias/ron',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -80,7 +80,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Whisky',
-            'urlImagen' => 'whiskyimage',
+            'urlImagen' => 'categorias/whisky',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -89,7 +89,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Ginegra',
-            'urlImagen' => 'ginebraimage',
+            'urlImagen' => 'categorias/ginebra',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -98,7 +98,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Vodka',
-            'urlImagen' => 'Vodkaimage',
+            'urlImagen' => 'categorias/Vodka',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -107,7 +107,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Licores',
-            'urlImagen' => 'licoresimage',
+            'urlImagen' => 'categorias/licores',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -116,7 +116,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Coca cola',
-            'urlImagen' => 'cocacolaimage',
+            'urlImagen' => 'categorias/cocacola',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -125,7 +125,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Fanta',
-            'urlImagen' => 'fantaimage',
+            'urlImagen' => 'categorias/fanta',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -134,7 +134,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Kas',
-            'urlImagen' => 'kasimage',
+            'urlImagen' => 'categorias/kas',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -143,7 +143,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Schweppes',
-            'urlImagen' => 'schweppesimage',
+            'urlImagen' => 'categorias/schweppes',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -152,7 +152,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 6,
             'nombre' => 'Tartas',
-            'urlImagen' => 'tartasimage',
+            'urlImagen' => 'categorias/tartas',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -161,7 +161,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 6,
             'nombre' => 'Crepes',
-            'urlImagen' => 'crepesimage',
+            'urlImagen' => 'categorias/crepes',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -170,7 +170,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 2,
             'nombre' => 'Zumos',
-            'urlImagen' => 'zumosimage',
+            'urlImagen' => 'categorias/zumos',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -179,7 +179,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 2,
             'nombre' => 'Batidos',
-            'urlImagen' => 'batidosimage',
+            'urlImagen' => 'categorias/batidos',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -188,7 +188,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Solo',
-            'urlImagen' => 'soloimage',
+            'urlImagen' => 'categorias/solo',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -197,7 +197,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Agua',
-            'urlImagen' => 'aguaimage',
+            'urlImagen' => 'categorias/agua',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

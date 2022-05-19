@@ -92,13 +92,13 @@ class DatabaseSeeder extends Seeder
         // }
 
          //crea 30 productos por establecimiento
-         $pedidos_establecimiento=200;
-         for ($i=0; $i<$pedidos_establecimiento;$i++)
-         {
-             $producto = Producto::all()->random();
-             $establecimiento = Establecimiento::all()->random()->id;
-             $producto->establecimientos()->attach($establecimiento)->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
-         }
+        //  $pedidos_establecimiento=200;
+        //  for ($i=0; $i<$pedidos_establecimiento;$i++)
+        //  {
+        //      $producto = Producto::all()->random();
+        //      $establecimiento = Establecimiento::all()->random()->id;
+        //      $producto->establecimientos()->attach($establecimiento)->each()->insert(['precio'=>mt_rand(2.5,10.5,'00')]);
+        //  }
 
         //   //crea 30 productos por carta
         $productos_carta =30;

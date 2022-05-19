@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.0/font/css/open-iconic-bootstrap.css" integrity="sha256-CNwnGWPO03a1kOlAsGaH5g8P3dFaqFqqGFV/1nkX5OU=" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 
@@ -61,18 +60,6 @@
                
                 @endif
             </ul>
-            <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
-                 @guest
-                 <li class="nav-item">
-                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                 </li>
-                 @if (Route::has('register'))
-                     <li class="nav-item">
-                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                     </li>
-                 @endif
-             @else
                  <li class="nav-item dropdown">
                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                          {{ Auth::user()->email }} {{ Auth::user()->rol }}
@@ -90,7 +77,6 @@
                          </form>
                      </div>
                  </li>
-             @endguest
             </ul>
         </div>
     </nav>
@@ -107,6 +93,7 @@
 
 <footer class="footer">
     <div class="container">
+        
         <span class="text-muted">https://escuelaestech.es</span>
     </div>
 </footer>
