@@ -29,6 +29,17 @@ body {
     height: 70%;
 }
 
+.card-body {
+    background-color: #EA710A;
+    border-radius: 50px;
+    width: 400px;
+    height: 300px;
+}
+
+.btn-primary {
+    margin-right: 12px;
+}
+
 .bandeja {
     position: absolute;
     transform: translate(150%, 0);
@@ -36,6 +47,26 @@ body {
 
 .cuadrado {
     margin-top: 15%;
+    width: 500px;
+}
+
+.logo {
+    margin-left: 10%;
+}
+
+.form-group-titulo {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.btn-primary {
+    background-color: #F8D097;
+    color: #004F57;
+}
+
+.card {
+    border-radius: 50px;
 }
 
 
