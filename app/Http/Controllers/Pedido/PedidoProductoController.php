@@ -4,24 +4,30 @@ namespace App\Http\Controllers\Pedido;
 
 use App\Models\Pedido;
 use Illuminate\Http\Request;
+use App\Models\Establecimiento;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
-class PedidoController extends Controller
+class PedidoProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        if( $request->is('api/*')){
-            return $this->showAll(Pedido::all());
-            }
-            else{
-                $pedidos = Pedido::all();
-             return view('pedidos.index', compact('pedidos'));
-            }
+        $administrador = Auth::user();
+        if ($administrador->rol == "CAMARERO"){
+            $establecimientoProductos = Establecimiento::all()->load('productos')
+            ->where('id',$administrador->establecimiento_id); 
+
+            $pedidoProductos = Pedido::with('productos')->wherehas('productos')
+            ->where('establecimiento_id',$administrador->establecimiento_id)->get(); 
+             // dd($pedidoProductos);
+        }
+        
+        return view('PedidosProductos.index', compact('pedidoProductos','establecimientoProductos'));
     }
 
     /**
@@ -76,7 +82,7 @@ class PedidoController extends Controller
      */
     public function update(Request $request, Pedido $pedido)
     {
-        Pedido::where('id',$pedido)->update(array('estado' => 0));
+       //
     }
 
     /**
@@ -85,10 +91,8 @@ class PedidoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pedido $pedido)
+    public function destroy($id)
     {
-        $pedido->delete();
-
-        return redirect()->route('pedidos.index');
+        //
     }
 }
