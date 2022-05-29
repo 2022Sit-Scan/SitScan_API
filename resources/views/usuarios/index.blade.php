@@ -32,7 +32,7 @@
             <td>{{ $usuario->password }}</td>
             <td>{{ $usuario->rol }}</td>
             <td>
-                <a href="{{ route('usuarios.show', $usuario) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
+                
                 <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
                 <form action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                     @csrf

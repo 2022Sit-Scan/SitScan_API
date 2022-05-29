@@ -23,7 +23,8 @@ class PedidoProductoController extends Controller
             ->where('id',$administrador->establecimiento_id); 
 
             $pedidoProductos = Pedido::with('productos')->wherehas('productos')
-            ->where('establecimiento_id',$administrador->establecimiento_id)->get(); 
+            ->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',1
+            )->get(); 
              // dd($pedidoProductos);
         }
         
