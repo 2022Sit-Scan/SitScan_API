@@ -15,7 +15,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Coca Cola Original',
-            'urlImagen' => 'refrescos/cocacola/original',
+            'urlImagen' => '/imagenes/refrescos/cocacola/original',
             'descripcion' => 'Coca Cola Original',
             'categoria_id' => 12,
             'created_at' => now(),
@@ -25,7 +25,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Coca Cola Zero',
-            'urlImagen' => 'refrescos/cocacola/zero',
+            'urlImagen' => '/imagenes/refrescos/cocacola/zero',
             'descripcion' => 'Coca Cola Zero',
             'categoria_id' => 12,
             'created_at' => now(),
@@ -35,7 +35,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Coca Cola Light',
-            'urlImagen' => 'refrescos/cocacola/light',
+            'urlImagen' => '/imagenes/refrescos/cocacola/light',
             'descripcion' => 'Coca Cola Light',
             'categoria_id' => 12,
             'created_at' => now(),
@@ -45,7 +45,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Coca Cola Sin Cafeina',
-            'urlImagen' => 'refrescos/cocacola/sincafeina',
+            'urlImagen' => '/imagenes/refrescos/cocacola/sincafeina',
             'descripcion' => 'Coca Cola Sin Caferia',
             'categoria_id' => 12,
             'created_at' => now(),
@@ -55,7 +55,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Fanta Naranja',
-            'urlImagen' => 'refrescos/fanta/naranja',
+            'urlImagen' => '/imagenes/refrescos/fanta/naranja',
             'descripcion' => 'Fanta Naranja',
             'categoria_id' => 13,
             'created_at' => now(),
@@ -65,7 +65,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Fanta Limon',
-            'urlImagen' => 'refrescos/fanta/limon',
+            'urlImagen' => '/imagenes/refrescos/fanta/limon',
             'descripcion' => 'Fanta Limon',
             'categoria_id' => 13,
             'created_at' => now(),
@@ -75,7 +75,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Kas Naranja',
-            'urlImagen' => 'refrescos/kas/naranja',
+            'urlImagen' => '/imagenes/refrescos/kas/naranja',
             'descripcion' => 'Kas Naranja',
             'categoria_id' => 14,
             'created_at' => now(),
@@ -85,7 +85,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Kas Limon',
-            'urlImagen' => 'refrescos/kas/limon',
+            'urlImagen' => '/imagenes/refrescos/kas/limon',
             'descripcion' => 'Kas Limon',
             'categoria_id' => 14,
             'created_at' => now(),
@@ -95,7 +95,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Schweppes  Limon',
-            'urlImagen' => 'refrescos/schweppes/limon',
+            'urlImagen' => '/imagenes/refrescos/schweppes/limon',
             'descripcion' => 'Schweppes Limon',
             'categoria_id' => 15,
             'created_at' => now(),
@@ -105,7 +105,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Schweppes  Tonica',
-            'urlImagen' => 'refrescos/schweppes/tonica',
+            'urlImagen' => '/imagenes/refrescos/schweppes/tonica',
             'descripcion' => 'Schweppes Tonica',
             'categoria_id' => 15,
             'created_at' => now(),
@@ -115,7 +115,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Zumo Piña',
-            'urlImagen' => 'zumos/piña',
+            'urlImagen' => '/imagenes/zumos/piña',
             'descripcion' => 'Zumo Piña',
             'categoria_id' => 18,
             'created_at' => now(),
@@ -125,7 +125,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Zumo Melocoton',
-            'urlImagen' => 'zumos/melocoton',
+            'urlImagen' => '/imagenes/zumos/melocoton',
             'descripcion' => 'Zumo Melocoton',
             'categoria_id' => 18,
             'created_at' => now(),
@@ -135,7 +135,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Batido Fresa',
-            'urlImagen' => 'batidos/fresa',
+            'urlImagen' => '/imagenes/batidos/fresa',
             'descripcion' => 'Batido Fresa',
             'categoria_id' => 19,
             'created_at' => now(),
@@ -145,7 +145,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Batido Vainilla',
-            'urlImagen' => 'batidos/vainilla',
+            'urlImagen' => '/imagenes/batidos/vainilla',
             'descripcion' => 'Batido Vainilla',
             'categoria_id' => 19,
             'created_at' => now(),
@@ -155,7 +155,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Brugal',
-            'urlImagen' => 'destilados/ron/brugal',
+            'urlImagen' => '/imagenes/destilados/ron/brugalimage.jpg',
             'descripcion' => 'Brugal',
             'categoria_id' => 7,
             'created_at' => now(),
@@ -165,7 +165,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Barcelo',
-            'urlImagen' => 'destilados/ron/barcelo',
+            'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage.jpg',
             'descripcion' => 'Barcelo',
             'categoria_id' => 7,
             'created_at' => now(),
@@ -175,7 +175,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Santa Teresa',
-            'urlImagen' => 'destilados/ron/santateresa',
+            'urlImagen' => '/imagenes/destilados/ron/santaTeresaimage.jpg',
             'descripcion' => 'Santa Teresa',
             'categoria_id' => 7,
             'created_at' => now(),
@@ -184,9 +184,9 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')
         ->insert([
-            'nombre' => 'Jhonnie Walker',
-            'urlImagen' => 'jhonniewalkerimage',
-            'descripcion' => 'Jhonnie Walker',
+            'nombre' => 'Red Label',
+            'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage.jpg',
+            'descripcion' => 'Red Label',
             'categoria_id' => 8,
             'created_at' => now(),
             'updated_at' => now(),
@@ -195,7 +195,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'JB',
-            'urlImagen' => 'destilados/whisky/jb',
+            'urlImagen' => '/imagenes/destilados/whiskey/jbimage.jpg',
             'descripcion' => 'JB',
             'categoria_id' => 8,
             'created_at' => now(),
@@ -205,7 +205,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'DYC8',
-            'urlImagen' => 'destilados/whisky/dyc8',
+            'urlImagen' => '/imagenes/destilados/whiskey/dyc8image.jpg',
             'descripcion' => 'DYC8',
             'categoria_id' => 8,
             'created_at' => now(),
@@ -215,7 +215,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Larios',
-            'urlImagen' => 'destilados/ginebra/larios',
+            'urlImagen' => '/imagenes/destilados/ginebra/lariosimage.jg',
             'descripcion' => 'Larios',
             'categoria_id' => 9,
             'created_at' => now(),
@@ -225,7 +225,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Puerto de Indias',
-            'urlImagen' => 'destilados/ginebra/puerto',
+            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindias.jpg',
             'descripcion' => 'Puerto de Indias',
             'categoria_id' => 9,
             'created_at' => now(),
@@ -235,7 +235,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Beefeater',
-            'urlImagen' => 'destilados/ginebra/beefeater',
+            'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage.jpg',
             'descripcion' => 'Beefeater',
             'categoria_id' => 9,
             'created_at' => now(),
@@ -245,7 +245,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Belvedere',
-            'urlImagen' => 'destilados/vodka/belvedere',
+            'urlImagen' => '/imagenes/destilados/vodka/belvedereimage.jpg',
             'descripcion' => 'Belvedere',
             'categoria_id' => 10,
             'created_at' => now(),
@@ -255,7 +255,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Absolut',
-            'urlImagen' => 'destilados/vodka/absolut',
+            'urlImagen' => '/imagenes/destilados/vodka/absolutimage.jpg',
             'descripcion' => 'Absolut',
             'categoria_id' => 10,
             'created_at' => now(),
@@ -265,7 +265,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Smirnoff',
-            'urlImagen' => 'destilados/vodka/smirnoff',
+            'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage.jpg',
             'descripcion' => 'Smirnoff',
             'categoria_id' => 10,
             'created_at' => now(),
@@ -275,7 +275,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jagermeister',
-            'urlImagen' => 'destilados/chupitos/jager',
+            'urlImagen' => '/imagenes/destilados/chupitos/jager',
             'descripcion' => 'Jagermeister',
             'categoria_id' => 11,
             'created_at' => now(),
@@ -285,7 +285,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jagerbomb',
-            'urlImagen' => 'destilados/chupitos/jagerbomb',
+            'urlImagen' => '/imagenes/destilados/chupitos/jagerbomb',
             'descripcion' => 'Jagerbomb',
             'categoria_id' => 11,
             'created_at' => now(),
@@ -295,7 +295,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'ThunderBitch',
-            'urlImagen' => 'destilados/chupitos/thunderbitch',
+            'urlImagen' => '/imagenes/destilados/chupitos/thunderbitch',
             'descripcion' => 'ThunderBitch',
             'categoria_id' => 11,
             'created_at' => now(),
@@ -305,7 +305,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Tarta de Queso',
-            'urlImagen' => 'postres/tartaqueso',
+            'urlImagen' => '/imagenes/postres/tartaquesoimage.jpg',
             'descripcion' => 'Tarta de Queso',
             'categoria_id' => 16,
             'created_at' => now(),
@@ -315,7 +315,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Tarta de Crema',
-            'urlImagen' => 'postres/tartacrema',
+            'urlImagen' => '/imagenes/postres/tartacremaimage.jpg',
             'descripcion' => 'Tarta de Crema',
             'categoria_id' => 16,
             'created_at' => now(),
@@ -325,7 +325,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Tarta de Chocolate',
-            'urlImagen' => 'postres/tartachocolate',
+            'urlImagen' => '/imagenes/postres/tartachocolate',
             'descripcion' => 'Tarta de Chocolate',
             'categoria_id' => 16,
             'created_at' => now(),
@@ -335,7 +335,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Tarta de Fresa',
-            'urlImagen' => 'postres/tartafresa',
+            'urlImagen' => '/imagenes/postres/tartafresa',
             'descripcion' => 'Tarta de Fresa',
             'categoria_id' => 16,
             'created_at' => now(),
@@ -345,7 +345,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Crepes de Chocolate',
-            'urlImagen' => 'postres/crepeschocolate',
+            'urlImagen' => '/imagenes/postres/crepeschocolate',
             'descripcion' => 'Crepes de Chocolate',
             'categoria_id' => 17,
             'created_at' => now(),
@@ -355,7 +355,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Crepes de Vainilla',
-            'urlImagen' => 'postres/crepesvainilla',
+            'urlImagen' => '/imagenes/postres/crepesvainilla',
             'descripcion' => 'Crepes de Vainilla',
             'categoria_id' => 17,
             'created_at' => now(),
@@ -365,7 +365,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Cafe con Leche',
-            'urlImagen' => 'cafes/cafeconleche',
+            'urlImagen' => '/imagenes/cafes/cafeconleche',
             'descripcion' => 'Cafe con Leche',
             'categoria_id' => 5,
             'created_at' => now(),
@@ -375,7 +375,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Cafe Solo',
-            'urlImagen' => 'cafes/cafesolo',
+            'urlImagen' => '/imagenes/cafes/cafesolo',
             'descripcion' => 'Cafe Solo',
             'categoria_id' => 5,
             'created_at' => now(),
@@ -385,7 +385,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Cafe Cortado',
-            'urlImagen' => 'cafes/cortado',
+            'urlImagen' => '/imagenes/cafes/cortado',
             'descripcion' => 'Cafe Cortado',
             'categoria_id' => 5,
             'created_at' => now(),
@@ -395,7 +395,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Cafe Bombon',
-            'urlImagen' => 'cafes/bombon',
+            'urlImagen' => '/imagenes/cafes/bombon',
             'descripcion' => 'Cafe Bombon',
             'categoria_id' => 5,
             'created_at' => now(),
@@ -405,7 +405,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Cafe con Leche',
-            'urlImagen' => 'cafes/cafeconleche',
+            'urlImagen' => '/imagenes/cafes/cafeconleche',
             'descripcion' => 'Cafe con Leche',
             'categoria_id' => 5,
             'created_at' => now(),
@@ -415,7 +415,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Botella de agua',
-            'urlImagen' => 'refrescos/agua',
+            'urlImagen' => '/imagenes/refrescos/agua',
             'descripcion' => 'Botella de agua',
             'categoria_id' => 21,
             'created_at' => now(),
