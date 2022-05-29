@@ -20,19 +20,22 @@
         {{ method_field('PUT') }}
         {{ csrf_field() }}
 
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name', $usuario->name) }}">
+        
         {{-- otra forma de comprobar los errores 
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror--}}
-        <br>
         <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email', $usuario->email) }}">
+        <input type="email" name="email" id="email" value="{{ old('email', $usuario->email) }}">
         <br>
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password" placeholder="Mayor a 6 caracteres">
         <br>
+        <label for="rol">Rol</label>
+            <select class="form-control" id="rol" name="rol">
+                <option value='GERENTE'>Gerente</option>
+                <option value='CAMARERO'>Camarero</option>
+            </select>
         <button type="submit">Actualizar usuario</button>
     </form>
 

@@ -3,10 +3,8 @@
 @section('title', "Crear usuario")
 
 @section('content')
-    <div class="card">
-        <h4 class="card-header">Crear usuario</h4>
-        <div class="card-body">
-
+    
+        <h4 class="pt-3">Crear usuario</h4>
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <h6>Por favor corrige los errores debajo:</h6>
@@ -17,28 +15,39 @@
                     </ul>
                 </div>
             @endif
-
             <form method="POST" action="{{ url('usuarios') }}">
                 {{ csrf_field() }}
-
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name') }}">
-                </div>
-
+                
                 <div class="form-group">
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email') }}">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="roberto@example.com">
                 </div>
 
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Mayor a 6 caracteres">
                 </div>
+                <div class="form-group">
+                    <label for="establecimiento_id">Establecimiento</label>
+                    <select class="form-control" id="establecimiento_id" name="establecimiento_id">
+                        <option selected disabled value='Establecimiento'>Establecimiento</option>
+                         @foreach ($establecimientos as $establecimiento)
+                      <option value="{{$establecimiento->id}}">{{$establecimiento->nombre}}</option>
+                        @endforeach
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="rol">Rol</label>
+                    <select class="form-control" id="rol" name="rol">
+                        <option value='ADMINISTRADOR'>Administrador</option>
+                        <option value='GERENTE'>Gerente</option>
+                        <option value='CAMARERO'>Camarero</option>
+                    </select>
+                  </div>
 
                 <button type="submit" class="btn btn-primary">Crear usuario</button>
                 <a href="{{ route('usuarios.index') }}" class="btn btn-link">Regresar al listado de usuarios</a>
             </form>
-        </div>
-    </div>
+        
+  
 @endsection

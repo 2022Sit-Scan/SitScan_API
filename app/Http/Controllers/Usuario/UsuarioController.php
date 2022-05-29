@@ -6,6 +6,7 @@ use view;
 
 use App\Models\Usuario;
 use Illuminate\Http\Request;
+use App\Models\Establecimiento;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -56,7 +57,8 @@ class UsuarioController extends Controller
 
     public function create()
     {
-        return view('usuarios.create');
+        $establecimientos= Establecimiento::all();
+        return view('usuarios.create', compact('establecimientos'));
     }
 
     /**
@@ -68,9 +70,10 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
 		$rules = [
-            'name' => 'required|min:5|max:255',
             'email' => 'required|email|unique:usuarios,email',
             'password' => 'required|min:6',
+            'establecimiento_id' => 'required',
+            'rol' => 'required'
         ];
         $messages = [
             'required' => 'El campo :attribute es obligatorio.',
@@ -80,9 +83,10 @@ class UsuarioController extends Controller
         $validatedData = $request->validate($rules, $messages);
         
         Usuario::create([
-            'name' => $validatedData['name'],
             'email' => $validatedData['email'],
-            'password' => bcrypt($validatedData['password'])
+            'password' => bcrypt($validatedData['password']),
+            'establecimiento_id' => $validatedData['establecimiento_id'],
+            'rol' => $validatedData['rol'],
         ]);
 
         return redirect()->route('usuarios.index');
@@ -105,6 +109,7 @@ class UsuarioController extends Controller
         $rules = [
             'email' => ['email', Rule::unique('usuarios')->ignore($usuario->id)],
             'password' => 'nullable|min:6', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
+            'rol' => ''
         ];
         
         $validatedData = $request->validate($rules);
@@ -122,7 +127,7 @@ class UsuarioController extends Controller
         }
 
         $usuario->update($validatedData);
-        return redirect()->route('usuarios.show', ['usuario' => $usuario]);
+        return redirect()->route('usuarios.index');
     }
 
     /**
