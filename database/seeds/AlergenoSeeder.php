@@ -39,7 +39,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Pescado',
-            'urlImagen' => 'alergenos/pescado.sv',
+            'urlImagen' => 'alergenos/pescado.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
