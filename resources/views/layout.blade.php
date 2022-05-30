@@ -32,9 +32,6 @@
                     <a class="nav-link" href="{{ url('/usuarios') }}">Usuarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/usuarios') }}">Usuarios</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
                 </li>
                 <li class="nav-item">
