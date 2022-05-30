@@ -6,25 +6,58 @@
     <div class="d-flex justify-content-between align-items-end mb-3">
         <h1 class="pb-1">@yield('title')</h1>
         <p>
-            <a href="{{ route('pedidos.create') }}" class="btn btn-primary">Nueva pedido</a>
+            <a href="{{ route('pedidos.create') }}" class="btn btn-primary">COMPLETADOS</a>
         </p>
     </div>
 
     @if ($pedidos != "")
     <table class="table">
         <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Establecimiento</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Mesa</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Nombre Cliente</th>
-            <th scope="col">Acciones</th>
-            
-        </tr>
+        
         </thead>
         <tbody>
+
+            <div class="card-body-pedido">
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+
+                    <div class="form-group-titulo-mesa row">
+                        <label class="label col-md-12 col-form-label">{{ __('MESA 1') }}</label>
+                    </div>
+
+                    <div class="form-group-titulo row">
+                        
+                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
+                    </div>
+
+                    <div class="form-group-titulo row">
+                        
+                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
+                    </div>
+
+                    <div class="form-group-titulo row">
+                        
+                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
+                    </div>
+
+                    <div class="form-group-titulo row">
+                        
+                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
+                    </div>
+
+                    <div class="form-group-hecho  row mb-0">
+                        <div class="col-md-6 offset-md-2">
+                            <button type="submit" class="btn btn-primary-mesa">
+                                {{ __('HECHO') }}
+                            </button>
+
+                            @if (Route::has('password.request'))
+                                
+                            @endif
+                        </div>
+                    </div>
+                </form>
+            </div>
             
         @foreach($pedidos as $pedido)
         <tr>

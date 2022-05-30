@@ -12,11 +12,10 @@
                 <table class="table">
                     <thead class="thead-dark">
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col">ID</th>
                         <th scope="col">Nombre Producto</th>
-                        <th scope="col">Descripcion</th>
                         <th scope="col">Categoria</th>
-                        <th scope="col">Url Imagen</th>
+                        <th scope="col">Precio</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     </thead>
@@ -25,9 +24,8 @@
                     <tr>
                         <th scope="row">{{ $producto->id }}</th>
                         <td>{{ $producto->nombre }}</td>
-                        <td>{{ $producto->descripcion }}</td>
                         <td>{{ $producto->categoria->nombre }}</td>
-                        <td>{{ $producto->urlImagen }}</td>
+                        <td>{{ $producto->precio }}</td>
                         <td>
                             <a href="{{ route('productos.show', $producto) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                             <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
