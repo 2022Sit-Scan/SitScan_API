@@ -20,7 +20,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::producto('/crear', 'usuario\usuarioController@store');*/
 
     // definiendo rutas con controlador de recursos
-    Route::resource('usuarios', 'Usuario\UsuarioController');
+    Route::resource('usuarios', 'Usuario\UsuarioController')->except(['show']);
      Route::resource('productos', 'Producto\ProductoController')->except(['show']);
      Route::resource('categorias', 'Categoria\CategoriaController')->except(['show']);
      Route::resource('alergenos', 'Alergeno\AlergenoController')->except(['show']);
@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth']], function() {
      Route::resource('establecimientos', 'Establecimiento\EstablecimientoController')->except(['show']);
      Route::resource('pedidos', 'Pedido\PedidoController')->except(['show']);
      Route::resource('listaprecios', 'Establecimiento\EstablecimientoProductoController');
+     Route::resource('pedidosproductos', 'Pedido\PedidoProductoController');
 
     // Route::resource('comments', 'CommentController');
 });

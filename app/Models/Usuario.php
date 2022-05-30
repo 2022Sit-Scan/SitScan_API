@@ -36,9 +36,9 @@ class Usuario extends Authenticatable
         return $this->belongsTo(Establecimiento::class);
     }
 
-    protected static function boot()
-{
-    parent::boot();
-    static::addGlobalScope(new ActiveScope);
-}
+//     protected static function boot()
+// {
+//     parent::boot();
+//     static::addGlobalScope(new ActiveScope);
+// }
 }

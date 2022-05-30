@@ -15,7 +15,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Gluten',
-            'urlImagen' => 'alergenos/gluten',
+            'urlImagen' => '/imagenes/alergenos/gluten.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -23,7 +23,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Crustáceos',
-            'urlImagen' => 'alergenos/crustaceos',
+            'urlImagen' => '/imagenes/alergenos/crustaceos.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -31,7 +31,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Huevos',
-            'urlImagen' => 'alergenos/huevos',
+            'urlImagen' => '/imagenes/alergenos/huevos.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -39,7 +39,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Pescado',
-            'urlImagen' => 'alergenos/pescado',
+            'urlImagen' => '/imagenes/alergenos/pescado.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -47,7 +47,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Cacahuetes',
-            'urlImagen' => 'alergenos/cacahuetes',
+            'urlImagen' => '/imagenes/alergenos/cacahuetes.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -55,15 +55,15 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Soja',
-            'urlImagen' => 'alergenos/soja',
+            'urlImagen' => '/imagenes/alergenos/soja.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
         DB::table('alergenos')
         ->insert([
-            'nombre' => 'Leche',
-            'urlImagen' => 'alergenos/leche',
+            'nombre' => 'Lacteos',
+            'urlImagen' => '/imagenes/alergenos/lacteos.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -71,7 +71,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Frutos secos',
-            'urlImagen' => 'alergenos/frutossecos',
+            'urlImagen' => '/imagenes/alergenos/cascara.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -79,7 +79,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Apio',
-            'urlImagen' => 'alergenos/apio',
+            'urlImagen' => '/imagenes/alergenos/apio.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -87,7 +87,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Mostaza',
-            'urlImagen' => 'alergenos/mostaza',
+            'urlImagen' => '/imagenes/alergenos/mostaza.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -95,7 +95,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Sesamo',
-            'urlImagen' => 'alergenos/sesamo',
+            'urlImagen' => '/imagenes/alergenos/sesamo.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -103,7 +103,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Azufre y Sulfitos',
-            'urlImagen' => 'alergenos/azufreysulfitos',
+            'urlImagen' => '/imagenes/alergenos/azufre.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -111,7 +111,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Altramuces',
-            'urlImagen' => 'alergenos/altramuces',
+            'urlImagen' => '/imagenes/alergenos/altramuces.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -119,7 +119,7 @@ class AlergenoSeeder extends Seeder
         DB::table('alergenos')
         ->insert([
             'nombre' => 'Moluscos',
-            'urlImagen' => 'alergenos/moluscos',
+            'urlImagen' => '/imagenes/alergenos/moluscos.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
