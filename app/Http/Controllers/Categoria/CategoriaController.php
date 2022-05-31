@@ -33,7 +33,8 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        $categoriaspadre = Categoria::all()->where('categoriaPadre',NULL);
+        return view('categorias.create', compact('categoriaspadre'));
     }
 
     /**
@@ -44,7 +45,25 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'categoriaPadre' => '',
+            'nombre' => 'required | max:20',
+            'urlImagen' => '',
+           
+        ];
+        $messages = [
+            'required' => 'El campo :attribute es obligatorio.',
+
+        ];
+        $validatedData = $request->validate($rules, $messages);
+        
+        Categoria::create([
+            'categoriaPadre'=>  $validatedData['categoriaPadre'],
+            'nombre' => $validatedData['nombre'],
+            'urlImagen' => $validatedData['urlImagen'],
+        ]);
+
+        return redirect()->route('categorias.index');
     }
 
     /**
@@ -64,9 +83,10 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Categoria $categoria)
     {
-        //
+        $categoriaspadre = Categoria::all()->where('categoriaPadre',NULL);
+        return view('categorias.edit', ['categoria'=>$categoria],compact('categoriaspadre'));
     }
 
     /**
@@ -76,9 +96,24 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Categoria $categoria)
     {
-        //
+        $rules = [
+            'nombre' => '',
+            'urlImagen' => '', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
+            'categoriaPadre'=> '',
+        ];
+        
+        $validatedData = $request->validate($rules);
+
+        $categoria->fill($validatedData);
+
+        if(!$categoria->isDirty()){
+            return redirect()->route('categorias.edit', ['categoria' => $categoria])->withErrors(['errors' => 'Debes cambiar al menos 1 campo']);
+        }
+
+        $categoria->update($validatedData);
+        return redirect()->route('categorias.index');
     }
 
     /**

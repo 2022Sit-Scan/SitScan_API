@@ -19,6 +19,7 @@
             <th scope="col">Nombre</th>
             <th scope="col">Categoria Padre</th>
             <th scope="col">Url Imagen</th>
+            <th scope="col">Imagenes</th>
             <th scope="col">Acciones</th>
         </tr>
         </thead>
@@ -30,10 +31,10 @@
             
             <td>@if ($categoria->categoriaPadre != NULL){{ $categoria->catHijos->first()->nombre }}@endif</td>
             <td>{{ $categoria->urlImagen }}</td>
+            <td><img src="../{{$categoria->urlImagen}}"/></td>
             <td>
-                <a href="{{ route('categorias.show', $categoria) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('categorias.edit', $categoria) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
-                <form action="{{ route('categorias.destroy', $categoria) }}" method="producto">
+                <form action="{{ route('categorias.destroy', $categoria) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-link"><span class="oi oi-trash"></span></button>

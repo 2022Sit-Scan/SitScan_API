@@ -1,11 +1,11 @@
 @extends('layout')
 
-@section('title', "Editar comentario")
+@section('title', "Editar Categoria")
 
 @section('content')
-    <div class="card">
-        <h4 class="card-header">Editar comentario</h4>
-        <div class="card-body">
+    <div >
+        <h4 >Editar Categoria</h4>
+        <div>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -18,42 +18,35 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ url("comments/{$comment->id}") }}">
+            <form method="POST" action="{{ url("categorias/{$categoria->id}") }}">
                 {{ method_field('PUT') }}
                 {{ csrf_field() }}
-
-                <div class="row row-filters ">
-                    <div class="col-md-12">
-                            <div class="btn-group mr-3 mb-3">
-                                <select name="usuario" id="usuario" class="select-field">
-                                    <option value="all" selected>Elija el usuario</option>    
-                                    @foreach($usuarios as $usuario)                        
-                                    <option value="{{ $usuario->id }}" {{ $comment->usuario->id == $usuario->id ? ' selected' : '' }}>{{ $usuario->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="btn-group mr-3 mb-3">
-                                <select name="post" id="post" class="select-field">
-                                    <option value="all" selected>Elija el post</option>    
-                                    @foreach($posts as $post)                        
-                                    <option value="{{ $post->id }}" {{ $comment->post->id == $post->id ? ' selected' : '' }}>{{ $post->title }}</option>
-                                    @endforeach
-                                </select>
-                            </div>                            
-                    </div>
-                    <div class="col-md-9">
-                        <div class="form-group">
-                            <label for="descripcion">Descripción:</label>
-                            <textarea class="form-control" name="body" id="descripcion" rows="3">{{ old('body', $comment->body) }}</textarea>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                <button type="submit" class="btn btn-primary">Editar comentario</button>
-                <a href="{{ route('comments.index') }}" class="btn btn-link">Regresar al listado de comentarios</a>
+        
+                <label for="name">Nombre Producto:</label>
+                <input type="text" name="nombre" id="nombre" value="{{ old('nombre', $categoria->nombre) }}">
+                {{-- otra forma de comprobar los errores 
+                    @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror--}}
+                <br>
+                <label for="urlImagen">urlImagen:</label>
+                <input type="text" name="urlImagen" id="urlImagen" value="{{ old('urlImagen', $categoria->urlImagen) }}">
+                <br>   
+                  <div class="form-group">
+                    <label for="categoriaPadre">Categoria Padre</label>
+                    <select class="form-control" id="categoriaPadre" name="categoriaPadre">
+                        <option value=''>Es Categoria Padre</option>
+                         @foreach ($categoriaspadre as $padre)
+                      <option value="{{$padre->id}}">{{$padre->nombre}}</option>
+                        @endforeach
+                    </select>
+                  </div>
+                <button type="submit">Actualizar Categoria</button>
             </form>
+            <p>
+                <a href="{{ route('categorias.index') }}">Regresar al listado de las categorias</a>
+               
+            </p>
         </div>
     </div>
 @endsection

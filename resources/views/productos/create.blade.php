@@ -1,10 +1,10 @@
 @extends('layout')
 
-@section('title', "Crear usuario")
+@section('title', "Crear Producto")
 
 @section('content')
     <div>
-        <h4>Crear usuario</h4>
+        <h4>Crear Producto</h4>
         <div>
 
             @if ($errors->any())

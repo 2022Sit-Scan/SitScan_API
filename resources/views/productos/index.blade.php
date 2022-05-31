@@ -17,6 +17,7 @@
                         <th scope="col">Descripción</th>
                         <th scope="col">Categoria</th>
                         <th scope="col">URL</th>
+                        <th scope="col">Imagenes</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     </thead>
@@ -29,6 +30,7 @@
                         <td>{{ $producto->descripcion }}</td>
                         <td>{{ $producto->categoria->nombre }}</td>
                         <td>{{ $producto->urlImagen }}</td>
+                        <td><img src="..{{$producto->urlImagen}}"/></td>
                         <td>
                             <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
                             <form action="{{ route('productos.destroy', $producto) }}" method="POST">
