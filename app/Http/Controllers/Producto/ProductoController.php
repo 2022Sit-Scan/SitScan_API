@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Producto;
 
 use App\Models\Producto;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -30,7 +31,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        $categorias = Categoria::all();
+        return view('productos.create', compact('categorias'));
     }
 
     /**
@@ -41,7 +43,26 @@ class ProductoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $rules = [
+            'nombre' => 'required| min:6 | max:20',
+            'urlImagen' => '', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
+            'descripcion' => 'max:1000',
+            'categoria_id'=> 'integer',
+        ];
+        $messages = [
+            'required' => 'El campo :attribute es obligatorio.',
+            'max' => 'El campo :attribute tiene mas de 1000 caracteres'
+        ];
+        $validatedData = $request->validate($rules, $messages);
+
+        Producto::create([
+            'nombre' => $validatedData['nombre'],
+            'urlImagen' => $validatedData['urlImagen'],
+            'categoria_id' => $validatedData['categoria_id'],
+            'descripcion' => $validatedData['descripcion'],
+        ]);
+
+        return redirect()->route('productos.index');
     }
 
     /**
@@ -61,9 +82,10 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Producto $producto)
     {
-        //
+        $categorias= Categoria::all();
+        return view('productos.edit', ['producto' => $producto],compact('categorias'));
     }
 
     /**
@@ -73,9 +95,25 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Producto $producto)
     {
-        //
+        $rules = [
+            'nombre' => 'min:6 | max:20',
+            'urlImagen' => '', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
+            'descripcion' => 'max:1000',
+            'categoria_id'=> 'integer',
+        ];
+        
+        $validatedData = $request->validate($rules);
+
+        $producto->fill($validatedData);
+
+        if(!$producto->isDirty()){
+            return redirect()->route('productos.edit', ['producto' => $producto])->withErrors(['errors' => 'Debes cambiar al menos 1 campo']);
+        }
+
+        $producto->update($validatedData);
+        return redirect()->route('productos.index');
     }
 
     /**

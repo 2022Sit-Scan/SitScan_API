@@ -21,10 +21,10 @@
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="#">Proyecto MVC</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                  @if ( Auth::user()->rol == 'ADMINISTRADOR')
@@ -56,28 +56,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/listaprecios') }}">Lista de Precios</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/#') }}">Añadir Producto</a>    
+                </li>
+                @elseif ( Auth::user()->rol == 'CAMARERO')
                 
-                @else
-               
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
+                </li>
+                
                 @endif
-            </ul>
-                 <li class="nav-item dropdown">
-                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                         {{ Auth::user()->email }} {{ Auth::user()->rol }}
-                     </a>
-
-                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                         <a class="dropdown-item" href="{{ route('logout') }}"
-                            onclick="event.preventDefault();
-                                          document.getElementById('logout-form').submit();">
-                             {{ __('Logout') }}
-                         </a>
-
-                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                             @csrf
-                         </form>
-                     </div>
-                 </li>
             </ul>
         </div>
     </nav>
@@ -92,10 +80,45 @@
     </div>
 </main>
 
+<a href="#ventana1" class="btn btn-primary btn-lg" data-toggle="modal">CERRAR SESION</a>
+    <!-- Modal -->
+<div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ¿Desea cerrar sesión?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
+
+          <button type="button" class="btn btn-primary-logout col-md-6">
+            <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
+            onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                {{ __('CERRAR SESIÓN') }}
+                <div class="modal fade" id="ventan">
+            
+                </div>
+            </div>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+            </button>
+        </div>
+      </div>
+    </div>
+</div>
+
 <footer class="footer">
     <div class="container">
-        
-        <span class="text-muted">https://escuelaestech.es</span>
+        <img src="/imagenes/imagenes/logo_entero_blanco.svg" class="logo-blanco" alt="Logo"/>
+        <span class="text-muted">Si tiene algún tipo de problema técnico, no dude en llamar al <strong>955 85 74 92</strong> le atenderemos enseguida</span>
     </div>
 </footer>
 

@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="card">
-        <h4 class="card-header">Crear usuario</h4>
+        <h4 class="card-header">Crear pedido</h4>
         <div class="card-body">
 
             @if ($errors->any())

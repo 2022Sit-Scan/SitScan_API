@@ -8,17 +8,31 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    overflow-x: hidden;
-     
+    overflow-x: hidden;  
 }
+
+h6 {
+    color: #F7E5D7;
+}
+
+
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    /* Set the fixed height of the footer here */
     height: 60px;
-    line-height: 60px; /* Vertically center the text there */
-    background-color: #f5f5f5;
+    line-height: 60px;
+    background-color: #F1A02D;
+}
+
+.thead-dark {
+    background-color: #EA710A !important;
+}
+
+.logo-blanco {
+    width: 10%;
+    height: 10%;
+    margin-right: 20%;
 }
 
 .tapa {
@@ -36,13 +50,27 @@ body {
     height: 300px;
 }
 
+.card-body-dialog {
+    background-color: #004F57;
+    border-radius: 30px;
+    width: 330px;
+    height: 200px;
+}
+
+.card-body-pedido {
+    background-color: #F7E5D7;
+    border-radius: 30px;
+    width: 330px;
+    height: 300px;
+}
+
 .btn-primary {
     margin-right: 12px;
 }
 
-.bandeja {
+.bandeja { 
     position: absolute;
-    transform: translate(150%, 0);
+    transform: translate(165%, 0);
 }
 
 .cuadrado {
@@ -58,6 +86,15 @@ body {
     color: #FFFFFF;
     font-size: 20px;
     margin-left: 20px;
+    width: 300px;
+}
+
+.form-group-titulo-mesa {
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #004F57 !important;
+    margin-left: 20px;
+    width: 300px;
 }
 
 .btn-primary {
@@ -65,8 +102,59 @@ body {
     color: #004F57;
 }
 
+.modal-content {
+    border-radius: 100px;
+}
+
+.modal-header {
+    color: #FFFFFF;
+    background-color: #004F57;
+    border-bottom: 0px !important;
+    text-align: center;
+}
+
+.modal-body {
+    color: #F8D097;
+    background-color: #004F57;
+    text-align: center;
+}
+
+.modal-footer {
+    color: #F8D097;
+    background-color: #004F57;
+    border-top: 0px !important;
+    text-align: center;
+}
+
+.close {
+    background-color: #004F57;
+    margin-right: 0px;
+}
+
+.btn-primary-mesa {
+    margin-bottom: 0;
+    background-color: #004F57;
+    color: #FFFFFF;
+}
+
+.btn-primary-logout {
+    background-color: #F8D097;
+    color: #FFFFFF;
+    margin-right: 10%;
+}
+
+.label {
+    background-color: #971515;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
 .card {
     border-radius: 50px;
+}
+
+.text-muted {
+    color: #000000 !important;
 }
 
 
