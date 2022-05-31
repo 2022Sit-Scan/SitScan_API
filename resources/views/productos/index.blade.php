@@ -10,7 +10,7 @@
                 <p><a href="#" class="btn btn-primary">Crear producto</a></p>
                 
                 <table class="table">
-                    <thead class="thead-dark">
+                    <thead class="thead">
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nombre Producto</th>

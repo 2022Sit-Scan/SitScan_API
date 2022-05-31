@@ -1,5 +1,7 @@
 /* Sticky footer styles
 -------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 html {
     position: relative;
     min-height: 100%;
@@ -7,6 +9,7 @@ html {
 }
 body {
     /* Margin bottom by footer height */
+    font-family: 'Karla', sans-serif;
     margin-bottom: 60px;
     overflow-x: hidden;  
 }
@@ -25,7 +28,19 @@ h6 {
     background-color: #F1A02D;
 }
 
-.thead-dark {
+.fila-tabla {
+    background-color: #F4E2D4;
+    border-bottom: 2px solid #F3A114;
+    border-radius: 50px;
+}
+
+.fila-tabla:hover {
+    background-color: #e7c892;
+    border-bottom: 2px solid #F4E2D4;
+}
+
+.thead {
+    color: #ffffff;
     background-color: #EA710A !important;
 }
 
@@ -102,6 +117,23 @@ h6 {
     color: #004F57;
 }
 
+#addProducto {
+    background-color: #004F57;
+    color: #FFFFFF;
+    border-color: none !important;
+}
+
+#addProducto:hover {
+    background-color: #006B67;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #F8D097;
+    color: #004F57;
+    border-color: none;
+}
+
 .modal-content {
     border-radius: 100px;
 }
@@ -140,7 +172,6 @@ h6 {
 .btn-primary-logout {
     background-color: #F8D097;
     color: #FFFFFF;
-    margin-right: 10%;
 }
 
 .label {
