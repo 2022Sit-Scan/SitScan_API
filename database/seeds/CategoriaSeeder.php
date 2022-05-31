@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Agua y refrescos',
-            'urlImagen' => 'categorias/aguayrefrescos',
+            'urlImagen' => '/imagenes/categorias/icon_refrescos.svg',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -26,7 +26,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Zumos y batidos',
-            'urlImagen' => 'categorias/zumosybatidos',
+            'urlImagen' => '/imagenes/categorias/icon_batidos',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -35,7 +35,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Destilados',
-            'urlImagen' => 'categorias/destilados',
+            'urlImagen' => '/imagenes/categorias/icon_destilados',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -44,7 +44,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cervezas',
-            'urlImagen' => 'categorias/cervezas',
+            'urlImagen' => '/imagenes/categorias/icon_cervezas',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -53,7 +53,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cafes',
-            'urlImagen' => 'categorias/cafes',
+            'urlImagen' => '/imagenes/categorias/icon_cafes',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -62,7 +62,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Postres',
-            'urlImagen' => 'categorias/postres',
+            'urlImagen' => '/imagenes/categorias/icon_postres',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
