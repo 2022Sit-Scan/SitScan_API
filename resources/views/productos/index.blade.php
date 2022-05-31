@@ -41,7 +41,7 @@
       </div>
     </div>
 </div>             
-                <p><a href="#" class="btn btn-primary">Crear producto</a></p>
+                <p><a href="{{ route('productos.create') }}" class="btn btn-primary">Crear producto</a></p>
                 
                 <table class="table">
                     <thead class="thead">
@@ -49,7 +49,8 @@
                         <th scope="col">ID</th>
                         <th scope="col">Nombre Producto</th>
                         <th scope="col">Categoria</th>
-                        <th scope="col">Precio</th>
+                        <th scope="col">url</th>
+                        <th scope="col">imagen</th>
                         <th scope="col">Acciones</th>
                     </tr>
                     </thead>
@@ -59,14 +60,15 @@
                         <th scope="row">{{ $producto->id }}</th>
                         <td>{{ $producto->nombre }}</td>
                         <td>{{ $producto->categoria->nombre }}</td>
-                        <td>{{ $producto->precio }}</td>
+                        <td>{{ $producto->urlImagen }}</td>
+                        <td><img src="..{{$producto->urlImagen}}"/></td>
                         <td>
-                            <a href="{{ route('productos.show', $producto) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
-                            <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
+                            
+                            <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
                             <form action="{{ route('productos.destroy', $producto) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
+                                <button type="submit" class="btn btn-link"><span class="oi oi-trash"></span></button>
                             </form>   
                         </td>
                     </tr>
