@@ -46,9 +46,9 @@
 
     @if ($usuarios != "")
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="thead">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Correo</th>
             <th scope="col">Establecimiento</th>
             <th scope="col" class="w-55">Password</th>
@@ -59,7 +59,7 @@
         <tbody>
             
         @foreach($usuarios as $usuario)
-        <tr>
+        <tr class="fila-tabla">
             <th scope="row">{{ $usuario->id }}</th>
             <td>{{ $usuario->email }}</td>
             <td>@if($usuario->establecimiento_id != 0){{ $usuario->establecimiento->nombre }}@endif</td>

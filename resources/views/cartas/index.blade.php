@@ -46,9 +46,9 @@
 
     @if ($cartas != "")
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="thead">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">Establecimiento</th>
             <th scope="col">Acciones</th>
@@ -57,7 +57,7 @@
         <tbody>
             
         @foreach($cartas as $carta)
-        <tr>
+        <tr class="fila-tabla">
             <th scope="row">{{ $carta->id }}</th>
             <td>{{ $carta->email }}</td>
             <td>{{ $carta->establecimiento->nombre}}</td>

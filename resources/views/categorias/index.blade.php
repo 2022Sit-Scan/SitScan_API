@@ -47,9 +47,9 @@
     @if ($categorias->isNotEmpty())
     {{-- {{dd($categorias)}} --}}
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="thead">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">Categoria Padre</th>
             <th scope="col">Url Imagen</th>
@@ -59,7 +59,7 @@
         </thead>
         <tbody>
         @foreach($categorias as $categoria)
-        <tr>
+        <tr class="fila-tabla">
             <th scope="row">{{ $categoria->id }}</th>
             <td>{{ $categoria->nombre }}</td>
             

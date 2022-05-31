@@ -46,9 +46,9 @@
 
     @if ($establecimientos != "")
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="thead">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">URL Logo</th>
             <th scope="col">Acciones</th>
@@ -59,7 +59,7 @@
         <tbody>
             
         @foreach($establecimientos as $establecimiento)
-        <tr>
+        <tr class="fila-tabla">
             <th scope="row">{{ $establecimiento->id }}</th>
             <td>{{ $establecimiento->nombre }}</td>
             <td>{{ $establecimiento->urlLogo }}</td>

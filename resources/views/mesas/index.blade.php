@@ -46,9 +46,9 @@
 
     @if ($mesas != "")
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="thead">
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">ID</th>
             <th scope="col">Numero Mesa</th>
             <th scope="col">Codigo QR</th>
             <th scope="col">Establecimiento</th>
@@ -59,7 +59,7 @@
         <tbody>
             
         @foreach($mesas as $mesa)
-        <tr>
+        <tr class="fila-tabla">
             <th scope="row">{{ $mesa->id }}</th>
             <td>{{ $mesa->numero_mesa }}</td>
             <td>{{ $mesa->codigoQR }}</td>

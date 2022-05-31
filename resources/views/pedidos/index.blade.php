@@ -46,7 +46,7 @@
 
     @if ($pedidos != "")
     <table class="table">
-        <thead class="thead-dark">
+        <thead class="thead">
         
         </thead>
         <tbody>
@@ -94,7 +94,7 @@
             </div>
             
         @foreach($pedidos as $pedido)
-        <tr>
+        <tr class="fila-tabla">
             <th scope="row">{{ $pedido->id }}</th>
             <td>{{ $pedido->establecimiento->nombre }}</td>
             <td>{{ $pedido->cantidad }}</td>

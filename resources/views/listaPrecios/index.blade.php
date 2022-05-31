@@ -75,7 +75,37 @@
             <td>{{ $establec->nombre }}</td>
             <td>{{ $establec->pivot->precio }}</td>
             <td>
-                <a href="{{ route('listaprecios.edit', $establecimientoProducto) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></a>
+                <a href="#ventana2" class="btn btn-link" data-toggle="modal"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></a>
+                <div class="modal fade" id="ventana2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">EDITAR PRODUCTO</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ¿Desea editar el producto?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary-logout col-md-6">
+                          <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
+                          onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();">
+                              {{ __('EDITAR') }}
+                              <div class="modal fade" id="ventan">
+                          
+                              </div>
+                          </div>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                          </form>
+                          </button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
                 <form action="{{ route('listaprecios.destroy', $establecimientoProducto) }}" method="POST">
                     @csrf
                     @method('DELETE')

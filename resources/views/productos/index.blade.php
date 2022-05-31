@@ -56,7 +56,7 @@
                     </thead>
                     <tbody>
                     @foreach($productos as $producto)
-                    <tr>
+                    <tr class="fila-tabla">
                         <th scope="row">{{ $producto->id }}</th>
                         <td>{{ $producto->nombre }}</td>
                         <td>{{ $producto->categoria->nombre }}</td>
