@@ -31,7 +31,7 @@
             
             <td>@if ($categoria->categoriaPadre != NULL){{ $categoria->catHijos->first()->nombre }}@endif</td>
             <td>{{ $categoria->urlImagen }}</td>
-            <td><img src="../{{$categoria->urlImagen}}"/></td>
+            <td><img src="..{{$categoria->urlImagen}}"/></td>
             <td>
                 <a href="{{ route('categorias.edit', $categoria) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
                 <form action="{{ route('categorias.destroy', $categoria) }}" method="POST">

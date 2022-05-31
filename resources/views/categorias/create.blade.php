@@ -4,7 +4,7 @@
 
 @section('content')
     <div>
-        <h4>Crear comentario</h4>
+        <h4>Crear Categoria</h4>
         <div>
 
             @if ($errors->any())
