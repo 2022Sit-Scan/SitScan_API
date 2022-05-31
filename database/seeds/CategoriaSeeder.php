@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Agua y refrescos',
-            'urlImagen' => '/imagenes/categorias/icon_refrescos.svg',
+            'urlImagen' => '/imagenes/categorias/icon_refrescos.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -26,7 +26,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Zumos y batidos',
-            'urlImagen' => '/imagenes/categorias/icon_batidos',
+            'urlImagen' => '/imagenes/categorias/icon_zumosybatidos.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -35,7 +35,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Destilados',
-            'urlImagen' => '/imagenes/categorias/icon_destilados',
+            'urlImagen' => '/imagenes/categorias/icon_destilados.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -44,7 +44,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cervezas',
-            'urlImagen' => '/imagenes/categorias/icon_cervezas',
+            'urlImagen' => '/imagenes/categorias/icon_cervezas.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -53,7 +53,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cafes',
-            'urlImagen' => '/imagenes/categorias/icon_cafes',
+            'urlImagen' => '/imagenes/categorias/icon_cafes.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -62,7 +62,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Postres',
-            'urlImagen' => '/imagenes/categorias/icon_postres',
+            'urlImagen' => '/imagenes/categorias/icon_postres.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
