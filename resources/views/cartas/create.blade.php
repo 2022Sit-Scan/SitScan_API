@@ -1,11 +1,11 @@
 @extends('layout')
 
-@section('title', "Crear usuario")
+@section('title', "Crear Carta")
 
 @section('content')
-    <div class="card">
-        <h4 class="card-header">Crear carta</h4>
-        <div class="card-body">
+    <div>
+        <h4>Crear carta</h4>
+        <div>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -18,26 +18,26 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ url('usuarios') }}">
+            <form method="POST" action="{{ url('cartas') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name') }}">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre Carta" value="{{ old('nombre') }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email') }}">
-                </div>
+                    <label for="establecimiento_id">Establecimiento</label>
+                    <select class="form-control" id="establecimiento_id" name="establecimiento_id">
+                        <option selected disabled value='Establecimiento'>Establecimiento</option>
+                         @foreach ($establecimientos as $establecimiento)
+                      <option value="{{$establecimiento->id}}">{{$establecimiento->nombre}}</option>
+                        @endforeach
+                    </select>
+                  </div>
 
-                <div class="form-group">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Mayor a 6 caracteres">
-                </div>
-
-                <button type="submit" class="btn btn-primary">Crear usuario</button>
-                <a href="{{ route('usuarios.index') }}" class="btn btn-link">Regresar al listado de usuarios</a>
+                <button type="submit" class="btn btn-primary">Crear carta</button>
+                <a href="{{ route('cartas.index') }}" class="btn btn-link">Regresar al listado de cartas</a>
             </form>
         </div>
     </div>

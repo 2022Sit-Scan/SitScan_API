@@ -1,9 +1,9 @@
 @extends('layout')
 
-@section('title', "Editar usuario")
+@section('title', "Editar Carta")
 
 @section('content')
-    <h1>Editar usuario</h1>
+    <h1>Editar Carta</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -16,29 +16,33 @@
         </div>
     @endif
 
-    <form method="POST" action="{{ url("usuarios/{$usuario->id}") }}">
+    <form method="POST" action="{{ url("cartas/{$carta->id}") }}">
         {{ method_field('PUT') }}
         {{ csrf_field() }}
 
-        <label for="name">Nombre:</label>
-        <input type="text" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name', $usuario->name) }}">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" value="{{ old('nombre', $carta->nombre) }}">
         {{-- otra forma de comprobar los errores 
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror--}}
         <br>
-        <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email', $usuario->email) }}">
+        <div class="form-group">
+            <label for="establecimiento_id">Establecimiento</label>
+            <select class="form-control" id="establecimiento_id" name="establecimiento_id">
+                <option selected disabled value='Establecimiento'>Establecimiento</option>
+                 @foreach ($establecimientos as $establecimiento)
+              <option value="{{$establecimiento->id}}">{{$establecimiento->nombre}}</option>
+                @endforeach
+            </select>
+          </div>
         <br>
-        <label for="password">Contraseña:</label>
-        <input type="password" name="password" id="password" placeholder="Mayor a 6 caracteres">
-        <br>
-        <button type="submit">Actualizar usuario</button>
+        <button type="submit">Actualizar Carta</button>
     </form>
 
     <p>
-        <a href="{{ route('usuarios.index') }}">Regresar al listado de usuarios</a>
+        <a href="{{ route('cartas.index') }}">Regresar al listado de cartas</a>
         {{-- otra forma 
-        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a>--}}
+        <a href="{{ url()->previous() }}">Regresar al listado de cartas</a>--}}
     </p>
 @endsection

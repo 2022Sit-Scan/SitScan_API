@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Carta;
 
 use App\Models\Carta;
 use Illuminate\Http\Request;
+use App\Models\Establecimiento;
 use App\Http\Controllers\Controller;
 
 class CartaController extends Controller
@@ -31,7 +32,8 @@ class CartaController extends Controller
      */
     public function create()
     {
-        //
+        $establecimientos = Establecimiento::all();
+        return view('cartas.create', compact('establecimientos'));
     }
 
     /**
@@ -42,7 +44,22 @@ class CartaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'nombre' => 'required',
+            'establecimiento_id'=> 'integer',
+        ];
+        $messages = [
+            'required' => 'El campo :attribute es obligatorio.',
+        ];
+        $validatedData = $request->validate($rules, $messages);
+
+        Carta::create([
+            'nombre' => $validatedData['nombre'],
+            'establecimiento_id' => $validatedData['establecimiento_id'],
+           
+        ]);
+
+        return redirect()->route('cartas.index');
     }
 
     /**
@@ -62,9 +79,10 @@ class CartaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Carta $carta)
     {
-        //
+        $establecimientos= Establecimiento::all();
+        return view('cartas.edit', ['carta' => $carta],compact('establecimientos'));
     }
 
     /**
@@ -74,9 +92,24 @@ class CartaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Carta $carta)
     {
-        //
+        
+        $rules = [
+            'nombre' => 'required',
+            'establecimiento_id'=> 'integer',
+        ];
+        
+        $validatedData = $request->validate($rules);
+
+        $carta->fill($validatedData);
+
+        if(!$carta->isDirty()){
+            return redirect()->route('cartas.edit', ['carta' => $carta])->withErrors(['errors' => 'Debes cambiar al menos 1 campo']);
+        }
+
+        $carta->update($validatedData);
+        return redirect()->route('cartas.index');
     }
 
     /**
