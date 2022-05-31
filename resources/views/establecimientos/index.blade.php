@@ -70,7 +70,7 @@
                 <form action="{{ route('establecimientos.destroy', $establecimiento) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-link"><span class="oi oi-trash"></span></button>
+                    <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
                 </form>                
             </td>
         </tr>
