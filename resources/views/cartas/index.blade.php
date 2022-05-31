@@ -59,11 +59,10 @@
         @foreach($cartas as $carta)
         <tr class="fila-tabla">
             <th scope="row">{{ $carta->id }}</th>
-            <td>{{ $carta->email }}</td>
+            <td>{{ $carta->nombre }}</td>
             <td>{{ $carta->establecimiento->nombre}}</td>
           
             <td>
-                <a href="{{ route('cartas.show', $carta) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('cartas.edit', $carta) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></a>
                 <form action="{{ route('cartas.destroy', $carta) }}" method="POST">
                     @csrf
