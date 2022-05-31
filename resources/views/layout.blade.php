@@ -66,13 +66,17 @@
                     <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
                 </li>
                 
+                
                 @endif
             </ul>
         </div>
     </nav>
 </header>
 
+
+
 <!-- Begin page content -->
+
 <main role="main" class="container">
     <div class="row mt-3">
         <div class="col-12">
@@ -80,6 +84,7 @@
         </div>
     </div>
 </main>
+
 
 <footer class="footer">
     <div class="container">
