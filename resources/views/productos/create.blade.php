@@ -22,7 +22,7 @@
                 
                 {{ csrf_field() }}
         
-                <label for="name">Nombre Producto:</label>
+                <label for="nombre">Nombre Producto:</label>
                 <input type="text" name="nombre" id="nombre" placeholder="Nombre Producto">
                 <br>
                 <label for="urlImagen">urlImagen:</label>

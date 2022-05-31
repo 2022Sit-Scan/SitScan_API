@@ -66,11 +66,11 @@
             
             <td>
                 <a href="{{ route('establecimientos.show', $establecimiento) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
-                <a href="{{ route('establecimientos.edit', $establecimiento) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
+                <a href="{{ route('establecimientos.edit', $establecimiento) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
                 <form action="{{ route('establecimientos.destroy', $establecimiento) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-link"><span class="oi oi-trash"></span></button>
+                    <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
                 </form>                
             </td>
         </tr>
