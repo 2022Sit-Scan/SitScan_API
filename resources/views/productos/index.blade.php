@@ -41,7 +41,7 @@
       </div>
     </div>
 </div>             
-                <p><a href="#" class="btn btn-primary">Crear producto</a></p>
+                <p><a href="{{ route('productos.create') }}" class="btn btn-primary">Crear producto</a></p>
                 
                 <table class="table">
                     <thead class="thead">
@@ -63,7 +63,7 @@
                         <td>{{ $producto->urlImagen }}</td>
                         <td><img src="..{{$producto->urlImagen}}"/></td>
                         <td>
-                            <a href="{{ route('productos.show', $producto) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
+                            
                             <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
                             <form action="{{ route('productos.destroy', $producto) }}" method="POST">
                                 @csrf
