@@ -67,7 +67,7 @@
             <td>{{ $usuario->rol }}</td>
             <td>
                 
-                <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
+                <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
                 <form action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                     @csrf
                     @method('DELETE')

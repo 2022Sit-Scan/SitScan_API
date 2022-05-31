@@ -67,7 +67,7 @@
             <td>{{ $categoria->urlImagen }}</td>
             <td><img src="..{{$categoria->urlImagen}}"/></td>
             <td>
-                <a href="{{ route('categorias.edit', $categoria) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
+                <a href="{{ route('categorias.edit', $categoria) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
                 <form action="{{ route('categorias.destroy', $categoria) }}" method="POST">
                     @csrf
                     @method('DELETE')

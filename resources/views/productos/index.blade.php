@@ -62,7 +62,7 @@
                         <td>{{ $producto->precio }}</td>
                         <td>
                             <a href="{{ route('productos.show', $producto) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
-                            <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
+                            <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
                             <form action="{{ route('productos.destroy', $producto) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
