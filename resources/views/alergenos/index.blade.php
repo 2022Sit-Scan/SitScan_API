@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Lista de alergenos')
+@section('title', 'Lista de Alergenos')
 
 @section('content')
     <div class="d-flex justify-content-between align-items-end mb-3">
@@ -17,6 +17,7 @@
             <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Url Imagen</th>
+            <th scope="col">Imagenes</th>
             <th scope="col">Acciones</th>
             
         </tr>
@@ -28,8 +29,8 @@
             <th scope="row">{{ $alergeno->id }}</th>
             <td>{{ $alergeno->nombre }}</td>
             <td>{{ $alergeno->urlImagen }}</td>
+            <td><img src="..{{$alergeno->urlImagen}}"/></td>
             <td>
-                <a href="{{ route('alergenos.show', $alergeno) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('alergenos.edit', $alergeno) }}" class="btn btn-link"><span class="oi oi-pencil"></span></a>
                 <form action="{{ route('alergenos.destroy', $alergeno) }}" method="POST">
                     @csrf

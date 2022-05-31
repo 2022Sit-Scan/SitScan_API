@@ -36,7 +36,6 @@
           <div class="form-group">
             <label for="categoria_id">Categoria</label>
             <select class="form-control" id="categoria_id" name="categoria_id">
-                <option selected disabled value={{ old('categoria', $producto->categoria_id) }}>{{ old('categoria', $producto->categoria->nombre) }}</option>
                  @foreach ($categorias as $categoria)
               <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
                 @endforeach
