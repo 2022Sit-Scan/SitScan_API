@@ -40,6 +40,7 @@ class UsuarioController extends Controller
  //     return view('usuarios.index')
  //         ->with('usuarios', usuario::all())
  //         ->with('title', 'Listado de usuarios');
+      
          $usuarios = Usuario::all();
         return view('usuarios.index', compact('usuarios'));
     }
