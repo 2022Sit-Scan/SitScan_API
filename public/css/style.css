@@ -135,25 +135,23 @@ h6 {
 }
 
 .modal-content {
-    border-radius: 100px;
+    border-radius: 40px;
+    background-color: #004F57;
+    margin: 2%;
 }
 
 .modal-header {
     color: #FFFFFF;
-    background-color: #004F57;
     border-bottom: 0px !important;
     text-align: center;
 }
 
 .modal-body {
     color: #F8D097;
-    background-color: #004F57;
-    text-align: center;
 }
 
 .modal-footer {
     color: #F8D097;
-    background-color: #004F57;
     border-top: 0px !important;
     text-align: center;
 }
@@ -169,9 +167,27 @@ h6 {
     color: #FFFFFF;
 }
 
-.btn-primary-logout {
+/* .btn-primary-logout {
     background-color: #F8D097;
     color: #FFFFFF;
+} */
+#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios{
+background-color: #F8D097;
+color: #006B67;
+}
+
+#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover{
+    background-color: #F3C47F;
+    
+    }
+
+#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios{
+    background-color: #FFF8F2;
+    color: #006B67;
+    }
+
+#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover {
+        background-color: #EAE7E4;
 }
 
 .label {
