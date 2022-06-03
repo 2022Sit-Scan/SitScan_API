@@ -13,17 +13,6 @@
                             <label id="label-login" for="email" class="offset-md-3 col-form-label text-center">{{ __('INICIAR SESIÓN') }}</label>
                         </div>
 
-                        <div class="form-group-titulo row">
-                            
-                            <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                        </div>
-
-                        <div class="form-group-titulo row">
-                            
-                            <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                        </div>
-
-
                         <div class="form-group row">
 
                             <div class="col-md-12">
@@ -50,18 +39,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group-titulo row">
-                            
-                            <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                        </div>
-
-                        <div class="form-group-titulo row">
-                            
-                            <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                        </div>
-
                         <div class="form-group-iniciar  row mb-0">
-                            <div class="btn-login">
+                            <div class="btn-login text-center">
                                 <button id="btn-entrar" type="submit" class="btn btn-primary ">
                                     {{ __('ENTRAR') }}
                                 </button>

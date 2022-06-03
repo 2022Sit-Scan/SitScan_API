@@ -252,6 +252,7 @@ color: #006B67;
 .form-group-titulo {
     color: #FFFFFF;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .form-group-titulo-mesa {
@@ -260,6 +261,10 @@ color: #006B67;
     background-color: #004F57 !important;
     margin-left: 20px;
     width: 300px;
+}
+
+.form-group {
+    margin-bottom: 2em;
 }
 
 /*---------------------------- */
