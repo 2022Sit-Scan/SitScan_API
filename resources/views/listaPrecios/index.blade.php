@@ -90,61 +90,37 @@
             <td>{{ $establec->nombre }}</td>
             <td>{{ $establec->pivot->precio }} €</td>
             <td>
-              <a href="#ventana2" class="btn btn-link" data-toggle="modal"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="25" width="25"></a>
-              <div class="modal fade" id="ventana2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">EDITAR PRODUCTO</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <h5>¿Desea editar el producto?</h5>
-                      <form>
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">NOMBRE</label>
-                          <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre del producto">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">PRECIO PRODUCTO</label>
-                          <input type="double" class="form-control" id="exampleInputPassword1" placeholder="Precio">
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">IMAGEN</label>
-                          <div class="container d-flex justify-content-center">
-                            <div class="row">
-                              
-                            <div class="col-md-12">
-                              <div class="file-drop-area">
-                                <div class="row">
-                                  <div class="col-sm-12">
-                                    <img class="img-upload" src="/imagenes/imagenes/cloud-computing.png"></img>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-12">
-                                    <span class="file-message">Arrastre y suelte un archivo aquí</span>
-                                    <span class="choose-file-button">o haga click aquí </span>
-                                    <input class="file-input" type="file" multiple>
-                                  </div>
-                                </div>
-                              </div>           
-                                  </div>      
-                                </div>   
+                <a href="#ventana2" class="btn btn-link" data-toggle="modal"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="25" width="25"></a>
+                <div class="modal fade" id="ventana2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">EDITAR PRODUCTO</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ¿Desea editar el producto?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary-logout col-md-6">
+                          <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
+                          onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();">
+                              {{ __('EDITAR') }}
+                              <div class="modal fade" id="ventan">
+                          
                               </div>
-                            </div>
                           </div>
-                        </div>
-                      </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" id="btn-aceptar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6" data-dismiss="modal">EDITAR</button>
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                          </form>
+                          </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-            </div>
+              </div>
                 <form action="{{ route('listaprecios.destroy', $establecimientoProducto) }}" method="POST">
                     @csrf
                     @method('DELETE')
