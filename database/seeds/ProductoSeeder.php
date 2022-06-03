@@ -35,7 +35,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Coca Cola Light',
-            'urlImagen' => '/imagenes/refrescos/cocacola/cocalightimage.jpg',
+            'urlImagen' => '/imagenes/refrescos/cocacola/colalightimage.jpg',
             'descripcion' => 'Coca Cola Light',
             'categoria_id' => 12,
             'created_at' => now(),
@@ -225,7 +225,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Puerto de Indias',
-            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindias.jpg',
+            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage.jpg',
             'descripcion' => 'Puerto de Indias',
             'categoria_id' => 9,
             'created_at' => now(),
@@ -305,7 +305,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Tarta de Queso',
-            'urlImagen' => '/imagenes/postres/tartaquesoimage.jpg',
+            'urlImagen' => '/imagenes/postres/tartadequesoimage.jpg',
             'descripcion' => 'Tarta de Queso',
             'categoria_id' => 16,
             'created_at' => now(),
@@ -315,7 +315,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Tarta de Crema',
-            'urlImagen' => '/imagenes/postres/tartacremaimage.jpg',
+            'urlImagen' => '/imagenes/postres/tartadecremaimage.jpg',
             'descripcion' => 'Tarta de Crema',
             'categoria_id' => 16,
             'created_at' => now(),

@@ -13,16 +13,16 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times; <i class="fa-solid fa-xmark-large"></i></span>
           </button>
         </div>
         <div class="modal-body">
           ¿Desea cerrar sesión?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
+          <button type="button" id="btn-cancelar-cerrarSesion-categorias" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
 
-          <button type="button" class="btn btn-primary-logout col-md-6">
+          <button type="button" id="btn-aceptar-cerrarSesion-categorias" class="btn btn-primary-logout col-md-6">
             <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
             onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -78,6 +78,7 @@
         @endforeach
         </tbody>
     </table>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     @else
         <p>No hay categorias registrados.</p>
     @endif
