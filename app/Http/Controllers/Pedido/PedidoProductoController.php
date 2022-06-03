@@ -22,13 +22,11 @@ class PedidoProductoController extends Controller
             $establecimientoProductos = Establecimiento::all()->load('productos')
             ->where('id',$administrador->establecimiento_id); 
           
-            $pedidoProductos = Pedido::with('productos.establecimientos')->wherehas('productos')->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',1)->get(); 
-              //dd($pedidoProductos);
-
-              return view('PedidosProductos.index',compact('pedidoProductos','establecimientoProductos'));
+            $pedidoProductos = Pedido::with('productos.establecimientos')->wherehas('productos')->where('establecimiento_id',2)->where('estado',1)->get()->pluck('productos'); 
+             // dd($pedidoProductos);
         }
         
-      
+        return view('PedidosProductos.index', compact('pedidoProductos','establecimientoProductos'));
     }
 
     /**

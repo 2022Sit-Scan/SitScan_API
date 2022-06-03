@@ -214,12 +214,8 @@ td{
 .btn-buscar{
     background-color: #006B67;
     padding-left: 20px;
-    padding-right: 20px;  
-}
-
-.buscador{
-    margin-left: 97px;
-    padding:7px;
+    padding-right: 20px;
+    margin-left: -15px!important;
 }
 
 .btn-buscar:hover{

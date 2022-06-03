@@ -140,6 +140,5 @@ $("#HoraActual").text(hours+ ":" +minutes);
 setTimeout("showTime()", 1000);
 }
 </script>
-
 </body>
 </html>
