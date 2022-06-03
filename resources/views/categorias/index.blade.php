@@ -13,7 +13,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span aria-hidden="true">&times; <i class="fa-solid fa-xmark-large"></i></span>
           </button>
         </div>
         <div class="modal-body">
@@ -78,6 +78,7 @@
         @endforeach
         </tbody>
     </table>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     @else
         <p>No hay categorias registrados.</p>
     @endif
