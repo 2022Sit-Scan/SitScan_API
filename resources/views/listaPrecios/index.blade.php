@@ -90,6 +90,7 @@
             <td>{{ $establec->nombre }}</td>
             <td>{{ $establec->pivot->precio }} €</td>
             <td>
+
               <a href="#ventana2" class="btn btn-link" data-toggle="modal"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="25" width="25"></a>
               <div class="modal fade" id="ventana2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -229,6 +230,7 @@
       </div>
     </div>
 </div>
+
                 <form action="{{ route('listaprecios.destroy', $establecimientoProducto) }}" method="POST">
                     @csrf
                     @method('DELETE')

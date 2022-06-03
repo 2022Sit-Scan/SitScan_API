@@ -24,9 +24,11 @@ class PedidoProductoController extends Controller
           
             $pedidoProductos = Pedido::with('productos.establecimientos')->wherehas('productos')->where('establecimiento_id',2)->where('estado',1)->get()->pluck('productos'); 
              // dd($pedidoProductos);
+             return view('PedidosProductos.index', compact('pedidoProductos','establecimientoProductos'));
+            
         }
         
-        return view('PedidosProductos.index', compact('pedidoProductos','establecimientoProductos'));
+        
     }
 
     /**
