@@ -142,8 +142,10 @@ tr th{
 }
 td{
     text-align: center;
-    vertical-align: baseline!important;
     font-size: 20px;
+}
+.table td, .table th {
+    vertical-align: inherit!important;
 }
 
 /* ------- */
@@ -285,26 +287,22 @@ td{
     background-color: #035c59;
 }
 
-/* .btn-primary-logout {
-    background-color: #F8D097;
-    color: #FFFFFF;
-} */
-#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios{
+#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios , #btn-aceptar-cerrarSesion-usuarios, #btn-aceptar-cerrarSesion-alergenos,#btn-aceptar-cerrarSesion-cartas{
 background-color: #F8D097;
 color: #006B67;
 }
 
-#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover{
+#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover, #btn-aceptar-cerrarSesion-usuarios:hover,#btn-aceptar-cerrarSesion-alergenos:hover,#btn-aceptar-cerrarSesion-cartas:hover{
     background-color: #F3C47F;
     
     }
 
-#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios{
+#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios, #btn-cancelar-cerrarSesion-usuarios, #btn-cancelar-cerrarSesion-alergenos,#btn-cancelar-cerrarSesion-cartas{
     background-color: #FFF8F2;
     color: #006B67;
     }
 
-#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover {
+#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover{
         background-color: #EAE7E4;
 }
 

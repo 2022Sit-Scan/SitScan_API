@@ -1,10 +1,13 @@
 @extends('layout')
 
-@section('title', 'Lista de Usuarios')
+@section('title', 'LISTA DE USUARIOS')
 
 @section('content')
+
 <div class="row no-gutters">
-  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Boton Cerrar Sesión" height="12" width="15">CERRAR SESION</a>
+<div class="col-12 col-md-12 col-lg-8"><h1 class="pb-1">@yield('title')</h1></div>
+  <div class="col-6 col-md-6 col-lg-2">
+  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR SESIÓN</a>
   
   <!-- Modal -->
 <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -13,16 +16,16 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
           <button type="button" id="btn_cerrar" class="close" data-dismiss="modal" aria-label="Close">
-          <img src="imagenes/imagenes/close.png" alt="Close" height="26" width="26">
+          <img src="imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
           </button>
         </div>
         <div class="modal-body">
           ¿Desea cerrar sesión?
         </div>
         <div class="modal-footer">
-          <button type="button" id="btn-aceptar-cerrarSesion" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
+          <button type="button" id="btn-cancelar-cerrarSesion-usuarios" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
 
-          <button type="button" id="btn-cancelar-cerrarSesion" class="btn btn-primary-logout col-md-6">
+          <button type="button" id="btn-aceptar-cerrarSesion-usuarios" class="btn btn-primary-logout col-md-6">
             <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
             onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -39,9 +42,13 @@
       </div>
     </div>
 </div>
+  </div>
+
+  <div class="col-6 col-md-6 col-lg-2">
     <p>
-        <a href="{{ route('usuarios.create') }}" class="btn btn-primary"><img src="imagenes/imagenes/icon_add.png" alt="Editar" height="15" width="15">NUEVO USUARIO</a>
+        <a href="{{ route('usuarios.create') }}" class="btn btn-primary" id="addProducto"><img src="imagenes/imagenes/icon_add.png" alt="Botón Crear Usuario" height="15" width="15">NUEVO USUARIO</a>
     </p>
+</div>
 </div>
 
     @if ($usuarios != "")
@@ -49,11 +56,11 @@
         <thead class="thead">
         <tr>    
             <th scope="col">ID</th>
-            <th scope="col">Correo</th>
-            <th scope="col">Establecimiento</th>
-            <th scope="col" >Password</th>
-            <th scope="col">Rol</th>
-            <th scope="col">Acciones</th>
+            <th scope="col">CORREO</th>
+            <th scope="col">ESTABLECIMIENTO</th>
+            <th scope="col" >CONTRASEÑA</th>
+            <th scope="col">ROL</th>
+            <th scope="col">ACCIONES</th>
         </tr>
         </thead>
         <tbody>
@@ -70,14 +77,13 @@
                 <form action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
+                    <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Botón Eliminar" height="26" width="26"></button>
                 </form>                
             </td>
         </tr>
         @endforeach
         </tbody>
     </table>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     @else
         <p>No hay usuarios registrados.</p>
     @endif

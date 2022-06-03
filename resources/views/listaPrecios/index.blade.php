@@ -7,7 +7,7 @@
 <div class="row no-gutters">
   <div class="col-12 col-md-12 col-lg-8"><h1 id="HoraActual"></h1></div>
   <div class="col-6 col-md-6 col-lg-2">
-  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Editar" height="12" width="15">CERRAR SESION</a>
+  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR SESION</a>
   
   <!-- Modal -->
 <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -16,16 +16,16 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
           <button type="button" id="btn_cerrar" class="close" data-dismiss="modal" aria-label="Close">
-          <img src="imagenes/imagenes/close.png" alt="Editar" height="26" width="26">
+          <img src="imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
           </button>
         </div>
         <div class="modal-body">
           ¿Desea cerrar sesión?
         </div>
         <div class="modal-footer">
-          <button type="button" id="btn-aceptar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
+          <button type="button" id="btn-cancelar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
 
-          <button type="button" id="btn-cancelar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6">
+          <button type="button" id="btn-aceptar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6">
             <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
             onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -79,6 +79,7 @@
         </tr>
         </thead>
         <tbody>
+          
            {{--  {{dd($establecimientoProductos)}}  --}}
         @foreach($establecimientoProductos as $establecimientoProducto)
          @foreach($establecimientoProducto->productos as $establec)
