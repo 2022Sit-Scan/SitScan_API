@@ -41,10 +41,12 @@ body {
 }
 
 
+
 /* H1, H2, H3, H4, H5, H6 */
 
 h1{
-    font-family: 'Karla-Bold', sans-serif;   
+    font-family: 'Karla-Bold', sans-serif; 
+    color: #004F57;  
 }
 
 h2 {
@@ -53,6 +55,10 @@ h2 {
 
 h6 {
     color: #F7E5D7;
+}
+
+#HoraActual{
+    color: black;
 }
 
 /* ----------------------------- */

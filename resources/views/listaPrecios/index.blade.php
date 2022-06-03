@@ -44,9 +44,9 @@
 </div>
   </div>
   <div class="col-6 col-md-6 col-lg-2">
-  <p>
-    <a href="{{ route('listaprecios.create') }}" class="btn btn-primary" id="addProducto"> <img src="imagenes/imagenes/icon_add.png" alt="Editar" height="15" width="15"> AÑADIR PRODUCTO </a>
-  </p>
+    <p>
+      <a href="{{ route('listaprecios.create') }}" class="btn btn-primary" id="addProducto"> <img src="imagenes/imagenes/icon_add.png" alt="Editar" height="15" width="15"> AÑADIR PRODUCTO </a>
+    </p>
   </div>
 </div>
 
@@ -131,7 +131,7 @@
         </tbody>
     </table>
     @else
-        <p>No hay establecimientoProductos registrados.</p>
+        <p>No hay establecimiento Productos registrados.</p>
     @endif
 @endsection
 

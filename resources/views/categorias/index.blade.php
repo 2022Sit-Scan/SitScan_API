@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Lista de Categorias')
+@section('title', 'LISTA DE CATEGORIAS')
 
 @section('content')
     <div class="d-flex justify-content-between align-items-end mb-3">
@@ -12,8 +12,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times; <i class="fa-solid fa-xmark-large"></i></span>
+          <button type="button" id="btn_cerrar" class="close" data-dismiss="modal" aria-label="Close">
+            <img src="imagenes/imagenes/close.png" alt="Close" height="26" width="26">
           </button>
         </div>
         <div class="modal-body">
@@ -58,16 +58,16 @@
         </tr>
         </thead>
         <tbody>
+
         @foreach($categorias as $categoria)
         <tr class="fila-tabla">
             <th scope="row">{{ $categoria->id }}</th>
             <td>{{ $categoria->nombre }}</td>
-            
             <td>@if ($categoria->categoriaPadre != NULL){{ $categoria->catHijos->first()->nombre }}@endif</td>
             <td>{{ $categoria->urlImagen }}</td>
             <td><img src="..{{$categoria->urlImagen}}"/></td>
             <td>
-                <a href="{{ route('categorias.edit', $categoria) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
+                <a href="{{ route('categorias.edit', $categoria) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>
                 <form action="{{ route('categorias.destroy', $categoria) }}" method="POST">
                     @csrf
                     @method('DELETE')
