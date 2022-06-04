@@ -4,23 +4,81 @@
 
 @section('content')
 
+<div class="container">
 <div class="row no-gutters">
-  <div class="col-12 col-md-12 col-lg-8"><h1 class="pb-1">@yield('title')</h1></div>
+    <div class="col-12 col-md-12 col-lg-8"><h1 class="pb-1">@yield('title')</h1>
+    </div>
   <div class="col-6 col-md-6 col-lg-2">
         <p>
             <a href="{{ route('pedidos.create') }}" class="btn btn-primary">COMPLETADOS</a>
         </p>
     </div>
 </div>
+</div>
 
     @if ($pedidos != "")
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h3>MESA</h3>
+                </div>
+                <div class="card-body">
+                <table class="table">
+                     <tbody>
+                       <tr>
+                         <th scope="row">1</th>
+                         <td>Producto 1</td>
+                         <td>Cantidad</td>
+                         <td>Precio</td>
+                       </tr>
+                       <tr>
+                         <th scope="row">2</th>
+                         <td>Jacob</td>
+                         <td>Thornton</td>
+                         <td>@fat</td>
+                       </tr>
+                       <tr>
+                         <th scope="row">3</th>
+                         <td>Larry</td>
+                         <td>the Bird</td>
+                         <td>@twitter</td>
+                       </tr>
+                     </tbody>
+                 </table>
+                 <p class="text-right">Precio Total</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <table class="table">
         <thead class="thead">
         
         </thead>
         <tbody>
 
-            <div class="card-body-pedido">
+            <!-- <div class="card-body-pedido">
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
 
@@ -60,7 +118,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> -->
             
         @foreach($pedidos as $pedido)
         <tr class="fila-tabla">

@@ -194,7 +194,15 @@ td{
 
 /* CARD */
 
-.card {
+.card{
+    border-radius: 10px!important;
+}
+.card-header{
+    border-radius: 10px!important;
+    padding: 7%;
+}
+
+/* .card {
     border-radius: 50px;
 }
 
@@ -217,7 +225,7 @@ td{
     border-radius: 30px;
     width: 330px;
     height: 300px;
-}
+} */
 
 /* ------------- */
 
