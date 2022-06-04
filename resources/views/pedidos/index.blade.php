@@ -20,8 +20,8 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="card">
-                <div class="card-header">
+            <div class="card card-carta">
+                <div class="card-header card-header-carta">
                     <h3>MESA</h3>
                 </div>
                 <div class="card-body">
@@ -48,6 +48,9 @@
                      </tbody>
                  </table>
                  <p class="text-right">Precio Total</p>
+                </div>
+                <div class="card-footer card-footer-carta">
+                    <a id= "btn-hecho" href="{{ route('pedidos.create') }}" class="btn btn-primary">HECHO</a>
                 </div>
             </div>
         </div>
