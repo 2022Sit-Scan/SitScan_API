@@ -69,7 +69,7 @@
              <td>{{$pedidoProducto->cantidad }}</td> 
               <td>{{ $pedido->nombre }}</td>
               <td>{{$pedidoProducto->mesa->numero_mesa}}</td>
-                <td>{{$ped->pivot}}</td>
+                <td>{{$ped->pivot->precio}}</td>
             <td>Hora</td>
             <td>{{ $pedidoProducto->estado}}</td>
 
