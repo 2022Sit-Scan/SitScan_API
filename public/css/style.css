@@ -194,19 +194,25 @@ td{
 
 /* CARD */
 
-.card{
+.card-carta{
     border-radius: 10px!important;
 }
-.card-header{
+.card-header-carta{
     border-radius: 10px!important;
-    padding: 7%;
+    padding: 5%;
 }
 
-/* .card {
+.card-footer-carta{
+    padding: 0px!important;
+    background-color: #F7E5D7;
+    border-radius: 10px!important;
+}
+
+.card {
     border-radius: 50px;
 }
 
-.card-body {
+.card-body-login {
     background-color: #EA710A;
     border-radius: 50px;
     width: 300px;
@@ -225,7 +231,7 @@ td{
     border-radius: 30px;
     width: 330px;
     height: 300px;
-} */
+}
 
 /* ------------- */
 
@@ -312,6 +318,10 @@ color: #006B67;
 
 #btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover{
         background-color: #EAE7E4;
+}
+#btn-hecho{
+    width: 100%;
+    padding: 20px;
 }
 
 /* ------ */
