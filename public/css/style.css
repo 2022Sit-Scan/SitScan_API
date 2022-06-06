@@ -167,7 +167,7 @@ td{
 
 .bandeja { 
     position: absolute;
-    transform: translate(214%, 0);
+    transform: translate(250%, 95%);
     width: 320px;
     height: 200px;
 }
@@ -187,6 +187,7 @@ td{
 
 .card {
     border-radius: 50px;
+    transform: translate(-50%, 60%);
 }
 
 .card-body {
@@ -224,6 +225,7 @@ td{
 
 #btn-entrar{
     padding: 18% 40% 18% 40%;
+    margin-right: 20px;
 }
 
 #addProducto {
