@@ -186,7 +186,7 @@ class CategoriaSeeder extends Seeder
 
         DB::table('categorias')
         ->insert([
-            'categoriaPadre' => 1,
+            'categoriaPadre' => 5,
             'nombre' => 'Solo',
             'urlImagen' => 'categorias/solo',
             'created_at' => now(),
