@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pedido;
 
 use App\Models\Pedido;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use App\Models\Establecimiento;
 use Illuminate\Support\Facades\DB;
@@ -21,7 +22,11 @@ class PedidoProductoController extends Controller
         $administrador = Auth::user();
         if ($administrador->rol != "ADMINISTRADOR"){
            
-           $pedidoProductos = Pedido::with('productos','establecimiento')->where('establecimiento_id',2)->where('estado',0)->get();  
+           $pedidoProductos = Pedido::with('productos','establecimiento')
+           ->where('establecimiento_id',$administrador->establecimiento_id)
+           ->where('estado',0)
+           ->where('establecimiento_id',2)
+           ->get();  
           // $producto = $pedido->producto;
            $consulta = DB::table('establecimiento_producto')
            ->where('establecimiento_id',$administrador->establecimiento_id)
@@ -34,9 +39,10 @@ class PedidoProductoController extends Controller
             return view('pedidosproductos.index',compact('pedidoProductos'));
         }
         else{
-            $pedido = Pedido::all();
+            
+            $usuarios = Usuario::all();
 
-            return view('usuarios.index');
+            return view('usuarios.index', compact('usuarios'));
         }
        
 

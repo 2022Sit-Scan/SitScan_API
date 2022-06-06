@@ -88,7 +88,7 @@ class CategoriaSeeder extends Seeder
         DB::table('categorias')
         ->insert([
             'categoriaPadre' => 3,
-            'nombre' => 'Ginegra',
+            'nombre' => 'Ginebra',
             'urlImagen' => 'categorias/ginebra',
             'created_at' => now(),
             'updated_at' => now(),
