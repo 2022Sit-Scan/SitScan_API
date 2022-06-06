@@ -21,7 +21,7 @@ class PedidoProductoController extends Controller
         $administrador = Auth::user();
         if ($administrador->rol == "CAMARERO"){
            
-           $pedido = Pedido::all()->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',0);  
+           $pedido = Pedido::with('productos','establecimiento')->where('establecimiento_id',2)->where('estado',0)->get();  
           // $producto = $pedido->producto;
            $consulta = DB::table('establecimiento_producto')
            ->where('establecimiento_id',$administrador->establecimiento_id)
