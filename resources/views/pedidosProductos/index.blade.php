@@ -39,9 +39,6 @@
       </div>
     </div>
 </div>
-        <p>
-            <a href="{{ route('pedidosproductos.create') }}" class="btn btn-primary">Nueva pedidoProducto</a>
-        </p>
     </div>
 
     @if ($pedidoProductos != "")
@@ -49,7 +46,6 @@
         <thead class="thead">
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Establecimiento</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Nombre Producto</th>
             <th scope="col">Mesa</th>
@@ -61,29 +57,30 @@
         </tr>
         </thead>
         <tbody>
-            
+             
         @foreach($pedidoProductos as $pedidoProducto)
-            @foreach($pedidoProducto->productos as $pedid)
+        @foreach($pedidoProducto->productos as $pedido)
+        @foreach($pedido->establecimientos as $ped)
         <tr class="fila-tabla">
-            <th scope="row">{{ $pedidoProducto->id }}</th>
-            <td>{{ $pedidoProducto->establecimiento->nombre }}</td>
-            <td>{{ $pedidoProducto->cantidad }}</td>    
-            <td>{{ $pedid->nombre }}</td>
-            <td>{{ $pedidoProducto->mesa_id }}</td>
-            <td>{{ $pedid->pivot}}</td>
-            <td>{{ $pedidoProducto->created_at }}</td>
-            <td>{{ $pedidoProducto->estado }}</td>
+            <th scope="row">{{ $pedidoProducto->id}}</th>
+             <td>{{$pedidoProducto->cantidad }}</td> 
+              <td>{{ $pedido->nombre }}</td>
+              <td>{{$pedidoProducto->mesa->numero_mesa}}</td>
+                <td>{{$ped->pivot->precio}}</td>
+            <td>Hora</td>
+            <td>{{ $pedidoProducto->estado}}</td>
 
             <td> 
               
-                <form action="{{ url("pedidos/$pedidoProducto->id") }}" method="POST">
+                <form action="{{ url("pedidos/$pedidoProducto") }}" method="POST">
                     @csrf
                     @method('PUT')
                     <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
                 </form>                
             </td>
         </tr>
-            @endforeach
+         @endforeach
+        @endforeach
         @endforeach
         </tbody>
     </table>

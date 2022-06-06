@@ -48,8 +48,8 @@ class DatabaseSeeder extends Seeder
 
        
 
-        //   //crea 250 pedidos
-          $cantPedidos = 250;
+        //   //crea 30 pedidos
+          $cantPedidos = 30;
           factory(Pedido::class,$cantPedidos)->create();
 
           //   //crea 30 productos por carta
@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
            // //crea todos los productos por establecimiento (precio)
            $establecimientos = Establecimiento::all();
            
-        factory(Producto::class)->create()->each(
+        Producto::all()->each(
             function($product) use ($establecimientos){
                 $randomestablecimientos = $establecimientos->pluck('id');
                 $product->establecimientos()->attach($randomestablecimientos,['precio'=>mt_rand(2.5,10.5)]);
@@ -83,15 +83,14 @@ class DatabaseSeeder extends Seeder
         );
 
         //pedido producto
-        $pedido_producto =20;
-
-        for ($i=0; $i<$pedido_producto;$i++)
-        {
-            $producto = Producto::all()->random()->id;
-            $pedido = Pedido::all()->random();
-            $pedido->productos()->attach($producto);
-        }
-
+      
+        $productos=Producto::all();
+             Pedido::all()->each(
+            function($product) use ($productos){
+                $randomProductos = $productos->random(mt_rand(1,5))->pluck('id');
+                $product->productos()->attach($randomProductos);
+            }
+        );
          Schema::enableForeignKeyConstraints(); 
     }
 }

@@ -1,5 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +18,8 @@
 
 Route::group(['middleware' => ['auth']], function() {
 
-    Route::get('/', 'Usuario\UsuarioController@index');
+    
+    Route::get('/', 'Pedido\PedidoProductoController@index');
 
     /* definiendo rutas sueltas
     Route::get('/indice', 'usuarioController@index');
@@ -37,4 +43,4 @@ Route::group(['middleware' => ['auth']], function() {
 Auth::routes();
 
 //esta ruta esta protegida desde el __construct del controlador
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'Pedido\PedidoProductoController@index')->name('home');

@@ -1,15 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Pedido;
+namespace App\Http\Controllers\Carta;
 
-use App\Models\Pedido;
+use App\Models\Producto;
 use Illuminate\Http\Request;
-use App\Models\Establecimiento;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class PedidoProductoController extends Controller
+class CartaProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,23 +16,7 @@ class PedidoProductoController extends Controller
      */
     public function index()
     {
-        $administrador = Auth::user();
-        if ($administrador->rol == "CAMARERO"){
-           
-           $pedido = Pedido::all()->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',0);  
-          // $producto = $pedido->producto;
-           $consulta = DB::table('establecimiento_producto')
-           ->where('establecimiento_id',$administrador->establecimiento_id)
-           ->get();
-           dd($consulta);
-
-            // $pedido = Pedido::with('productos.establecimientos')->wherehas('productos')->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',0)->get(); 
-            // $pedidoFiltrado= $pedido->pluck('pedidos');
-
-            return view('pedidosproductos.index',compact('pedidoProductos','establecimientoProductos'));
-        }
-       
-
+        //
     }
 
     /**
@@ -87,9 +69,9 @@ class PedidoProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pedido $pedido)
+    public function update(Request $request, $id)
     {
-       //
+        //
     }
 
     /**

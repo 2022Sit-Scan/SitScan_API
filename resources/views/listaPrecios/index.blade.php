@@ -7,7 +7,7 @@
 <div class="row no-gutters">
   <div class="col-12 col-md-12 col-lg-8"><h1 id="HoraActual"></h1></div>
   <div class="col-6 col-md-6 col-lg-2">
-  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Editar" height="12" width="15">CERRAR SESION</a>
+  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR SESION</a>
   
   <!-- Modal -->
 <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -16,16 +16,16 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
           <button type="button" id="btn_cerrar" class="close" data-dismiss="modal" aria-label="Close">
-          <img src="imagenes/imagenes/close.png" alt="Editar" height="26" width="26">
+          <img src="imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
           </button>
         </div>
         <div class="modal-body">
           ¿Desea cerrar sesión?
         </div>
         <div class="modal-footer">
-          <button type="button" id="btn-aceptar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
+          <button type="button" id="btn-cancelar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
 
-          <button type="button" id="btn-cancelar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6">
+          <button type="button" id="btn-aceptar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6">
             <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
             onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -44,9 +44,9 @@
 </div>
   </div>
   <div class="col-6 col-md-6 col-lg-2">
-  <p>
-    <a href="{{ route('listaprecios.create') }}" class="btn btn-primary" id="addProducto"> <img src="imagenes/imagenes/icon_add.png" alt="Editar" height="15" width="15"> AÑADIR PRODUCTO </a>
-  </p>
+    <p>
+      <a href="{{ route('listaprecios.create') }}" class="btn btn-primary" id="addProducto"> <img src="imagenes/imagenes/icon_add.png" alt="Editar" height="15" width="15"> AÑADIR PRODUCTO </a>
+    </p>
   </div>
 </div>
 
@@ -55,18 +55,15 @@
   <h1 class="pb-1">@yield('title')</h1>
   </div>
   <div class="col-12 col-lg-4 ">
-  <nav class="navbar navbar-light">
-  <form class="form-inline">
-  <div class="row ">
-  <div class="col-6 col-lg-6">
-    <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
-  </div>
-  <div class="col-6 col-lg-6">
-    <button class="btn btn-buscar" type="submit"><img id="img_lupa" src="imagenes/imagenes/icon_lupa.png" alt="Editar" height="25" width="25"></button>
-  </div>
-  </div>
-  </form>
-</nav>
+     
+       <div class="row ">
+        <div class="col-9 col-lg-9">
+          <input class="form-control buscador" type="search" placeholder="Buscar" aria-label="Search">
+        </div>
+        <div class="col-3 col-lg-3">
+          <button class="btn btn-buscar" type="submit"><img id="img_lupa" src="imagenes/imagenes/icon_lupa.png" alt="Editar" height="25" width="25"></button>
+        </div>
+        </div>
   </div>
 </div>
 
@@ -81,6 +78,7 @@
         </tr>
         </thead>
         <tbody>
+          
            {{--  {{dd($establecimientoProductos)}}  --}}
         @foreach($establecimientoProductos as $establecimientoProducto)
         @foreach($establecimientoProducto->productos as $establec)
@@ -243,7 +241,7 @@
         </tbody>
     </table>
     @else
-        <p>No hay establecimientoProductos registrados.</p>
+        <p>No hay establecimiento Productos registrados.</p>
     @endif
 @endsection
 

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Establecimiento;
 
 
+use App\Models\Carta;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 use App\Models\Establecimiento;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,9 +20,9 @@ class EstablecimientoProductoController extends Controller
      */
     public function index()
     {
-       
+
         $administrador = Auth::user();
-        if ($administrador->rol == "GERENTE"){
+        if ($administrador->rol != "ADMINISTRADOR"){
             $establecimientoProductos = Establecimiento::all()->load('productos')
             ->where('id',$administrador->establecimiento_id); 
             //  dd($establecimientoProductos);
@@ -43,7 +45,14 @@ class EstablecimientoProductoController extends Controller
      */
     public function create()
     {
-        //
+        $administrador = Auth::user();
+        $productos= DB::table('productos')
+            ->join('carta_producto','productos.id','=','carta_producto.producto_id') 
+        ->get(); 
+        $establecimientoProductos= $productos->where('carta_id','!=',$administrador->establecimiento_id);
+        
+        dd($establecimientoProductos);
+        return view('listaprecios.create',compact('$establecimientoProductos'));
     }
 
     /**
@@ -52,9 +61,22 @@ class EstablecimientoProductoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,Carta $carta, Establecimiento $establecimiento)
     {
-        //
+        $rules = [
+            'establecimiento_id' => '',
+            'producto_id' => 'required',
+            'precio' => 'required',
+           
+        ];
+        $messages = [
+            'required' => 'El campo :attribute es obligatorio.',
+
+        ];
+        $validatedData = $request->validate($rules, $messages);
+        $carta->productos()->syncWithoutDetaching($validatedData);
+       
+        return redirect()->route('listaPrecios.index');
     }
 
     /**
@@ -76,7 +98,7 @@ class EstablecimientoProductoController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('listaPrecios.edit');
     }
 
     /**
@@ -99,6 +121,7 @@ class EstablecimientoProductoController extends Controller
      */
     public function destroy($id)
     {
-        //
+       // $id->delete();   
+        return redirect()->route('listaPrecios.index');
     }
 }
