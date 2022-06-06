@@ -19,19 +19,24 @@ class PedidoProductoController extends Controller
     public function index()
     {
         $administrador = Auth::user();
-        if ($administrador->rol == "CAMARERO"){
+        if ($administrador->rol != "ADMINISTRADOR"){
            
-           $pedido = Pedido::all()->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',0);  
+           $pedidoProductos = Pedido::with('productos','establecimiento')->where('establecimiento_id',2)->where('estado',0)->get();  
           // $producto = $pedido->producto;
            $consulta = DB::table('establecimiento_producto')
            ->where('establecimiento_id',$administrador->establecimiento_id)
            ->get();
-           dd($consulta);
+          // dd($pedidoProductos);
 
             // $pedido = Pedido::with('productos.establecimientos')->wherehas('productos')->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',0)->get(); 
             // $pedidoFiltrado= $pedido->pluck('pedidos');
 
-            return view('pedidosproductos.index',compact('pedidoProductos','establecimientoProductos'));
+            return view('pedidosproductos.index',compact('pedidoProductos'));
+        }
+        else{
+            $pedido = Pedido::all();
+
+            return view('usuarios.index');
         }
        
 
