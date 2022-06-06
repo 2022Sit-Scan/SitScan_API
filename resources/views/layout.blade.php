@@ -53,20 +53,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
                 </li>
-                @elseif (Auth::user()->rol == 'GERENTE')
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/listaprecios') }}">Lista de Precios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/#') }}">Añadir Producto</a>    
-                </li>
-                @elseif ( Auth::user()->rol == 'CAMARERO')
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
-                </li>
-                
-                
+
                 @endif
             </ul>
         </div>

@@ -70,7 +70,7 @@
             <th scope="row">{{ $usuario->id }}</th>
             <td>{{ $usuario->email }}</td>
             <td>@if($usuario->establecimiento_id != 0){{ $usuario->establecimiento->nombre }}@endif</td>
-            <td>{{ $usuario->password }}</td> 
+            <td>***** </td> 
             <td>{{ $usuario->rol }}</td>
             <td>
                 <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>

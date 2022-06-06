@@ -39,9 +39,6 @@
       </div>
     </div>
 </div>
-        <p>
-            <a href="{{ route('pedidosproductos.create') }}" class="btn btn-primary">Nueva pedidoProducto</a>
-        </p>
     </div>
 
     @if ($pedidoProductos != "")

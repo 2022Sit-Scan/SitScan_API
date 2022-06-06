@@ -63,8 +63,7 @@
         <div class="col-3 col-lg-3">
           <button class="btn btn-buscar" type="submit"><img id="img_lupa" src="imagenes/imagenes/icon_lupa.png" alt="Editar" height="25" width="25"></button>
         </div>
-  
-</div>
+        </div>
   </div>
 </div>
 
