@@ -105,7 +105,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
 
 <script>
-const background = document.getElementsByClassName("card-header card-header-carta background");
+var background = document.getElementsByClassName("fondo");
 
 const getRandomNumber = (limit) => {
   return Math.floor(Math.random() * limit);
@@ -120,7 +120,7 @@ const getRandomColor = () => {
 };
 
 const setBackgroundColor = () => {
-  const randomColor = getRandomColor();
+  var randomColor = getRandomColor();
   background.style.backgroundColor = randomColor;
 };
 

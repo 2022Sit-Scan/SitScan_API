@@ -328,7 +328,7 @@ color: #006B67;
     }
 
 #btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover{
-        background-color: #EAE7E4;
+        background-color: #cfcecc;
 }
 .btn-hecho{
     background-color: #006B67;

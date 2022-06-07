@@ -17,7 +17,7 @@
 <div class="row">
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card card-carta">
-      <div class="card-header card-header-carta background">
+      <div class="card-header card-header-carta fondo">
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-4">
@@ -58,7 +58,7 @@
   </div>
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card card-carta">
-      <div class="card-header card-header-carta background">
+      <div class="card-header card-header-carta id" setBackground();>
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-4">
@@ -99,7 +99,7 @@
   </div>
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card card-carta">
-      <div class="card-header card-header-carta background">
+      <div class="card-header card-header-carta fondo">
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-4">
@@ -227,7 +227,7 @@
         <div class="modal-footer">
           <button type="button" id="btn-cancelar-cerrarSesion-alergenos" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
 
-          <button type="button" class="btn btn-primary-logout col-md-6">
+          <button type="button" id="btn-aceptar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6">
             <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
               {{ __('CERRAR SESIÓN') }}
