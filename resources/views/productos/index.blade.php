@@ -57,6 +57,7 @@
         <th scope="col">ID</th>
         <th scope="col">NOMBRE PRODUCTO</th>
         <th scope="col">CATEGORÍA</th>
+        <th scope="col">PRECIO</th>
         <th scope="col">URL</th>
         <th scope="col">IMAGEN</th>
         <th scope="col">ACCIONES</th>
@@ -67,6 +68,7 @@
     <tr class="fila-tabla">
         <th scope="row">{{ $producto->id }}</th>
         <td>{{ $producto->nombre }}</td>
+        <td>{{ $producto->precio }} €</td>
         <td>{{ $producto->categoria->nombre }}</td>
         <td>{{ $producto->urlImagen }}</td>
         <td><img src="..{{$producto->urlImagen}}"/></td>

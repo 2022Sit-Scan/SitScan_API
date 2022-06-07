@@ -41,7 +41,7 @@
 </div>
     </div>
 
-    @if ($pedidoProductos != "")
+    @if ($pedidoNO != "")
     <table class="table">
         <thead class="thead">
         <tr>
@@ -57,29 +57,29 @@
         </tr>
         </thead>
         <tbody>
-             
-        @foreach($pedidoProductos as $pedidoProducto)
-        @foreach($pedidoProducto->productos as $pedido)
-        @foreach($pedido->establecimientos as $ped)
-        <tr class="fila-tabla">
-            <th scope="row">{{ $pedidoProducto->id}}</th>
-             <td>{{$pedidoProducto->cantidad }}</td> 
-              <td>{{ $pedido->nombre }}</td>
-              <td>{{$pedidoProducto->mesa->numero_mesa}}</td>
-                <td>{{$ped->pivot->precio}}</td>
-            <td>Hora</td>
-            <td>{{ $pedidoProducto->estado}}</td>
+           
+        @foreach($pedidoNO as $pedidoN)
+        
+        @foreach($pedidoN as $product)
+     
+         <tr class="fila-tabla">
+            <th scope="row">{{ $product->id}}</th>
+             <td>{{$product->cantidad }}</td> 
+              <td>{{ $product->productos}}</td>
+              <td>{{$product->mesa->numero_mesa}}</td>
+                <td>{{$product->precio}}</td>
+            <td>$product->created_at</td>
+            <td>{{ $product->estado}}</td>
 
             <td> 
               
-                <form action="{{ url("pedidos/$pedidoProducto") }}" method="POST">
+                <form action="{{ url("pedidos/$product") }}" method="POST">
                     @csrf
                     @method('PUT')
                     <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
                 </form>                
             </td>
         </tr>
-         @endforeach
         @endforeach
         @endforeach
         </tbody>

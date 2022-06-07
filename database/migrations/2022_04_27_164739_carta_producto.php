@@ -17,6 +17,7 @@ class CartaProducto extends Migration
             $table->increments('id');
             $table->integer('carta_id')->unsigned();
             $table->integer('producto_id')->unsigned();
+            $table->float('precio')->nullable();
             $table->timestamps();
             $table->foreign('carta_id')
                     ->references('id')

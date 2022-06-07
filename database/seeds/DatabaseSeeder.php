@@ -30,7 +30,6 @@ class DatabaseSeeder extends Seeder
         Pedido::truncate();
         Producto::truncate();
         Usuario::truncate();
-        DB::table('establecimiento_producto')->truncate();
         DB::table('pedido_producto')->truncate();
         DB::table('carta_producto')->truncate();
         DB::table('alergeno_producto')->truncate();
@@ -52,14 +51,7 @@ class DatabaseSeeder extends Seeder
           $cantPedidos = 30;
           factory(Pedido::class,$cantPedidos)->create();
 
-          //   //crea 30 productos por carta
-          $productos_carta =30;
-          for ($i=0; $i<$productos_carta;$i++)
-          {
-              $producto = Producto::all()->random();
-              $carta = Carta::all()->random()->id;
-              $producto->cartas()->attach($carta);
-          }
+        
           
             // //crea 5 alergenos por producto
 
@@ -69,16 +61,16 @@ class DatabaseSeeder extends Seeder
         {
             $producto = Producto::all()->random()->id;
             $alergeno = Alergeno::all()->random();
-            $alergeno->productos()->attach($producto);
+            $alergeno->productos()->attach($producto); 
         }
 
-           // //crea todos los productos por establecimiento (precio)
-           $establecimientos = Establecimiento::all();
+           // //crea todos los productos por carta (precio)
+           $cartas = Carta::all();
            
         Producto::all()->each(
-            function($product) use ($establecimientos){
-                $randomestablecimientos = $establecimientos->pluck('id');
-                $product->establecimientos()->attach($randomestablecimientos,['precio'=>mt_rand(2.5,10.5)]);
+            function($product) use ($cartas){
+                $randomestablecimientos = $cartas->pluck('id');
+                $product->cartas()->attach($randomestablecimientos,['precio'=>mt_rand(2.5,10.5)]);
             }
         );
 
@@ -88,7 +80,7 @@ class DatabaseSeeder extends Seeder
              Pedido::all()->each(
             function($product) use ($productos){
                 $randomProductos = $productos->random(mt_rand(1,5))->pluck('id');
-                $product->productos()->attach($randomProductos);
+                $product->productos()->attach($randomProductos,['cantidad'=>mt_rand(1,5)]);
             }
         );
          Schema::enableForeignKeyConstraints(); 

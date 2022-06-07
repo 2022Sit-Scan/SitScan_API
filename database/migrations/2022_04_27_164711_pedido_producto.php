@@ -17,7 +17,7 @@ class PedidoProducto extends Migration
             $table->increments('id');
             $table->integer('pedido_id')->unsigned();
             $table->integer('producto_id')->unsigned();
-            
+            $table->integer('cantidad');
             $table->timestamps();
             $table->foreign('pedido_id')
                     ->references('id')

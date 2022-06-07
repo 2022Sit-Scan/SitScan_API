@@ -27,7 +27,5 @@ class Establecimiento extends Model
     public function carta(){
         return $this->hasOne(Carta::class)->withTimestamps();
     }
-    public function productos(){
-        return $this->belongsToMany(Producto::class)->withPivot('precio');
-    }
+   
 }

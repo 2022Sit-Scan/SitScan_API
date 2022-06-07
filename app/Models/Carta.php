@@ -15,6 +15,6 @@ class Carta extends Model
         return $this->belongsTo(Establecimiento::class);
     }
     public function productos(){
-        return $this->belongsToMany(Producto::class)->withTimestamps();
+        return $this->belongsToMany(Producto::class)->withTimestamps()->withPivot('precio');
     }
 }

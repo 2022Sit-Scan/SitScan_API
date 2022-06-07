@@ -16,7 +16,6 @@ class CreatePedidosTable extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('establecimiento_id')->unsigned();
-            $table->integer('cantidad');
             $table->integer('mesa_id')->unsigned();
             $table->boolean('estado');
             $table->string('nombreCliente')->nullable();

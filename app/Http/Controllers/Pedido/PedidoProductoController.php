@@ -22,21 +22,20 @@ class PedidoProductoController extends Controller
         $administrador = Auth::user();
         if ($administrador->rol != "ADMINISTRADOR"){
            
-           $pedidoProductos = Pedido::with('productos','establecimiento')
+           $pedidoNO = Pedido::with('productos')
            ->where('establecimiento_id',$administrador->establecimiento_id)
            ->where('estado',0)
-           ->where('establecimiento_id',2)
-           ->get();  
-          // $producto = $pedido->producto;
-           $consulta = DB::table('establecimiento_producto')
+           ->get()
+           ->groupby('id');  
+
+           $pedidoSI = Pedido::with('productos')
            ->where('establecimiento_id',$administrador->establecimiento_id)
-           ->get();
-          // dd($pedidoProductos);
-
-            // $pedido = Pedido::with('productos.establecimientos')->wherehas('productos')->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',0)->get(); 
-            // $pedidoFiltrado= $pedido->pluck('pedidos');
-
-            return view('pedidosproductos.index',compact('pedidoProductos'));
+           ->where('estado',1)
+           ->get()
+           ->groupby('id');  
+          
+      
+            return view('pedidosproductos.index',compact('pedidoNO'));
         }
         else{
             
