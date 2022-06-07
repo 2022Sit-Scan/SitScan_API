@@ -4,7 +4,9 @@
     font-family: 'Karla-Bold';
     src: url('../tipografia/Karla-Bold.ttf');
     }
-
+.fondo{
+    background-color: #971515;
+}
 html{
     position: relative;
     min-height: 100%;

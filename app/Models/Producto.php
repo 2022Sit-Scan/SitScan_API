@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 class Producto extends Model
 {
     protected $fillable = [
-       'nombre', 'urlImagen', 'descripcion','categoria_id',
+       'nombre', 'urlImagen', 'descripcion','categoria_id','cantidad'
     ];
 
     public function alergenos(){
@@ -25,6 +25,6 @@ class Producto extends Model
         return $this->belongsToMany(Carta::class)->withTimestamps()->withPivot('precio');
     }
     public function pedidos(){
-        return $this->belongsToMany(Pedido::class)->withTimestamps()->withPivot('cantidad');
+        return $this->belongsToMany(Pedido::class)->withTimestamps();
     }
 }

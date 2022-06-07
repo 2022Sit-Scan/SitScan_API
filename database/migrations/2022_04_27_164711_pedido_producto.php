@@ -21,10 +21,10 @@ class PedidoProducto extends Migration
             $table->timestamps();
             $table->foreign('pedido_id')
                     ->references('id')
-                    ->on('pedidos')->onDelete('cascade');
+                    ->on('pedidos');
             $table->foreign('producto_id')
                     ->references('id')
-                    ->on('productos')->onDelete('cascade');
+                    ->on('productos');
            
         });
     }

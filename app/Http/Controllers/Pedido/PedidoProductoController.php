@@ -21,21 +21,19 @@ class PedidoProductoController extends Controller
     {
         $administrador = Auth::user();
         if ($administrador->rol != "ADMINISTRADOR"){
+            
            
-           $pedidoNO = Pedido::with('productos')
+           $pedidoNO = Pedido::all()->load('productos')
            ->where('establecimiento_id',$administrador->establecimiento_id)
-           ->where('estado',0)
-           ->get()
-           ->groupby('id');  
+           ->where('estado',0);
+            
 
-           $pedidoSI = Pedido::with('productos')
+           $pedidoSI = Pedido::all()->load('productos')
            ->where('establecimiento_id',$administrador->establecimiento_id)
-           ->where('estado',1)
-           ->get()
-           ->groupby('id');  
+           ->where('estado',1);  
           
       
-            return view('pedidosproductos.index',compact('pedidoNO'));
+            return view('pedidosproductos.index',compact('pedidoNO','pedidoSI'));
         }
         else{
             
