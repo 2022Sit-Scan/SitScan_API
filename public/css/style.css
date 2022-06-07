@@ -40,7 +40,6 @@ body {
 }
 
 
-
 /* H1, H2, H3, H4, H5, H6 */
 
 h1{
@@ -199,14 +198,17 @@ td{
 .card-header-carta{
     border-radius: 10px!important;
     padding: 5%;
+    color: white;
 }
 
 .card-footer-carta{
     padding: 0px!important;
-    background-color: #F7E5D7;
     border-radius: 10px!important;
 }
 
+.card-body{
+    background-color: #F7E5D7;
+}
 .card {
     border-radius: 50px;
     transform: translate(-50%, 60%);
@@ -226,7 +228,7 @@ td{
     height: 200px;
 }
 
-.card-body-pedido {
+.card-body-carta {
     background-color: #F7E5D7;
     border-radius: 30px;
     width: 330px;
@@ -261,6 +263,15 @@ td{
 #addProducto:hover {
     background-color: #006B67;
     color: #FFFFFF;
+}
+
+#btn_completado{
+    background-color: #EA710A;
+    color: white;
+}
+
+#btn_completado:hover{
+    background-color: #cc650a;
 }
 
 .btn-primary {
@@ -323,11 +334,22 @@ color: #006B67;
     }
 
 #btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover{
-        background-color: #EAE7E4;
+        background-color: #cfcecc;
 }
-#btn-hecho{
+.btn-hecho{
+    background-color: #006B67;
+    color: white;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
+}
+
+.btn-hecho:hover{
+    background-color: #004F57;
+    color: white;
+}
+
+.btn-hecho img{
+    padding-right:5px ;
 }
 
 /* ------ */
