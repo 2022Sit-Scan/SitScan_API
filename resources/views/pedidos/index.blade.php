@@ -17,195 +17,25 @@
 </div>
 
     @if ($pedidos != "")
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card card-carta">
-                <div class="card-header card-header-carta">
-                    <div class="container">
-                    <div class="row justify-content-between">
-                          <div class="col-4">
-                            MESA
-                          </div>
-                          <div class="col-4">
-                            HORA DEL PEDIDO
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                <table class="table">
-                     <tbody>
-                       <tr>
-                         <th >1</th>
-                         <td>Producto 1</td>
-                         <td>Cantidad</td>
-                         <td>Precio</td>
-                       </tr>
-                       <tr>
-                         <th >2</th>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
-                       </tr>
-                       <tr>
-                         <th >3</th>
-                         <td>Larry</td>
-                         <td>the Bird</td>
-                         <td>@twitter</td>
-                       </tr>
-                     </tbody>
-                 </table>
-                 <p class="text-right">Precio Total</p>
-                </div>
-                <div class="card-footer card-footer-carta">
-                    <a id= "btn-hecho" href="{{ route('pedidos.create') }}" class="btn btn-primary">HECHO</a>
-                </div>
-            </div>
-        </div><div class="col-12 col-md-6 col-lg-4">
-            <div class="card card-carta">
-                <div class="card-header card-header-carta">
-                    <div class="container">
-                    <div class="row justify-content-between">
-                          <div class="col-4">
-                            MESA
-                          </div>
-                          <div class="col-4">
-                            HORA DEL PEDIDO
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                <table class="table">
-                     <tbody>
-                       <tr>
-                         <th scope="row">1</th>
-                         <td>Producto 1</td>
-                         <td>Cantidad</td>
-                         <td>Precio</td>
-                       </tr>
-                       <tr>
-                         <th scope="row">2</th>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
-                       </tr>
-                       <tr>
-                         <th scope="row">3</th>
-                         <td>Larry</td>
-                         <td>the Bird</td>
-                         <td>@twitter</td>
-                       </tr>
-                     </tbody>
-                 </table>
-                 <p class="text-right">Precio Total</p>
-                </div>
-                <div class="card-footer card-footer-carta">
-                    <a id= "btn-hecho" href="{{ route('pedidos.create') }}" class="btn btn-primary">HECHO</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card card-carta">
-                <div class="card-header card-header-carta">
-                    <div class="container">
-                    <div class="row justify-content-between">
-                          <div class="col-4">
-                            MESA
-                          </div>
-                          <div class="col-4">
-                            HORA DEL PEDIDO
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                <table class="table">
-                     <tbody>
-                       <tr>
-                         <th scope="row">1</th>
-                         <td>Producto 1</td>
-                         <td>Cantidad</td>
-                         <td>Precio</td>
-                       </tr>
-                       <tr>
-                         <th scope="row">2</th>
-                         <td>Jacob</td>
-                         <td>Thornton</td>
-                         <td>@fat</td>
-                       </tr>
-                       <tr>
-                         <th scope="row">3</th>
-                         <td>Larry</td>
-                         <td>the Bird</td>
-                         <td>@twitter</td>
-                       </tr>
-                     </tbody>
-                 </table>
-                 <p class="text-right">Precio Total</p>
-                </div>
-                <div class="card-footer card-footer-carta">
-                    <a id= "btn-hecho" href="{{ route('pedidos.create') }}" class="btn btn-primary">HECHO</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 
     <table class="table">
         <thead class="thead">
-        
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">ESTABLECIMIENTO</th>  
+            <th scope="col">MESA</th>
+            <th scope="col">ESTADO</th>
+            <th scope="col">NOMBRE CLIENTE</th>
+
+        </tr>
         </thead>
         <tbody>
-
-            <!-- <div class="card-body-pedido">
-                <form method="POST" action="{{ route('login') }}">
-                    @csrf
-
-                    <div class="form-group-titulo-mesa row">
-                        <label class="label col-md-12 col-form-label">{{ __('MESA 1') }}</label>
-                    </div>
-
-                    <div class="form-group-titulo row">
-                        
-                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                    </div>
-
-                    <div class="form-group-titulo row">
-                        
-                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                    </div>
-
-                    <div class="form-group-titulo row">
-                        
-                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                    </div>
-
-                    <div class="form-group-titulo row">
-                        
-                        <label for="email" class="col-md-6 col-form-label text-md-right">{{ __('') }}</label>
-                    </div>
-
-                    <div class="form-group-hecho  row mb-0">
-                        <div class="col-md-6 offset-md-2">
-                            <button type="submit" class="btn btn-primary-mesa">
-                                {{ __('HECHO') }}
-                            </button>
-
-                            @if (Route::has('password.request'))
-                                
-                            @endif
-                        </div>
-                    </div>
-                </form>
-            </div> -->
             
         @foreach($pedidos as $pedido)
         <tr class="fila-tabla">
             <th scope="row">{{ $pedido->id }}</th>
             <td>{{ $pedido->establecimiento->nombre }}</td>
-            <td>{{ $pedido->cantidad }}</td>
             <td>{{ $pedido->mesa_id }}</td>
             <td>{{ $pedido->estado }}</td>
             <td>{{ $pedido->nombreCliente }}</td>
