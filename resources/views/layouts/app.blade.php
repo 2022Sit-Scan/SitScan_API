@@ -47,8 +47,8 @@
                 @endguest   
             </div>
         
-        <img src="/imagenes/imagenes/logo_sitandscan.png" class="logo" alt="Logo"/>
-        <img src="/imagenes/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa"/>
+        <img src="http://35.181.160.138/proyectos/SitScan_API/public/imagenes/logo_sitandscan.png" class="logo" alt="Logo"/>
+        <img src="http://35.181.160.138/proyectos/SitScan_API/public/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa"/>
         <main class="py-4 c">
             
             

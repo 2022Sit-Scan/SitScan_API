@@ -33,7 +33,7 @@ class PedidoProductoController extends Controller
            ->where('estado',1);  
           
       
-            return view('pedidosproductos.index',compact('pedidoNO','pedidoSI'));
+            return view('pedidosProductos.index',compact('pedidoNO','pedidoSI'));
         }
         else{
             

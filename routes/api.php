@@ -29,4 +29,5 @@ Route::apiResource('productos', 'Producto\ProductoController');
 Route::apiResource('categorias', 'Categoria\CategoriaController');
 Route::apiResource('establecimientos', 'Establecimiento\EstablecimientoController');
 Route::apiResource('pedidos', 'Pedido\PedidoController');
+Route::apiResource('cartaproducto', 'Carta\CartaProductoController');
 

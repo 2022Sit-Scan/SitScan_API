@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Carta;
 
+use App\Models\Carta;
 use App\Models\Producto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -16,7 +17,10 @@ class CartaProductoController extends Controller
      */
     public function index()
     {
-        //
+      $productos= Carta::with('productos')->whereHas('productos')->get();
+     
+      
+        return $this->showAll($productos);
     }
 
     /**
@@ -46,9 +50,10 @@ class CartaProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Carta $carta,$id)
     {
-        //
+        $productos= Carta::with('productos')->whereHas('productos')->find($id);
+        return $this->showOne($productos);
     }
 
     /**
