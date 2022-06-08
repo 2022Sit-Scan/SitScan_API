@@ -44,16 +44,26 @@ class PedidoController extends Controller
     {
       
         $pedido = new Pedido();
-        $ultimopedido= $pedido->orderBy('id', 'desc')->first();
         $pedido->establecimiento_id = $request->establecimiento_id;
         $pedido->mesa_id = $request->mesa_id;
         $pedido->estado = $request->estado;
         $pedido->nombreCliente = $request->nombreCliente;
         $pedido->save();
         $productos = $request->productos;
-            $pedido->productos()->syncWithoutDetaching($ultimopedido,$productos['producto_id'],$productos['cantidad']);
-        dd($pedido);
-        return $this->showOne($pedido,201);
+
+      
+            foreach ($productos as $producto){
+             $cantidad = $producto['cantidad'];
+             $productoID = $producto['producto_id'];
+             
+                $pedido->productos()->syncWithoutDetaching([$productoID=> ['cantidad'=>$cantidad]]);
+            }
+            
+           
+       
+         return $this->showOne($pedido,201);
+     
+        
     }
 
     /**
