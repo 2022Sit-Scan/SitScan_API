@@ -57,7 +57,7 @@
                                   MESA {{ $pedidoinfo->mesa->numero_mesa }}
                                 </div>
                                 <div class="col-4">
-                                  {{ $pedidoinfo->created_at }};
+                                  {{ $pedidoinfo->created_at }}
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                           {{ csrf_field() }}
                         <div class="card-footer card-footer-carta">
                             <button type="submit" class="btn btn-primary btn-hecho"><img
-                              src="imagenes/imagenes/icon_hecho.png" alt="Botón Hecho" height="12"
+                              src="./imagenes/imagenes/icon_hecho.png" alt="Botón Hecho" height="12"
                               width="20">HECHO</a></button>
                         </div>
                         </form>

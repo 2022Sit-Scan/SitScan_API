@@ -41,11 +41,11 @@
             <td>{{ $pedido->nombreCliente }}</td>
             <td>
                 <a href="{{ route('pedidos.show', $pedido) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
-                <a href="{{ route('pedidos.edit', $pedido) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
+                <a href="{{ route('pedidos.edit', $pedido) }}" class="btn btn-link"><img src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
                 <form action="{{ route('pedidos.destroy', $pedido) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
+                    <button  type="submit" class="btn btn-link"><img src="./imagenes/imagenes/icon_delete.svg" alt="Editar" height="26" width="26"></button>
                 </form>                
             </td>
         </tr>
@@ -53,7 +53,7 @@
         </tbody>
     </table>
     <div class="col align-self-end col-6 col-md-6 col-lg-2">
-  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR SESIÓN</a>
+  <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR SESIÓN</a>
 
     <!-- Modal -->
 <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -62,7 +62,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
           <button type="button" id="btn_cerrar" class="close" data-dismiss="modal" aria-label="Close">
-          <img src="imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
+          <img src="./imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
           </button>
         </div>
         <div class="modal-body">

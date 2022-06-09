@@ -45,7 +45,7 @@
   </div>
 <div class="col-6 col-md-6 col-lg-2">
         <p>
-            <a href="{{ route('alergenos.create') }}" class="btn btn-primary" id="addProducto"> <img src="imagenes/imagenes/icon_add.png" alt="Boton Crear Alérgeno" height="15" width="15">NUEVO ALÉRGENO
+            <a href="{{ route('alergenos.create') }}" class="btn btn-primary" id="addProducto"> <img src="./imagenes/imagenes/icon_add.png" alt="Boton Crear Alérgeno" height="15" width="15">NUEVO ALÉRGENO
         </a>
         </p>
     </div>
@@ -72,11 +72,11 @@
             <td>{{ $alergeno->urlImagen }}</td>
             <td><img src="..{{$alergeno->urlImagen}}"/></td>
             <td>
-                <a href="{{ route('alergenos.edit', $alergeno) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>
+                <a href="{{ route('alergenos.edit', $alergeno) }}" class="btn btn-link"><img src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>
                 <form action="{{ route('alergenos.destroy', $alergeno) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button  type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Botón Eliminar" height="26" width="26"></button>
+                    <button  type="submit" class="btn btn-link"><img src="./imagenes/imagenes/icon_delete.svg" alt="Botón Eliminar" height="26" width="26"></button>
                 </form>                
             </td>
         </tr>
