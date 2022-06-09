@@ -40,7 +40,6 @@
             <td>{{ $pedido->estado }}</td>
             <td>{{ $pedido->nombreCliente }}</td>
             <td>
-                <a href="{{ route('pedidos.show', $pedido) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
                 <a href="{{ route('pedidos.edit', $pedido) }}" class="btn btn-link"><img src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
                 <form action="{{ route('pedidos.destroy', $pedido) }}" method="POST">
                     @csrf

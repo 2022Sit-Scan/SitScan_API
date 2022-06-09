@@ -69,7 +69,6 @@
             <td>{{ $establecimiento->urlLogo }}</td>
             
             <td>
-                <a href="{{ route('establecimientos.show', $establecimiento) }}" class="btn btn-link"><span class="oi oi-eye"></span></a>
 
                 <a href="{{ route('establecimientos.edit', $establecimiento) }}" class="btn btn-link"><img src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>
 
