@@ -21,7 +21,7 @@
                         ¿Desea cerrar sesión?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
+                        <button type="button" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELA</button>
 
                         <button type="button" class="btn btn-primary-logout col-md-6">
                             <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true"
