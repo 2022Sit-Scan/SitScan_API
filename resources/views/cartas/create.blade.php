@@ -1,10 +1,10 @@
 @extends('layout')
 
-@section('title', "Crear Carta")
+@section('title', "CREAR CARTA")
 
 @section('content')
     <div>
-        <h4>Crear carta</h4>
+        <h4>CREAR CARTA</h4>
         <div>
 
             @if ($errors->any())
@@ -23,11 +23,11 @@
 
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre Carta" value="{{ old('nombre') }}">
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre de carta" value="{{ old('nombre') }}">
                 </div>
 
                 <div class="form-group">
-                    <label for="establecimiento_id">Establecimiento</label>
+                    <label for="establecimiento_id">Establecimiento:</label>
                     <select class="form-control" id="establecimiento_id" name="establecimiento_id">
                         <option selected disabled value='Establecimiento'>Establecimiento</option>
                          @foreach ($establecimientos as $establecimiento)
@@ -36,8 +36,8 @@
                     </select>
                   </div>
 
-                <button type="submit" class="btn btn-primary">Crear carta</button>
-                <a href="{{ route('cartas.index') }}" class="btn btn-link">Regresar al listado de cartas</a>
+                <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_add.png" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
+                <a href="{{ route('cartas.index') }}" class="btn btn-link"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Flecha" height="12" width="15">Regresar al listado de cartas</a>
             </form>
         </div>
     </div>

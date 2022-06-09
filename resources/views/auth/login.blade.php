@@ -38,8 +38,8 @@
                             </div>
                         </div>
 
-                        <div class="form-group-iniciar  row mb-0">
-                            <div class="btn-login text-center">
+                        <div class="form-group-iniciar row mb-0">
+                            <div class="btn-login text-center col align-self-center">
                                 <button id="btn-entrar" type="submit" class="btn btn-primary ">
                                     {{ __('ENTRAR') }}
                                 </button>
