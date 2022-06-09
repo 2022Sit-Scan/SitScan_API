@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,42 +22,43 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
-            <div class="container">
-                @guest
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::usuario()->name }}
-                            </a>
-                                
+        <div class="container">
+            @guest
+            @else
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::usuario()->name }}
+                </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
+                        {{ __('Logout') }}
+                    </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                           </div>
-                        </li>
-                @endguest   
-            </div>
-        
-        <img src="http://35.181.160.138/proyectos/SitScan_API/public/imagenes/logo_sitandscan.png" class="logo" alt="Logo"/>
-        <img src="http://35.181.160.138/proyectos/SitScan_API/public/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa"/>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </div>
+            </li>
+            @endguest
+        </div>
+
+        <img src="./imagenes/imagenes/logo_sitandscan.png" class="logo" alt="Logo" />
+        <img src="./imagenes/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa" />
         <main class="py-4 c">
-            
-            
-            
+
+
+
             @yield('content')
-            
+
         </main>
-        <img src="/imagenes/imagenes/bandeja_imagen.png" class="bandeja" alt="Bandeja"/>
+        <img src="/imagenes/imagenes/bandeja_imagen.png" class="bandeja" alt="Bandeja" />
     </div>
 </body>
+
 </html>
