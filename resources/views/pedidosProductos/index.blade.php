@@ -57,7 +57,7 @@
                                   MESA {{ $pedidoinfo->mesa->numero_mesa }}
                                 </div>
                                 <div class="col-4">
-                                  {{ $pedidoinfo->created_at }};
+                                  {{ $pedidoinfo->created_at }}
                                 </div>
                             </div>
                         </div>

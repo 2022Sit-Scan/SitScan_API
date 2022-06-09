@@ -4,7 +4,6 @@
 <div class="container cuadrado">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
                 <div class="card-body card-body-login">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -52,7 +51,6 @@
                         </div>
                     </form>
                 </div>
-            </div>
         </div>
     </div>
 </div>
