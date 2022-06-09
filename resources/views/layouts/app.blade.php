@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">log
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,16 +47,15 @@
                 @endguest   
             </div>
         
-        <img src="http://35.181.160.138/proyectos/SitScan_API/public/imagenes/logo_sitandscan.png" class="logo" alt="Logo"/>
-        <img src="http://35.181.160.138/proyectos/SitScan_API/public/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa"/>
-        <main class="py-4 c">
-            
-            
-            
-            @yield('content')
-            
-        </main>
-        <img src="/imagenes/imagenes/bandeja_imagen.png" class="bandeja" alt="Bandeja"/>
+            <img src="./imagenes/imagenes/logo_sitandscan.png" class="logo" alt="Logo"/>         
+            <img src="./imagenes/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa"/>
+
+            <main class="py-4 c">                                                    
+                @yield('content')                      
+            </main>         
+
+            <img src="/imagenes/imagenes/bandeja_imagen.png" class="bandeja" alt="Bandeja"/>     
+        </div>
     </div>
 </body>
 </html>
