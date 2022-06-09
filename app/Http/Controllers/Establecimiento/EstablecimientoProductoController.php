@@ -73,6 +73,7 @@ class EstablecimientoProductoController extends Controller
             'required' => 'El campo :attribute es obligatorio.',
 
         ];
+        
         $validatedData = $request->validate($rules, $messages);
         $carta->productos()->syncWithoutDetaching($validatedData);
        
