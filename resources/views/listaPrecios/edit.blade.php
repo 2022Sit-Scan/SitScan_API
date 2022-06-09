@@ -16,16 +16,12 @@
         </div>
     @endif
 
-    <form method="POST" action="{{ url("usuarios/{$usuario->id}") }}">
+    <form method="POST" action="{{ url("usuario/{$usuario->id}") }}">
         {{ method_field('PUT') }}
         {{ csrf_field() }}
 
         <label for="name">Nombre:</label>
         <input type="text" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name', $usuario->name) }}">
-        {{-- otra forma de comprobar los errores 
-            @error('name')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror--}}
         <br>
         <label for="email">Correo electrónico:</label>
         <input type="email" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email', $usuario->email) }}">

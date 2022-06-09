@@ -4,15 +4,14 @@
     font-family: 'Karla-Bold';
     src: url('../tipografia/Karla-Bold.ttf');
     }
-.fondo{
-    background-color: #971515;
-}
+
 html{
     position: relative;
     min-height: 100%;
 }
 
 body {
+    /* Margin bottom by footer height */
     font-family: 'Karla-Bold', sans-serif;
     margin-bottom: 60px;
     overflow-x: hidden;  
@@ -45,72 +44,14 @@ body {
 /* H1, H2, H3, H4, H5, H6 */
 
 h1{
-    font-family: 'Karla-Bold', sans-serif; 
-    color: #004F57;  
-}
-
-h2 {
-    margin: 50px 0;
+    font-family: 'Karla-Bold', sans-serif;   
 }
 
 h6 {
     color: #F7E5D7;
 }
 
-#HoraActual{
-    color: black;
-}
-
 /* ----------------------------- */
-
-/* Drag and drop */
-
-.choose-file-button {
-    flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    padding: 8px 15px;
-    margin-right: 10px;
-    font-size: 12px;
-  }
-  
-  .file-message {
-    font-size: small;
-    font-weight: 300;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .file-input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    opacity: 0;
-    
-  }
-
-  .file-drop-area {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 450px;
-    max-width: 100%;
-    padding: 25px;
-    border: 1px dashed rgba(255, 255, 255, 0.4);
-    border-radius: 3px;
-    transition: 0.2s;
-   
-  }
-  
-  .mt-100{
-      margin-top:100px;
-  }
 
 /* TABLA */
 
@@ -142,10 +83,8 @@ tr th{
 }
 td{
     text-align: center;
+    vertical-align: baseline!important;
     font-size: 20px;
-}
-.table td, .table th {
-    vertical-align: inherit!important;
 }
 
 /* ------- */
@@ -176,7 +115,7 @@ td{
 
 .bandeja { 
     position: absolute;
-    transform: translate(250%, 95%);
+    transform: translate(214%, 0);
     width: 320px;
     height: 200px;
 }
@@ -194,29 +133,11 @@ td{
 
 /* CARD */
 
-.card-carta{
-    border-radius: 10px!important;
-}
-.card-header-carta{
-    border-radius: 10px!important;
-    padding: 5%;
-    color: white;
-}
-
-.card-footer-carta{
-    padding: 0px!important;
-    border-radius: 10px!important;
-}
-
-.card-body{
-    background-color: #F7E5D7;
-}
 .card {
     border-radius: 50px;
-    transform: translate(-50%, 60%);
 }
 
-.card-body-login {
+.card-body {
     background-color: #EA710A;
     border-radius: 50px;
     width: 300px;
@@ -230,7 +151,7 @@ td{
     height: 200px;
 }
 
-.card-body-carta {
+.card-body-pedido {
     background-color: #F7E5D7;
     border-radius: 30px;
     width: 330px;
@@ -251,7 +172,6 @@ td{
 
 #btn-entrar{
     padding: 18% 40% 18% 40%;
-    margin-right: 20px;
 }
 
 #addProducto {
@@ -265,15 +185,6 @@ td{
 #addProducto:hover {
     background-color: #006B67;
     color: #FFFFFF;
-}
-
-#btn_completado{
-    background-color: #EA710A;
-    color: white;
-}
-
-#btn_completado:hover{
-    background-color: #cc650a;
 }
 
 .btn-primary {
@@ -290,13 +201,37 @@ td{
     border-color: none;
     
 }
-#btn_cerrar{
-    color: white;
+
+.modal-content {
+    border-radius: 40px;
+    background-color: #004F57;
+    padding: 2%;
 }
 
-.btn-primary-modificar {
-    margin-left: 25%;
-    margin-top: 5%;
+.modal-header {
+    color: #FFFFFF;
+    border-bottom: 0px !important;
+    text-align: center;
+}
+
+.modal-body {
+    color: #F8D097;
+}
+
+.modal-footer {
+    color: #F8D097;
+    border-top: 0px !important;
+    text-align: center;
+}
+
+.close {
+    background-color: #004F57;
+    margin-right: 0px;
+}
+
+#btn_cerrar{
+    color: white;
+
 }
 
 .btn-primary-mesa {
@@ -305,53 +240,88 @@ td{
     color: #FFFFFF;
 }
 
+.file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    max-width: 100%;
+    padding: 25px;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    transition: 0.2s;
+   
+  }
+  
+  .choose-file-button {
+    flex-shrink: 0;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  .img-upload {
+      height: 100px;
+      width: 100px;
+  }
+  
+  .file-message {
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    
+  }
+  
+  .mt-100{
+      margin-top:100px;
+  }
+
 .btn-buscar{
     background-color: #006B67;
     padding-left: 20px;
-    padding-right: 20px;  
-}
-
-.buscador{
-    margin-left: 97px;
-    padding:7px;
+    padding-right: 20px;
+    margin-left: -15px!important;
 }
 
 .btn-buscar:hover{
     background-color: #035c59;
 }
 
-#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios , #btn-aceptar-cerrarSesion-usuarios, #btn-aceptar-cerrarSesion-alergenos,#btn-aceptar-cerrarSesion-cartas{
+/* .btn-primary-logout {
+    background-color: #F8D097;
+    color: #FFFFFF;
+} */
+
+#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios{
 background-color: #F8D097;
 color: #006B67;
 }
 
-#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover, #btn-aceptar-cerrarSesion-usuarios:hover,#btn-aceptar-cerrarSesion-alergenos:hover,#btn-aceptar-cerrarSesion-cartas:hover{
+#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover{
     background-color: #F3C47F;
     
     }
 
-#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios, #btn-cancelar-cerrarSesion-usuarios, #btn-cancelar-cerrarSesion-alergenos,#btn-cancelar-cerrarSesion-cartas{
+#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios{
     background-color: #FFF8F2;
     color: #006B67;
     }
 
-#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover{
-        background-color: #cfcecc;
-}
-.btn-hecho{
-    background-color: #006B67;
-    color: white;
-    width: 100%;
-    padding: 15px;
-}
-
-.btn-hecho:hover{
-    background-color: #004F57;
-    color: white;
-}
-
-.btn-hecho img{
-    padding-right:5px ;
+#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover {
+        background-color: #EAE7E4;
 }
 
 /* ------ */
