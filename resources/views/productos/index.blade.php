@@ -49,8 +49,7 @@
       <a href="{{ route('productos.create') }}" class="btn btn-primary" id="addProducto"><img src="./imagenes/imagenes/icon_add.png" alt="Botón Crear Producto" height="15" width="15">NUEVO PRODUCTO</a>
     </p>
   </div>
-</div>
-                
+</div>                
 <table class="table">
     <thead class="thead">
     <tr>
