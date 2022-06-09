@@ -9,7 +9,7 @@
     <h1 id="HoraActual"></h1>
   </div>
   <div class="col-6 col-md-6 col-lg-2">
-    <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR SESION</a>
+    <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR SESION</a>
 
     <!-- Modal -->
     <div class="modal fade" id="ventana1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -18,7 +18,7 @@
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
             <button type="button" id="btn_cerrar" class="close" data-dismiss="modal" aria-label="Close">
-              <img src="imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
+              <img src="./imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
             </button>
           </div>
           <div class="modal-body">
@@ -46,7 +46,7 @@
   </div>
   <div class="col-6 col-md-6 col-lg-2">
     <p>
-      <a href="{{ route('listaprecios.create') }}" class="btn btn-primary" id="addProducto"> <img src="imagenes/imagenes/icon_add.png" alt="Botón Buscar" height="15" width="15"> AÑADIR PRODUCTO </a>
+      <a href="{{ route('listaprecios.create') }}" class="btn btn-primary" id="addProducto"> <img src="./imagenes/imagenes/icon_add.png" alt="Botón Buscar" height="15" width="15"> AÑADIR PRODUCTO </a>
     </p>
   </div>
 </div>
@@ -62,7 +62,7 @@
         <input class="form-control buscador" type="search" placeholder="Buscar" aria-label="Search">
       </div>
       <div class="col-3 col-lg-3">
-        <button class="btn btn-buscar" type="submit"><img id="img_lupa" src="imagenes/imagenes/icon_lupa.png" alt="Botón Buscar" height="25" width="25"></button>
+        <button class="btn btn-buscar" type="submit"><img id="img_lupa" src="./imagenes/imagenes/icon_lupa.png" alt="Botón Buscar" height="25" width="25"></button>
       </div>
 
     </div>
@@ -90,7 +90,7 @@
       <td>{{ $establec->nombre }}</td>
       <td>{{ $establec->pivot->precio }} €</td>
       <td>
-        <a href="#ventana2" class="btn btn-link" data-toggle="modal"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="25" width="25"></a>
+        <a href="#ventana2" class="btn btn-link" data-toggle="modal"><img src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="25" width="25"></a>
         <div class="modal fade" id="ventana2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -123,7 +123,7 @@
         <form action="{{ route('listaprecios.destroy', $establecimientoProducto) }}" method="POST">
           @csrf
           @method('DELETE')
-          <button type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg" alt="Editar" height="20" width="20"></button>
+          <button type="submit" class="btn btn-link"><img src="./imagenes/imagenes/icon_delete.svg" alt="Editar" height="20" width="20"></button>
         </form>
       </td>
     </tr>
