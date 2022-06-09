@@ -42,7 +42,23 @@ class PedidoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      
+        $pedido = new Pedido();
+        $pedido->establecimiento_id = $request->establecimiento_id;
+        $pedido->mesa_id = $request->mesa_id;
+        $pedido->estado = $request->estado;
+        $pedido->nombreCliente = $request->nombreCliente;
+        $pedido->save();
+        $productos = $request->productos;
+
+      
+            foreach ($productos as $producto){
+             $cantidad = $producto['cantidad'];
+             $productoID = $producto['producto_id'];
+             
+                $pedido->productos()->syncWithoutDetaching([$productoID=> ['cantidad'=>$cantidad]]);
+            }  
+         return $this->showOne($pedido,201);
     }
 
     /**
@@ -76,9 +92,12 @@ class PedidoController extends Controller
      */
     public function update(Request $request, Pedido $pedido)
     {
-        Pedido::where('id',$pedido)->update(array('estado' => 0));
-    }
+        $validatedData = $request;
 
+        Pedido::where('id',$pedido->id)->update(array('estado' => 1));
+
+        return redirect()->route('pedidosproductos.index');
+    }
     /**
      * Remove the specified resource from storage.
      *

@@ -56,6 +56,7 @@
     <tr>
         <th scope="col">ID</th>
         <th scope="col">NOMBRE PRODUCTO</th>
+        <th scope="col">PRECIO</th>
         <th scope="col">CATEGORÍA</th>
         <th scope="col">URL</th>
         <th scope="col">IMAGEN</th>
@@ -67,11 +68,11 @@
     <tr class="fila-tabla">
         <th scope="row">{{ $producto->id }}</th>
         <td>{{ $producto->nombre }}</td>
+        <td>{{ $producto->precio }} €</td>
         <td>{{ $producto->categoria->nombre }}</td>
-        <td>{{ $producto->urlImagen }}</td>
-        <td><img src="..{{$producto->urlImagen}}"/></td>
+      <td>{{ $producto->urlImagen }}</td>
+        <td><img src=".{{$producto->urlImagen}}"/></td>
         <td>
-            
             <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><img src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></a>
             <form action="{{ route('productos.destroy', $producto) }}" method="POST">
                 @csrf

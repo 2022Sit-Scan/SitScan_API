@@ -17,14 +17,14 @@ class PedidoProducto extends Migration
             $table->increments('id');
             $table->integer('pedido_id')->unsigned();
             $table->integer('producto_id')->unsigned();
-            
+            $table->integer('cantidad')->nullable();
             $table->timestamps();
             $table->foreign('pedido_id')
                     ->references('id')
-                    ->on('pedidos')->onDelete('cascade');
+                    ->on('pedidos');
             $table->foreign('producto_id')
                     ->references('id')
-                    ->on('productos')->onDelete('cascade');
+                    ->on('productos');
            
         });
     }

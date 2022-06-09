@@ -12,12 +12,9 @@ use Illuminate\Database\Eloquent\Model;
 class Producto extends Model
 {
     protected $fillable = [
-       'nombre', 'urlImagen', 'descripcion','categoria_id',
+       'nombre', 'urlImagen', 'descripcion','categoria_id','cantidad'
     ];
 
-    public function establecimientos(){
-        return $this->belongsToMany(Establecimiento::class)->withTimestamps()->withPivot('precio');
-    }
     public function alergenos(){
         return $this->belongsToMany(Alergeno::class)->withTimestamps();
     }
@@ -25,7 +22,7 @@ class Producto extends Model
         return $this->belongsTo(Categoria::class);
     }
     public function cartas(){
-        return $this->belongsToMany(Carta::class)->withTimestamps();
+        return $this->belongsToMany(Carta::class)->withTimestamps()->withPivot('precio');
     }
     public function pedidos(){
         return $this->belongsToMany(Pedido::class)->withTimestamps();

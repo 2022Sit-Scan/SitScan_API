@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Pedido;
 
 use App\Models\Pedido;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 use App\Models\Establecimiento;
 use Illuminate\Support\Facades\DB;
@@ -20,23 +21,25 @@ class PedidoProductoController extends Controller
     {
         $administrador = Auth::user();
         if ($administrador->rol != "ADMINISTRADOR"){
+            
            
-           $pedidoProductos = Pedido::with('productos','establecimiento')->where('establecimiento_id',2)->where('estado',0)->get();  
-          // $producto = $pedido->producto;
-           $consulta = DB::table('establecimiento_producto')
+           $pedidoNO = Pedido::all()->load('productos')
            ->where('establecimiento_id',$administrador->establecimiento_id)
-           ->get();
-          // dd($pedidoProductos);
+           ->where('estado',0);
+            
 
-            // $pedido = Pedido::with('productos.establecimientos')->wherehas('productos')->where('establecimiento_id',$administrador->establecimiento_id)->where('estado',0)->get(); 
-            // $pedidoFiltrado= $pedido->pluck('pedidos');
-
-            return view('pedidosproductos.index',compact('pedidoProductos'));
+           $pedidoSI = Pedido::all()->load('productos')
+           ->where('establecimiento_id',$administrador->establecimiento_id)
+           ->where('estado',1);  
+          
+      
+            return view('pedidosProductos.index',compact('pedidoNO','pedidoSI'));
         }
         else{
-            $pedido = Pedido::all();
+            
+            $usuarios = Usuario::all();
 
-            return view('usuarios.index');
+            return view('usuarios.index', compact('usuarios'));
         }
        
 

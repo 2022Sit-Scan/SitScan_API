@@ -35,8 +35,8 @@ trait ApiResponser
 
     function showOne(Model $instance, $code = 200)
     {
-       $transformer = $instance->transformer;
-       $instance = $this->transformData($instance, $transformer);
+    //    $transformer = $instance->transformer;
+    //    $instance = $this->transformData($instance, $transformer);
 
         return $this->successResponse(['data' => $instance], $code);
     }

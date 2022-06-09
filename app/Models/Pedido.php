@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
     protected $fillable = [
-        'establecimiento_id','cantidad','mesa_id', 'estado', 'nombreCliente',
+        'establecimiento_id','mesa_id', 'estado', 'nombreCliente',
     ];
 
     public function mesa(){
@@ -21,6 +21,6 @@ class Pedido extends Model
         return $this->belongsTo(Establecimiento::class);
     }
     public function productos(){
-        return $this->belongsToMany(Producto::class)->withTimestamps();
+        return $this->belongsToMany(Producto::class)->withPivot('cantidad')->withTimestamps();
     }
 }

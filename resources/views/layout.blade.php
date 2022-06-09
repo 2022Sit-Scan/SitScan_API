@@ -75,7 +75,7 @@
 
 <footer class="footer">
     <div class="container">
-        <img src="/imagenes/imagenes/logo_entero_blanco_1.svg" class="logo-blanco" alt="Logo"/>
+        <img src="http://35.181.160.138/proyectos/SitScan_API/public/imagenes/logo_entero_blanco_1.svg" class="logo-blanco" alt="Logo"/>
         <span class="text-muted">Si tiene algún tipo de problema técnico, no dude en llamar al <strong>955 85 74 92</strong> le atenderemos enseguida</span>
     </div>
 </footer>
@@ -91,29 +91,28 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
 
-<!-- Bootstrap -- MDB
-================================================== -->
-<!-- Font Awesome -->
-<!-- <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  rel="stylesheet"
-/> -->
-<!-- Google Fonts -->
-<!-- <link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/> -->
-<!-- MDB -->
-<!-- <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css"
-  rel="stylesheet"
-/>
- -->
-<!-- Bootstrap -- MDB -- JavaScript
-================================================== -->
-<!-- MDB -->
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
- -->
+<script>
+var background = document.getElementsByClassName("fondo");
+
+const getRandomNumber = (limit) => {
+  return Math.floor(Math.random() * limit);
+};
+
+const getRandomColor = () => {
+  const h = getRandomNumber(360);
+  const s = getRandomNumber(100);
+  const l = getRandomNumber(100);
+
+  return `hsl(${h}deg, ${s}%, ${l}%)`;
+};
+
+const setBackgroundColor = () => {
+  var randomColor = getRandomColor();
+  background.style.backgroundColor = randomColor;
+};
+
+setBackgroundColor();
+</script>
  
 <script>
 showTime();
