@@ -98,7 +98,25 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Vodka',
-            'urlImagen' => '/categorias/Vodka',
+            'urlImagen' => '/categorias/vodka',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 3,
+            'nombre' => 'Bourbon',
+            'urlImagen' => '/categorias/bourbon',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 3,
+            'nombre' => 'Martini',
+            'urlImagen' => '/categorias/martini',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
