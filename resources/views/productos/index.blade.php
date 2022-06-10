@@ -23,9 +23,9 @@
           ¿Desea cerrar sesión?
         </div>
         <div class="modal-footer">
-          <button type="button" id="btn-cancelar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
+          <button type="button" id="btn-cancelar-cerrarSesion-productos" class="btn btn-primary-logout col-md-6" data-dismiss="modal">CANCELAR</button>
 
-          <button type="button" id="btn-aceptar-cerrarSesion-listPrecios" class="btn btn-primary-logout col-md-6">
+          <button type="button" id="btn-aceptar-cerrarSesion-productos" class="btn btn-primary-logout col-md-6">
             <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button" aria-haspopup="true" aria-expanded="false" v-pre
             onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">

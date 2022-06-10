@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,151 +19,107 @@
 
 <body>
 
-<header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                 @if ( Auth::user()->rol == 'ADMINISTRADOR')
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/usuarios') }}">Usuarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/categorias') }}">Categorias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/alergenos') }}">Alergenos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/cartas') }}">Cartas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/mesas') }}">Mesas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/establecimientos') }}">Establecimientos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
-                </li>
-                @elseif (Auth::user()->rol == 'GERENTE')
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/listaprecios') }}">Lista de Precios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/#') }}">Añadir Producto</a>    
-                </li>
-                @elseif ( Auth::user()->rol == 'CAMARERO')
-                
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
-                </li>
-                
-                
-                @endif
-            </ul>
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    @if ( Auth::user()->rol == 'ADMINISTRADOR')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/usuarios') }}">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/categorias') }}">Categorias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/alergenos') }}">Alergenos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/cartas') }}">Cartas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/mesas') }}">Mesas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/establecimientos') }}">Establecimientos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
+                    </li>
+                    @elseif (Auth::user()->rol == 'GERENTE')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/listaprecios') }}">Lista de Precios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/#') }}">Añadir Producto</a>
+                    </li>
+                    @elseif ( Auth::user()->rol == 'CAMARERO')
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
+                    </li>
+
+
+                    @endif
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- Begin page content -->
+
+    <main role="main" class="container">
+        <div class="row mt-3">
+            <div class="col-12">
+                @yield('content')
+            </div>
         </div>
-    </nav>
-</header>
+    </main>
 
 
-
-<!-- Begin page content -->
-
-<main role="main" class="container">
-    <div class="row mt-3">
-        <div class="col-12">
-            @yield('content')
+    <footer class="footer">
+        <div class="container">
+            <img src="/imagenes/imagenes/logo_entero_blanco_1.svg" class="logo-blanco" alt="Logo" />
+            <span class="text-muted">Si tiene algún tipo de problema técnico, no dude en llamar al <strong>955 85 74 92</strong> le atenderemos enseguida</span>
         </div>
-    </div>
-</main>
+    </footer>
 
 
-<footer class="footer">
-    <div class="container">
-        <img src="/imagenes/imagenes/logo_entero_blanco_1.svg" class="logo-blanco" alt="Logo"/>
-        <span class="text-muted">Si tiene algún tipo de problema técnico, no dude en llamar al <strong>955 85 74 92</strong> le atenderemos enseguida</span>
-    </div>
-</footer>
-
-
-<!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
 ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/js/gijgo.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<!-- Bootstrap -- MDB
-================================================== -->
-<!-- Font Awesome -->
-<!-- <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  rel="stylesheet"
-/> -->
-<!-- Google Fonts -->
-<!-- <link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/> -->
-<!-- MDB -->
-<!-- <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css"
-  rel="stylesheet"
-/>
- -->
-<!-- Bootstrap -- MDB -- JavaScript
-================================================== -->
-<!-- MDB -->
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
- -->
- 
-<script>
-showTime();
-function showTime(){
-myDate = new Date();
-hours = myDate.getHours();
-minutes = myDate.getMinutes();
-if (hours < 10) hours = 0 + hours;
-if (minutes < 10) minutes = "0" + minutes;
-$("#HoraActual").text(hours+ ":" +minutes);
-setTimeout("showTime()", 1000);
-}
-</script>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
-></script>
 
-<script>
-$(document).on('change', '.file-input', function() {
-        
+    <script>
+        showTime();
 
-        var filesCount = $(this)[0].files.length;
-        
-        var textbox = $(this).prev();
-      
-        if (filesCount === 1) {
-          var fileName = $(this).val().split('\\').pop();
-          textbox.text(fileName);
-        } else {
-          textbox.text(filesCount + ' files selected');
+        function showTime() {
+            myDate = new Date();
+            hours = myDate.getHours();
+            minutes = myDate.getMinutes();
+            if (hours < 10) hours = 0 + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            $("#HoraActual").text(hours + ":" + minutes);
+            setTimeout("showTime()", 1000);
         }
-      });
-</script>
-
-
+    </script>
 
 </body>
+
 </html>
