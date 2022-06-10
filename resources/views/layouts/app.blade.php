@@ -47,6 +47,7 @@
                 @endguest   
             </div>
         
+
             <img src="./imagenes/imagenes/logo_sitandscan.png" class="logo" alt="Logo"/>         
             <img src="./imagenes/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa"/>
 
