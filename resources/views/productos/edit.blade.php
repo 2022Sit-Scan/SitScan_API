@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Editar Producto")
+@section('title', 'Editar Producto')
 
 @section('content')
     <h1>Editar Producto</h1>
@@ -25,28 +25,28 @@
         {{-- otra forma de comprobar los errores 
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
-            @enderror--}}
+            @enderror --}}
         <br>
         <label for="urlImagen">urlImagen:</label>
         <input type="text" name="urlImagen" id="urlImagen" value="{{ old('urlImagen', $producto->urlImagen) }}">
         <br>
         <label for="descripcion">Descripción:</label>
         <textarea class="form-control" id="descripcion" name="descripcion" rows="3" value="descripcion">{{ old('descripcion', $producto->descripcion) }}</textarea>
-        <br>   
-          <div class="form-group">
+        <br>
+        <div class="form-group">
             <label for="categoria_id">Categoria</label>
             <select class="form-control" id="categoria_id" name="categoria_id">
-                 @foreach ($categorias as $categoria)
-              <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+                @foreach ($categorias as $categoria)
+                    <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
                 @endforeach
             </select>
-          </div>
+        </div>
         <button type="submit">Actualizar producto</button>
     </form>
 
     <p>
         <a href="{{ route('productos.index') }}">Regresar al listado de productos</a>
         {{-- otra forma 
-        <a href="{{ url()->previous() }}">Regresar al listado de productos</a>--}}
+        <a href="{{ url()->previous() }}">Regresar al listado de productos</a> --}}
     </p>
 @endsection

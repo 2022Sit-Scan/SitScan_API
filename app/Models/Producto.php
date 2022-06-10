@@ -22,7 +22,7 @@ class Producto extends Model
         return $this->belongsTo(Categoria::class);
     }
     public function cartas(){
-        return $this->belongsToMany(Carta::class)->withTimestamps()->withPivot('precio');
+        return $this->belongsToMany(Carta::class)->withTimestamps();
     }
     public function pedidos(){
         return $this->belongsToMany(Pedido::class)->withTimestamps();
