@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Editar usuario")
+@section('title', 'Editar usuario')
 
 @section('content')
     <h1>Editar usuario</h1>
@@ -25,10 +25,11 @@
         {{-- otra forma de comprobar los errores 
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
-            @enderror--}}
+            @enderror --}}
         <br>
         <label for="email">Correo electrónico:</label>
-        <input type="email" name="email" id="email" placeholder="pedro@example.com" value="{{ old('email', $usuario->email) }}">
+        <input type="email" name="email" id="email" placeholder="pedro@example.com"
+            value="{{ old('email', $usuario->email) }}">
         <br>
         <label for="password">Contraseña:</label>
         <input type="password" name="password" id="password" placeholder="Mayor a 6 caracteres">
@@ -39,6 +40,6 @@
     <p>
         <a href="{{ route('usuarios.index') }}">Regresar al listado de usuarios</a>
         {{-- otra forma 
-        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a>--}}
+        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a> --}}
     </p>
 @endsection

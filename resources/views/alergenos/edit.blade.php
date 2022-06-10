@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Editar Alergeno")
+@section('title', 'Editar Alergeno')
 
 @section('content')
     <h1>Editar Alergeno</h1>
@@ -25,17 +25,17 @@
         {{-- otra forma de comprobar los errores 
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
-            @enderror--}}
+            @enderror --}}
         <br>
-         <label for="urlImagen">urlImagen:</label>
+        <label for="urlImagen">urlImagen:</label>
         <input type="text" name="urlImagen" id="urlImagen" value="{{ old('urlImagen', $alergeno->urlImagen) }}">
-        
+
         <button type="submit">Actualizar Alergeno</button>
     </form>
 
     <p>
         <a href="{{ route('alergenos.index') }}">Regresar al listado de alergenos</a>
         {{-- otra forma 
-        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a>--}}
+        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a> --}}
     </p>
 @endsection

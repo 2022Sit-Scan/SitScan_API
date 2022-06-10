@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "CREAR CARTA")
+@section('title', 'CREAR CARTA')
 
 @section('content')
     <div>
@@ -23,21 +23,25 @@
 
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre de carta" value="{{ old('nombre') }}">
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre de carta"
+                        value="{{ old('nombre') }}">
                 </div>
 
                 <div class="form-group">
                     <label for="establecimiento_id">Establecimiento:</label>
                     <select class="form-control" id="establecimiento_id" name="establecimiento_id">
                         <option selected disabled value='Establecimiento'>Establecimiento</option>
-                         @foreach ($establecimientos as $establecimiento)
-                      <option value="{{$establecimiento->id}}">{{$establecimiento->nombre}}</option>
+                        @foreach ($establecimientos as $establecimiento)
+                            <option value="{{ $establecimiento->id }}">{{ $establecimiento->nombre }}</option>
                         @endforeach
                     </select>
-                  </div>
+                </div>
 
-                <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_add.png" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
-                <a href="{{ route('cartas.index') }}" class="btn btn-link"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Flecha" height="12" width="15">Regresar al listado de cartas</a>
+                <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion"
+                        src="./imagenes/imagenes/icon_add.png" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
+                <a href="{{ route('cartas.index') }}" class="btn btn-link"><img id="img_cerrarSesion"
+                        src="./imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Flecha" height="12" width="15">Regresar
+                    al listado de cartas</a>
             </form>
         </div>
     </div>
