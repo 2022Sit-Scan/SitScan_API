@@ -301,7 +301,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Santa Teresa',
-            'urlImagen' => '/imagenes/destilados/ron/santaTeresaimage.jpg',
+            'urlImagen' => '/imagenes/destilados/ron/santateresaimage.jpg',
             'descripcion' => 'Santa Teresa',
             'categoria_id' => 7,
             'precio' => 5,
@@ -312,7 +312,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Santa Teresa con Coca Cola',
-            'urlImagen' => '/imagenes/destilados/ron/santaTeresaimage-coca-cola.png',
+            'urlImagen' => '/imagenes/destilados/ron/santateresa-coca-cola.png',
             'descripcion' => 'Santa Teresa con Coca Cola',
             'categoria_id' => 7,
             'precio' => 5,
@@ -323,7 +323,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Santa Teresa con Coca Cola Zero',
-            'urlImagen' => '/imagenes/destilados/ron/santaTeresaimage-coca-cola-zero.png',
+            'urlImagen' => '/imagenes/destilados/ron/santateresa-coca-cola-zero.png',
             'descripcion' => 'Santa Teresa con Coca Cola Zero',
             'categoria_id' => 7,
             'precio' => 5,
@@ -334,7 +334,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Santa Teresa con Fanta Naranja',
-            'urlImagen' => '/imagenes/destilados/ron/santaTeresaimage-fanta-naranja.png',
+            'urlImagen' => '/imagenes/destilados/ron/santateresa-fanta-naranja.png',
             'descripcion' => 'Santa Teresa con Fanta Naranja',
             'categoria_id' => 7,
             'precio' => 5,
@@ -345,7 +345,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Santa Teresa con Fanta Limon',
-            'urlImagen' => '/imagenes/destilados/ron/santaTeresaimage-fanta-limon.png',
+            'urlImagen' => '/imagenes/destilados/ron/santateresa-fanta-limon.png',
             'descripcion' => 'Santa Teresa con Fanta Limon',
             'categoria_id' => 7,
             'precio' => 5,
@@ -356,7 +356,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Santa Teresa con Schweppes',
-            'urlImagen' => '/imagenes/destilados/ron/santaTeresaimage-schweppes.png',
+            'urlImagen' => '/imagenes/destilados/ron/santateresa-schweppes.png',
             'descripcion' => 'Santa Teresa con Schweppes',
             'categoria_id' => 7,
             'precio' => 5,
@@ -389,7 +389,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Red Label con Coca Cola Zero',
-            'urlImagen' => '/imagenes/destilados/whiskey/redlabelimagecoca-cola-zero.png',
+            'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage-coca-cola-zero.png',
             'descripcion' => 'Red Label con Coca Cola Zero',
             'categoria_id' => 8,
             'precio' => 5,
@@ -411,7 +411,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Red Label con Fanta de Limon',
-            'urlImagen' => '/imagenes/destilados/whiskey/redlabelimagefanta-limon.png',
+            'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage-fanta-limon.png',
             'descripcion' => 'Red Label con Fanta de Limon',
             'categoria_id' => 8,
             'precio' => 5,
@@ -433,7 +433,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Legendario',
-            'urlImagen' => '/imagenes/destilados/ron/legendario.jpg',
+            'urlImagen' => '/imagenes/destilados/ron/legendarioimage.jpg',
             'descripcion' => 'Legendario',
             'categoria_id' => 7,
             'precio' => 5,
@@ -444,7 +444,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Legendario con Coca Cola',
-            'urlImagen' => '/imagenes/destilados/ron/legendario-coca-cola.png',
+            'urlImagen' => '/imagenes/destilados/ron/legendarioimage-coca-cola.png',
             'descripcion' => 'Legendario con Coca Cola',
             'categoria_id' => 7,
             'precio' => 5,
@@ -455,7 +455,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Legendario con Coca Cola Zero',
-            'urlImagen' => '/imagenes/destilados/ron/legendario-coca-cola-zero.png',
+            'urlImagen' => '/imagenes/destilados/ron/legendarioimage-coca-cola-zero.png',
             'descripcion' => 'Legendario con Coca Cola Zero',
             'categoria_id' => 7,
             'precio' => 5,
@@ -466,7 +466,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Legendario con Fanta de Naranja',
-            'urlImagen' => '/imagenes/destilados/ron/legendario-fanta-naranja.png',
+            'urlImagen' => '/imagenes/destilados/ron/legendarioimage-fanta-naranja.png',
             'descripcion' => 'Legendario con Fanta de Naranja',
             'categoria_id' => 7,
             'precio' => 5,
@@ -477,7 +477,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Legendario con Fanta de Limon',
-            'urlImagen' => '/imagenes/destilados/ron/legendario-fanta-limon.png',
+            'urlImagen' => '/imagenes/destilados/ron/legendarioimage-fanta-limon.png',
             'descripcion' => 'Legendario con Fanta de Limon',
             'categoria_id' => 7,
             'precio' => 5,
@@ -488,7 +488,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Legendario con Schweppes',
-            'urlImagen' => '/imagenes/destilados/ron/legendario-schweppes.png',
+            'urlImagen' => '/imagenes/destilados/ron/legendarioimage-schweppes.png',
             'descripcion' => 'Legendario con Schweppes',
             'categoria_id' => 7,
             'precio' => 5,
@@ -1060,7 +1060,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Belvedere con Fanta de Naranja',
-            'urlImagen' => '/imagenes/destilados/vodka/belvedereimage.fanta-naranja.png',
+            'urlImagen' => '/imagenes/destilados/vodka/belvedereimage-fanta-naranja.png',
             'descripcion' => 'Belvedere con Fanta de Naranja',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1104,7 +1104,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Absolut con Coca Cola',
-            'urlImagen' => '/imagenes/destilados/vodka/absolutimage-coca-cola.png',
+            'urlImagen' => '/imagenes/destilados/vodka/absolutimage-cola-cola.png',
             'descripcion' => 'Absolut con Coca Cola',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1126,7 +1126,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Absolut con Fanta de Naranja',
-            'urlImagen' => '/imagenes/destilados/vodka/absolutimage-fanta-nombre.png',
+            'urlImagen' => '/imagenes/destilados/vodka/absolutimage-fanta-naranja.png',
             'descripcion' => 'Absolut con Fanta de Naranja',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1291,7 +1291,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bullet',
-            'urlImagen' => '/imagenes/destilados/bourbon/bulletimage.jpg',
+            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage.jpg',
             'descripcion' => 'Bullet',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1302,7 +1302,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bullet con Coca Cola',
-            'urlImagen' => '/imagenes/destilados/bourbon/bulletimage-coca-cola.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-coca-cola.png',
             'descripcion' => 'Bullet con Coca Cola',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1313,7 +1313,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bullet con Coca Cola Zero',
-            'urlImagen' => '/imagenes/destilados/bourbon/bulletimage-coca-cola-zero.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-coca-cola-zero.png',
             'descripcion' => 'Bullet con Coca Cola Zero',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1324,7 +1324,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bullet con Fanta de Naranja',
-            'urlImagen' => '/imagenes/destilados/bourbon/bulletimage-fanta-naranja.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-fanta-naranja.png',
             'descripcion' => 'Bullet con Fanta de Naranja',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1335,7 +1335,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bullet con Fanta de Limon',
-            'urlImagen' => '/imagenes/destilados/bourbon/bulletimage-fanta-limon.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-fanta-limon.png',
             'descripcion' => 'Bullet con Fanta de Limon',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1346,7 +1346,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bullet con Schweppes',
-            'urlImagen' => '/imagenes/destilados/bourbon/bulletimage-schweppes.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-schweppes.png',
             'descripcion' => 'Bullet con Schweppes',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1423,7 +1423,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'JackDaniel',
-            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielsimage.jpg',
+            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage.jpg',
             'descripcion' => 'JackDaniel',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1434,7 +1434,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'JackDaniel con Coca Cola',
-            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielsimage-coca-cola.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-coca-cola.png',
             'descripcion' => 'JackDaniel con Coca Cola',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1445,7 +1445,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'JackDaniel con Coca Cola Zero',
-            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielsimage-coca-cola-zero.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-coca-cola-zero.png',
             'descripcion' => 'JackDaniel con Coca Cola Zero',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1456,7 +1456,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'JackDaniel con Fanta de Naranja',
-            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielsimage-fanta-naranja.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-fanta-naranja.png',
             'descripcion' => 'JackDaniel con Fanta de Naranja',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1467,7 +1467,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'JackDaniel con Fanta de Limon',
-            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielsimage-fanta-limon.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-fanta-limon.png',
             'descripcion' => 'JackDaniel con Fanta de Limon',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1478,7 +1478,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'JackDaniel con Schweppes',
-            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielsimage-schweppes.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-schweppes.png',
             'descripcion' => 'JackDaniel con Schweppes',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1489,7 +1489,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jim Beam',
-            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamsimage.jpg',
+            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage.jpg',
             'descripcion' => 'Jim Beam',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1500,7 +1500,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jim Beam con Coca Cola',
-            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamsimage-coca-cola.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-coca-cola.png',
             'descripcion' => 'Jim Beam con Coca Cola',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1511,7 +1511,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jim Beam con Coca Cola Zero',
-            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamsimage-coca-cola-zero.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-coca-cola-zero.png',
             'descripcion' => 'Jim Beam con Coca Cola Zero',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1522,7 +1522,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jim Beam con Fanta de Naranja',
-            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamsimage-fanta-naranja.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-fanta-naranja.png',
             'descripcion' => 'Jim Beam con Fanta de Naranja',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1533,7 +1533,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jim Beam con Fanta de Limon',
-            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamsimage-fanta-limon.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-fanta-limon.png',
             'descripcion' => 'Jim Beam con Fanta de Limon',
             'categoria_id' => 10,
             'precio' => 5,
@@ -1544,7 +1544,7 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jim Beam con Schweppes',
-            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamsimage-schweppes.png',
+            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-schweppes.png',
             'descripcion' => 'Jim Beam con Schweppes',
             'categoria_id' => 10,
             'precio' => 5,
