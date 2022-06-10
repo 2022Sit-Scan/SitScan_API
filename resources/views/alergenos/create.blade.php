@@ -4,7 +4,7 @@
 
 @section('content')
 
-<h4 class="pt-3">CREAR ALÉRGENO</h4>
+<h1 class="pt-3">CREAR ALÉRGENO</h1>
 @if ($errors->any())
 <div class="alert alert-danger">
     <h6>Por favor corrige los errores debajo:</h6>

@@ -115,7 +115,7 @@ class ProductoSeeder extends Seeder
         ->insert([
             'nombre' => 'Schweppes  Tonica',
             'urlImagen' => '/imagenes/refrescos/schweppes/schweppesimage.jpg',
-            'descripcion' => 'Schweppes Tonica',
+            'descripcion' => 'Schweppes Tónica',
             'categoria_id' => 15,
             'precio' => 2.5,
             'created_at' => now(),
@@ -135,7 +135,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')
         ->insert([
-            'nombre' => 'Zumo Melocoton',
+            'nombre' => 'Zumo Melocotón',
             'urlImagen' => '/imagenes/zumos/zumomelocotonimage.jpg',
             'descripcion' => 'Zumo Melocoton',
             'categoria_id' => 18,
@@ -179,7 +179,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')
         ->insert([
-            'nombre' => 'Barcelo',
+            'nombre' => 'Ron Barceló',
             'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage.jpg',
             'descripcion' => 'Barcelo',
             'categoria_id' => 7,
@@ -399,7 +399,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')
         ->insert([
-            'nombre' => 'Cafe con Leche',
+            'nombre' => 'Café con Leche',
             'urlImagen' => '/imagenes/cafes/cafeconleche.jpg',
             'descripcion' => 'Cafe con Leche',
             'categoria_id' => 5,
@@ -410,7 +410,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')
         ->insert([
-            'nombre' => 'Cafe Solo',
+            'nombre' => 'Café Solo',
             'urlImagen' => '/imagenes/cafes/cafesolo.jpg',
             'descripcion' => 'Cafe Solo',
             'categoria_id' => 5,
@@ -421,7 +421,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')
         ->insert([
-            'nombre' => 'Cafe Cortado',
+            'nombre' => 'Café Cortado',
             'urlImagen' => '/imagenes/cafes/cafecortado.jpg',
             'descripcion' => 'Cafe Cortado',
             'categoria_id' => 5,
@@ -432,7 +432,7 @@ class ProductoSeeder extends Seeder
 
         DB::table('productos')
         ->insert([
-            'nombre' => 'Cafe Bombon',
+            'nombre' => 'Café Bombón',
             'urlImagen' => '/imagenes/cafes/cafebombon.jpg',
             'descripcion' => 'Cafe Bombon',
             'categoria_id' => 5,
@@ -440,16 +440,7 @@ class ProductoSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
-
-        /* DB::table('productos')
-        ->insert([
-            'nombre' => 'Cafe con Leche',
-            'urlImagen' => '/imagenes/cafes/cafeconleche',
-            'descripcion' => 'Cafe con Leche',
-            'categoria_id' => 5,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]); */
+        
 
         DB::table('productos')
         ->insert([

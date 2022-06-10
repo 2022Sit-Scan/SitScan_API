@@ -1,9 +1,9 @@
 @extends('layout')
 
-@section('title', "Editar Carta")
+@section('title', "EDITAR CARTA")
 
 @section('content')
-    <h1>Editar Carta</h1>
+    <h1>EDITAR CARTA</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -28,7 +28,7 @@
             @enderror--}}
         <br>
         <div class="form-group">
-            <label for="establecimiento_id">Establecimiento</label>
+            <label for="establecimiento_id">Establecimiento:</label>
             <select class="form-control" id="establecimiento_id" name="establecimiento_id">
                 <option selected disabled value='Establecimiento'>Establecimiento</option>
                  @foreach ($establecimientos as $establecimiento)
