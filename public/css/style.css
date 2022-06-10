@@ -253,18 +253,23 @@ td{
 /* ------------- */
 
 /* BOTONES */
-
-.btn-primary {
-    margin-right: 12px;
-}
-
-.btn-login{
-    margin: auto;
+p.btn-centrado{
+    text-align: end;
 }
 
 #btn-entrar{
-    padding: 18% 40% 18% 40%;
-    margin-right: 20px;
+    padding-left:25px;
+    padding-right: 25px;
+}
+
+#centrado{
+text-align: end;
+margin-bottom: 20px;
+}
+
+
+.btn-login{
+    margin: auto;
 }
 
 #addProducto {
@@ -280,12 +285,12 @@ td{
     color: #FFFFFF;
 }
 
-#btn_completado{
+#btn_completados{
     background-color: #EA710A;
     color: white;
 }
 
-#btn_completado:hover{
+#btn_completados:hover{
     background-color: #cc650a;
 }
 
@@ -333,22 +338,22 @@ td{
     background-color: #035c59;
 }
 
-#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios , #btn-aceptar-cerrarSesion-usuarios, #btn-aceptar-cerrarSesion-alergenos,#btn-aceptar-cerrarSesion-cartas{
+#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios , #btn-aceptar-cerrarSesion-usuarios, #btn-aceptar-cerrarSesion-alergenos,#btn-aceptar-cerrarSesion-cartas,#btn-aceptar-cerrarSesion-pedidosProductos,#btn-aceptar-cerrarSesion-productos,#btn-aceptar-cerrarSesion-establecimientos{
 background-color: #F8D097;
 color: #006B67;
 }
 
-#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover, #btn-aceptar-cerrarSesion-usuarios:hover,#btn-aceptar-cerrarSesion-alergenos:hover,#btn-aceptar-cerrarSesion-cartas:hover{
+#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover, #btn-aceptar-cerrarSesion-usuarios:hover,#btn-aceptar-cerrarSesion-alergenos:hover,#btn-aceptar-cerrarSesion-cartas:hover,#btn-aceptar-cerrarSesion-pedidosProductos:hover,#btn-aceptar-cerrarSesion-productos:hover,#btn-aceptar-cerrarSesion-establecimientos:hover{
     background-color: #F3C47F;
     
     }
 
-#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios, #btn-cancelar-cerrarSesion-usuarios, #btn-cancelar-cerrarSesion-alergenos,#btn-cancelar-cerrarSesion-cartas{
+#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios, #btn-cancelar-cerrarSesion-usuarios, #btn-cancelar-cerrarSesion-alergenos,#btn-cancelar-cerrarSesion-cartas,#btn-cancelar-cerrarSesion-pedidosProductos,#btn-cancelar-cerrarSesion-productos,#btn-cancelar-cerrarSesion-establecimientos{
     background-color: #FFF8F2;
     color: #006B67;
     }
 
-#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover{
+#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover,#btn-cancelar-cerrarSesion-pedidosProductos:hover,#btn-cancelar-cerrarSesion-productos:hover,#btn-cancelar-cerrarSesion-establecimientos:hover{
         background-color: #cfcecc;
 }
 .btn-hecho{
@@ -407,6 +412,7 @@ color: #006B67;
 
 .modal-body {
     color: #F8D097;
+    text-align: left;
 }
 
 .modal-footer {

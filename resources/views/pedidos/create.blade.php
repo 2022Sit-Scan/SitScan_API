@@ -1,10 +1,10 @@
 @extends('layout')
 
-@section('title', "Crear usuario")
+@section('title', "CREAR PEDIDO")
 
 @section('content')
     <div class="card">
-        <h4 class="card-header">Crear pedido</h4>
+        <h4 class="card-header">CREAR PEDIDO</h4>
         <div class="card-body">
 
             @if ($errors->any())
@@ -36,8 +36,8 @@
                     <input type="password" class="form-control" name="password" id="password" placeholder="Mayor a 6 caracteres">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Crear usuario</button>
-                <a href="{{ route('usuarios.index') }}" class="btn btn-link">Regresar al listado de usuarios</a>
+                <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_add.png" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
+                <a href="{{ route('usuarios.index') }}" class="btn btn-link"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_add.png" alt="Botón Flecha" height="12" width="15">Regresar al listado de pedidos</a>
             </form>
         </div>
     </div>
