@@ -61,7 +61,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">NÚMERO MESA</th>
-                        <th scope="col">CÓDIGO QR</th>
+                        <th scope="col">CÓDIGO QR <a href="https://www.codigos-qr.com/generador-de-codigos-qr/">Crear codigo QR</a></th>
                         <th scope="col">ESTABLECIMIENTO</th>
                         <th scope="col">ACCIONES</th>
 
