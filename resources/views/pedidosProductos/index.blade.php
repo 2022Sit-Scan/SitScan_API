@@ -121,3 +121,10 @@
 @section('sidebar')
     @parent
 @endsection
+
+
+<script type="text/javascript">
+    function actualizar(){location.reload(true);}
+  //Función para actualizar cada 60 segundos(60000 milisegundos)
+    setInterval("actualizar()",60000);
+  </script>

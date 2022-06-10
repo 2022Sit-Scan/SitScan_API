@@ -58,6 +58,7 @@ class PedidoController extends Controller
              
                 $pedido->productos()->syncWithoutDetaching([$productoID=> ['cantidad'=>$cantidad]]);
             }  
+            
          return $this->showOne($pedido,201);
     }
 
