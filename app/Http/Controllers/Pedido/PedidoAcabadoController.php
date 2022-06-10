@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class PedidoProductoController extends Controller
+class PedidoAcabadoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,11 +21,13 @@ class PedidoProductoController extends Controller
     {
         $administrador = Auth::user();
         if ($administrador->rol != "ADMINISTRADOR"){
-           $pedidoNO = Pedido::all()->load('productos')
-           ->where('establecimiento_id',$administrador->establecimiento_id)
-           ->where('estado',0)->sortByDesc('updated_at');
 
-            return view('pedidosProductos.index',compact('pedidoNO'));
+           $pedidoSI = Pedido::all()->load('productos')
+           ->where('establecimiento_id',$administrador->establecimiento_id)
+           ->where('estado',1)->sortByDesc('updated_at');  
+          
+      
+            return view('pedidosproductosacabados.index',compact('pedidoSI'));
         }
         else{
             
@@ -33,8 +35,8 @@ class PedidoProductoController extends Controller
 
             return view('usuarios.index', compact('usuarios'));
         }
-       
-
+   
+         return view('pedidosProductosacabados.index',compact('pedidoSI'));
     }
 
     /**
@@ -87,8 +89,9 @@ class PedidoProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pedido $pedido)
+    public function update(Request $request,Pedido $pedido)
     {
+       
        //
     }
 

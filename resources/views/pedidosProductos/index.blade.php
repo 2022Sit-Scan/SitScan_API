@@ -9,7 +9,7 @@
 </div>
 <div class="col-12 col-lg-4 mb-3">
     <p class="btn-centrado">
-        <a href="" class="btn btn-primary" id="btn_completados"> <img src="./imagenes/imagenes/icon_completado.png" alt="Botón Completados" height="15" width="15">COMPLETADOS</a>
+        <a href="{{ url('/pedidosacabados') }}" class="btn btn-primary" id="btn_completados"> <img src="./imagenes/imagenes/icon_completado.png" alt="Botón Completados" height="15" width="15">COMPLETADOS</a>
     </p>
 </div>
 </div>
