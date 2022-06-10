@@ -16,7 +16,7 @@ class EstablecimientoSeeder extends Seeder
         ->insert([
             'id' => 1,
             'nombre' => 'Elviris',
-            'urlLogo' => 'logos/elviris',
+            'urlLogo' => './imagenes/logos/elviris.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -25,7 +25,7 @@ class EstablecimientoSeeder extends Seeder
         ->insert([
             'id' => 2,
             'nombre' => 'Bar Marce',
-            'urlLogo' => 'logos/barmarce',
+            'urlLogo' => './imagenes/logos/barmarce.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -34,7 +34,7 @@ class EstablecimientoSeeder extends Seeder
         ->insert([
             'id' => 3,
             'nombre' => 'Cerveceria Espronceda',
-            'urlLogo' => 'logos/espronceda',
+            'urlLogo' => './imagenes/logos/espronceda.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -43,7 +43,7 @@ class EstablecimientoSeeder extends Seeder
         ->insert([
             'id' => 4,
             'nombre' => 'Bar El Bosques',
-            'urlLogo' => 'logos/barelbosques',
+            'urlLogo' => './imagenes/logos/elbosque.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -52,7 +52,7 @@ class EstablecimientoSeeder extends Seeder
         ->insert([
             'id' => 5,
             'nombre' => 'Cerveceria El Cordobés',
-            'urlLogo' => 'logos/elcordobes',
+            'urlLogo' => './imagenes/logos/elcordobes.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
