@@ -1,10 +1,9 @@
 @extends('layout')
 
-@section('title', 'Lista de Pedidos')
+@section('title', 'LISTA DE PEDIDOS')
 
 @section('content')
 
-    <div class="container">
         <div class="row no-gutters">
             
             <div class="col-12 col-md-12 col-lg-8">
@@ -18,8 +17,6 @@
                 </p>
             </div>
         </div>
-    </div>
-
     @if ($pedidos != '')
 
 
@@ -31,7 +28,6 @@
                     <th scope="col">MESA</th>
                     <th scope="col">ESTADO</th>
                     <th scope="col">NOMBRE CLIENTE</th>
-                    <th scope="col">ACCIONES</th>
 
                 </tr>
             </thead>
@@ -44,16 +40,6 @@
                         <td>{{ $pedido->mesa->numero_mesa }}</td>
                         <td>{{ $pedido->estado }}</td>
                         <td>{{ $pedido->nombreCliente }}</td>
-                        <td>
-                            <a href="{{ route('pedidos.edit', $pedido) }}" class="btn btn-link"><img
-                                    src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></span></a>
-                            <form action="{{ route('pedidos.destroy', $pedido) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-link"><img src="./imagenes/imagenes/icon_delete.svg"
-                                        alt="Editar" height="26" width="26"></button>
-                            </form>
-                        </td>
                     </tr>
                 @endforeach
             </tbody>

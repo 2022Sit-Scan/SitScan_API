@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="col-6 col-md-6 col-lg-2">
-            <p>
+            <p class="btn-end">
                 <a href="{{ route('categorias.create') }}" class="btn btn-primary" id="addProducto"> <img
                         src="./imagenes/imagenes/icon_add.png" alt="Boton Crear Categoría" height="15" width="15">NUEVA
                     CATEGORÍA </a>
