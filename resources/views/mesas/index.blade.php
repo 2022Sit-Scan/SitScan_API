@@ -76,9 +76,6 @@
                             <td>{{ $mesa->codigoQR }}</td>
                             <td>{{ $mesa->establecimiento->nombre }}</td>
                             <td>
-                                <a href="{{ route('mesas.edit', $mesa) }}" class="btn btn-link"><img
-                                        src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="26"
-                                        width="26"></span></a>
                                 <form action="{{ route('mesas.destroy', $mesa) }}" method="POST">
                                     @csrf
                                     @method('DELETE')

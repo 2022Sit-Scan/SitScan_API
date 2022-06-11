@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Mesa;
 use App\Models\Mesa;
 use Illuminate\Http\Request;
 use App\Models\Establecimiento;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class MesaController extends Controller
@@ -31,10 +32,10 @@ class MesaController extends Controller
      */
     public function create()
     {
-        $ultimaIDMesa=Mesa::orderBy('id','desc')->first()->id;
+       
         
         $establecimientos = Establecimiento::all();
-        return view('mesas.create', compact('establecimientos','ultimaIDMesa'));
+        return view('mesas.create', compact('establecimientos'));
     }
 
     /**
@@ -45,7 +46,38 @@ class MesaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
+        $rules = [
+            'establecimiento_id'=> 'integer | required',
+        ];
+        $messages = [
+            'required' => 'El campo :attribute es obligatorio.',
+        ];
+        $validatedData = $request->validate($rules, $messages);
+
+        $rutaBase="http://35.181.160.138/proyectos/SitScan_API/public/";
+
+        $numeroMesa=Mesa::where('establecimiento_id',$request['establecimiento_id'])->get()->count();
+        $numeroMesaSig= $numeroMesa+1;
+
+        $ultimaIDMesa=Mesa::orderBy('id','desc')->first()->id;
+       
+        $IDMesaSig= $ultimaIDMesa+1;
+        
+    
+        $rutaCreada=$rutaBase.$request['establecimiento_id']."/".$IDMesaSig;
+
+      
+
+        Mesa::create([
+            'numero_mesa'=> $numeroMesaSig,
+            'codigoQR'=> $rutaCreada,
+            'establecimiento_id' => $validatedData['establecimiento_id'],
+           
+        ]);
+        
+
+        return redirect()->route('mesas.index');
     }
 
     /**

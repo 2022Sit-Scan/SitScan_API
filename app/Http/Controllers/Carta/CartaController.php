@@ -44,15 +44,16 @@ class CartaController extends Controller
      */
     public function store(Request $request)
     {
+        
         $rules = [
             'nombre' => 'required',
-            'establecimiento_id'=> 'integer',
+            'establecimiento_id'=> 'integer|required',
         ];
         $messages = [
             'required' => 'El campo :attribute es obligatorio.',
         ];
         $validatedData = $request->validate($rules, $messages);
-
+        
         Carta::create([
             'nombre' => $validatedData['nombre'],
             'establecimiento_id' => $validatedData['establecimiento_id'],

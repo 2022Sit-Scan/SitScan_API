@@ -71,7 +71,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Ron',
-            'urlImagen' => '/categorias/ron_cat',
+            'urlImagen' => 'imagenes/categorias/ron_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -80,7 +80,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Whisky',
-            'urlImagen' => '/categorias/whisky_cat',
+            'urlImagen' => 'imagenes/categorias/whisky_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -89,7 +89,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Ginebra',
-            'urlImagen' => '/categorias/ginebra_cat',
+            'urlImagen' => 'imagenes/categorias/ginebra_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -98,7 +98,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Vodka',
-            'urlImagen' => '/categorias/vodka_cat',
+            'urlImagen' => 'imagenes/categorias/vodka_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -107,7 +107,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Bourbon',
-            'urlImagen' => '/categorias/bourbon_cat',
+            'urlImagen' => 'imagenes/categorias/bourbon_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -116,7 +116,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Martini',
-            'urlImagen' => '/categorias/martini_cat',
+            'urlImagen' => 'imagenes/categorias/martini_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -125,7 +125,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Licores',
-            'urlImagen' => '/categorias/licores_cat',
+            'urlImagen' => 'imagenes/categorias/licores_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
