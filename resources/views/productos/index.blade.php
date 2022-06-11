@@ -110,6 +110,7 @@
             @endforeach
         </tbody>
     </table>
+    {{ $productos->links()}}
 @endsection
 
 @section('sidebar')
