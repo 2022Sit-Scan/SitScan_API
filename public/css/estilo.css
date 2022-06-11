@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Karla-Bold';
+    src: url('../tipografia/Karla-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Karla-ExtraBold';
+    src: url('../tipografia/Karla-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Karla-Regular';
+    src: url('../tipografia/Karla-Regular.ttf');
+}
+
+#titulo1, #titulo2, #titulo3, #titulo4{
+    padding: 100px;
+}
+
+.fas {
+    color: #F7A528;
+}
+
+.nav-link {
+    color: #F7A528 !important;
+    font-family: 'Karla-Bold', sans-serif;
+}
+
+.nav-link:hover {
+    color: #d18b23 !important;
+}
+
+header {
+    background: url(../img/img-presentacion-02.jpg) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 80vh;
+}
+
+footer{
+    background-color: #FFF8F2;
+    min-height: 30vh;
+}
+
+header .navbar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+#color {
+    background-color: #F7A52834;
+}
+
+h1{
+    color: black;
+}
+
+h1 img{
+    margin-bottom: 15px;
+    padding-right: 5px;
+}
+
+h1, h2 {
+    font-family: 'Karla-ExtraBold', sans-serif;
+}
+
+strong{
+    color: #F7A528;
+}
+
+p{
+    font-family: 'Karla-Regular', sans-serif;
+}
+
+#centrado{
+    text-align: center;
+}
+
+#parrafo1{
+    margin-top: 50px;
+}
+
+footer a {
+    padding: 0 0 0.5rem 0!important;
+}
