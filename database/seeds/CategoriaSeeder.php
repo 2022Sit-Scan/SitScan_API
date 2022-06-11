@@ -206,7 +206,34 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 5,
             'nombre' => 'Solo',
-            'urlImagen' => '//categorias/solo',
+            'urlImagen' => '/categorias/solo',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 5,
+            'nombre' => 'Con Leche',
+            'urlImagen' => '/categorias/conleche',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 5,
+            'nombre' => 'Bombon',
+            'urlImagen' => '/categorias/bombon',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 5,
+            'nombre' => 'Cortado',
+            'urlImagen' => '/categorias/cortado',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

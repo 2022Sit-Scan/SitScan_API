@@ -176,7 +176,7 @@ td{
 
 .bandeja { 
     position: absolute;
-    transform: translate(250%, 95%);
+    transform: translate(250%, 120%);
     width: 320px;
     height: 200px;
     flex-direction: 200px;

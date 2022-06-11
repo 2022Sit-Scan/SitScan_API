@@ -51,13 +51,12 @@
 
         <img src="./imagenes/imagenes/logo_sitandscan.png" class="logo" alt="Logo" />
         <img src="./imagenes/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa" />
-
-        <main class="py-4 c">
-            @yield('content')
+                
+        <main>
+             @yield('content')
         </main>
-
+                       
         <img src="/imagenes/imagenes/bandeja_imagen.png" class="bandeja" alt="Bandeja" />
-    </div>
     </div>
 </body>
 

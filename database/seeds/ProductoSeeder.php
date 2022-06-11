@@ -1722,7 +1722,7 @@ class ProductoSeeder extends Seeder
             'nombre' => 'Cafe con Leche',
             'urlImagen' => '/imagenes/cafes/cafeconleche.jpg',
             'descripcion' => 'Cafe con Leche',
-            'categoria_id' => 5,
+            'categoria_id' => 23,
             'precio' => 1.30,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1733,7 +1733,7 @@ class ProductoSeeder extends Seeder
             'nombre' => 'Cafe Solo',
             'urlImagen' => '/imagenes/cafes/cafesolo.jpg',
             'descripcion' => 'Cafe Solo',
-            'categoria_id' => 5,
+            'categoria_id' => 22,
             'precio' => 1.30,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1744,7 +1744,7 @@ class ProductoSeeder extends Seeder
             'nombre' => 'Cafe Cortado',
             'urlImagen' => '/imagenes/cafes/cafecortado.jpg',
             'descripcion' => 'Cafe Cortado',
-            'categoria_id' => 5,
+            'categoria_id' => 25,
             'precio' => 1.30,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1755,7 +1755,7 @@ class ProductoSeeder extends Seeder
             'nombre' => 'Cafe Bombon',
             'urlImagen' => '/imagenes/cafes/cafebombon.jpg',
             'descripcion' => 'Cafe Bombon',
-            'categoria_id' => 5,
+            'categoria_id' => 24,
              'precio' => 1.50,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1775,9 +1775,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Cruzcampo',
-            'urlImagen' => '/imagenes/cerveza/alcohol/cruzcampo.jpg',
+            'urlImagen' => '/imagenes/cerveza/alcohol/cruzcampo.png',
             'descripcion' => 'Cruzcampo',
-            'categoria_id' => 24,
+            'categoria_id' => 27,
             'precio' => 1.70,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1786,9 +1786,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Amstel',
-            'urlImagen' => '/imagenes/cerveza/alcohol/amstel.jpg',
+            'urlImagen' => '/imagenes/cerveza/alcohol/amstel.png',
             'descripcion' => 'Amstel',
-            'categoria_id' => 24,
+            'categoria_id' => 27,
             'precio' => 1.70,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1797,9 +1797,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Heineken',
-            'urlImagen' => '/imagenes/cerveza/alcohol/heineken.jpg',
+            'urlImagen' => '/imagenes/cerveza/alcohol/heineken.png',
             'descripcion' => 'Heineken',
-            'categoria_id' => 24,
+            'categoria_id' => 27,
             'precio' => 1.80,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1808,9 +1808,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Alhambra',
-            'urlImagen' => '/imagenes/cerveza/alhocol/alhambra.jpg',
+            'urlImagen' => '/imagenes/cerveza/alhocol/alhambra.png',
             'descripcion' => 'Alhambra',
-            'categoria_id' => 24,
+            'categoria_id' => 27,
             'precio' => 1.70,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1819,9 +1819,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Cruzcampo 00',
-            'urlImagen' => '/imagenes/cerveza/sinalhocol/cruzcampo00.jpg',
+            'urlImagen' => '/imagenes/cerveza/sinalhocol/cruzcampo-00.png',
             'descripcion' => 'Cruzcampo 00',
-            'categoria_id' => 25,
+            'categoria_id' => 28,
             'precio' => 1.70,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1830,9 +1830,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Amstel 00',
-            'urlImagen' => '/imagenes/cerveza/sinalhocol/amstel00.jpg',
+            'urlImagen' => '/imagenes/cerveza/sinalhocol/amstel-00.png',
             'descripcion' => 'Amstel 00',
-            'categoria_id' => 25,
+            'categoria_id' => 28,
             'precio' => 1.70,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1841,9 +1841,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Heineken 00',
-            'urlImagen' => '/imagenes/cerveza/sinalhocol/heineken00.jpg',
+            'urlImagen' => '/imagenes/cerveza/sinalhocol/heineken-00.png',
             'descripcion' => 'Heineken 00',
-            'categoria_id' => 25,
+            'categoria_id' => 28,
             'precio' => 1.70,
             'created_at' => now(),
             'updated_at' => now(),
@@ -1852,9 +1852,9 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Alhambra 00',
-            'urlImagen' => '/imagenes/cerveza/sinalhocol/alhambra00.jpg',
+            'urlImagen' => '/imagenes/cerveza/sinalhocol/alhambra-00.png',
             'descripcion' => 'Alhambra 00',
-            'categoria_id' => 25,
+            'categoria_id' => 28,
             'precio' => 1.70,
             'created_at' => now(),
             'updated_at' => now(),
