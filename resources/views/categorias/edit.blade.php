@@ -23,7 +23,7 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="name">Nombre Producto:</label>
-                <input type="text" name="nombre" id="nombre" value="{{ old('nombre', $categoria->nombre) }}">
+                <input type="text" class="form-control" name="nombre" id="nombre" value="{{ old('nombre', $categoria->nombre) }}">
                 {{-- otra forma de comprobar los errores 
                     @error('name')
                         <div class="alert alert-danger">{{ $message }}
@@ -43,12 +43,10 @@
             @endforeach
         </select>
     </div>
-    <button type="submit">Actualizar Categoria</button>
+    <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion" src="../../imagenes/imagenes/icon_modificar.png" alt="Botón Modificar" height="12" width="15">MODIFICAR</button>
+    <a href="{{ route('categorias.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="../../imagenes/imagenes/flecha.png" alt="Botón Flecha" height="15" width="30">Regresar
+        al listado de categorías</a>
     </form>
-    <p>
-        <a href="{{ route('categorias.index') }}">Regresar al listado de las categorias</a>
-
-    </p>
 </div>
 </div>
 @endsection

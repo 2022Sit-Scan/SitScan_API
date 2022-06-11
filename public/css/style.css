@@ -386,6 +386,9 @@ color: #006B67;
 .btn-add:hover{
     color: #006B67;
 }
+.btn-end{
+    text-align: end;
+}
 /* ------ */
 
 /* FORMULARIOS */

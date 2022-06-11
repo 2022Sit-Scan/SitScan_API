@@ -54,7 +54,7 @@
         </div>
 
         <div class="col-6 col-md-6 col-lg-2">
-            <p>
+            <p class="btn-end">
                 <a href="{{ route('usuarios.create') }}" class="btn btn-primary" id="addProducto"><img
                         src="imagenes/imagenes/icon_add.png" alt="Botón Crear Usuario" height="15" width="15">NUEVO
                     USUARIO</a>
