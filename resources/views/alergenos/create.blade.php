@@ -29,7 +29,7 @@
         <input type="text" class="form-control" name="urlImagen" id="urlImagen" placeholder="/imagenes/alergenos/<nombreimagen>">
     </div>
 
-    <button type="submit" class="btn btn-primary btn-add"><img id="img_cerrarSesion" src="{{asset('/imagenes/imagenes/icon_add.svg')}}" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
-    <a href="{{ route('alergenos.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="{{asset('/imagenes/imagenes/flecha.png')}}" alt="Botón Flecha" height="15" width="30">Regresar al listado de alérgenos</a>
+    <button type="submit" class="btn btn-primary btn-add"><img id="img_cerrarSesion" src="../../imagenes/imagenes/icon_add.svg" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
+    <a href="{{ route('alergenos.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="../../imagenes/imagenes/flecha.png" alt="Botón Flecha" height="15" width="30">Regresar al listado de alérgenos</a>
 </form>
 @endsection
