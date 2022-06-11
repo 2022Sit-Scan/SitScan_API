@@ -44,7 +44,7 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
          $rules = [
-            'nombre' => 'required| min:6 | max:20',
+            'nombre' => 'required| max:20',
             'urlImagen' => '', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
             'descripcion' => 'max:1000',
             'categoria_id'=> 'integer',
@@ -98,7 +98,7 @@ class ProductoController extends Controller
     public function update(Request $request, Producto $producto)
     {
         $rules = [
-            'nombre' => 'min:6 | max:20',
+            'nombre' => 'max:20',
             'urlImagen' => '', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
             'descripcion' => 'max:1000',
             'categoria_id'=> 'integer',

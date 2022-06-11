@@ -31,7 +31,7 @@ class EstablecimientoController extends Controller
      */
     public function create()
     {
-        //
+        return view('establecimientos.create');
     }
 
     /**
@@ -42,7 +42,24 @@ class EstablecimientoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            
+            'nombre' => 'required | max:20',
+            'urlLogo' => '',
+           
+        ];
+        $messages = [
+            'required' => 'El campo :attribute es obligatorio.',
+
+        ];
+        $validatedData = $request->validate($rules, $messages);
+        
+        Establecimiento::create([
+            'nombre' => $validatedData['nombre'],
+            'urlLogo' => $validatedData['urlLogo'],
+        ]);
+
+        return redirect()->route('establecimientos.index');
     }
 
     /**
