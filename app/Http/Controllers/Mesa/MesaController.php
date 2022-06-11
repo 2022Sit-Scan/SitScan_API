@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mesa;
 
 use App\Models\Mesa;
 use Illuminate\Http\Request;
+use App\Models\Establecimiento;
 use App\Http\Controllers\Controller;
 
 class MesaController extends Controller
@@ -30,7 +31,10 @@ class MesaController extends Controller
      */
     public function create()
     {
-        //
+        $ultimaIDMesa=Mesa::orderBy('id','desc')->first()->id;
+        
+        $establecimientos = Establecimiento::all();
+        return view('mesas.create', compact('establecimientos','ultimaIDMesa'));
     }
 
     /**

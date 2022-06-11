@@ -68,7 +68,7 @@
                 <th scope="col">NOMBRE PRODUCTO</th>
                 <th scope="col">PRECIO</th>
                 <th scope="col">CATEGORÍA</th>
-                <th scope="col">URL</th>
+                {{--  <th scope="col">URL</th>  --}}
                 <th scope="col">IMAGEN</th>
                 <th scope="col">ACCIONES</th>
             </tr>
@@ -80,7 +80,7 @@
                     <td>{{ $producto->nombre }}</td>
                     <td>{{ $producto->precio }} €</td>
                     <td>{{ $producto->categoria->nombre }}</td>
-                    <td>{{ $producto->urlImagen }}</td>
+                    {{--  <td>{{ $producto->urlImagen }}</td>  --}}
                     <td><img src=".{{ $producto->urlImagen }}" /></td>
                     <td>
                         <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><img
