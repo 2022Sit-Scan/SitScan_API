@@ -44,10 +44,9 @@
     </div>
     <!-- MODAL -->
   </div>
-
   <div class="col-6 col-md-6 col-lg-3">
     <p class="btn-end">
-      <a href="{{ route('establecimientos.create') }}" class="btn btn-primary" id="addProducto"> <img src="./imagenes/imagenes/icon_add.png" alt="Boton Crear Alérgeno" height="15" width="15">NUEVO ESTABLECIMIENTO</a>
+      <a href="{{ route('establecimientos.create') }}" class="btn btn-primary" id="addProducto"> <img src="./imagenes/imagenes/icon_add.png" alt="Boton Crear Establecimiento" height="15" width="15">NUEVO ESTABLECIMIENTO</a>
     </p>
   </div>
 </div>
@@ -71,8 +70,6 @@
       <td>{{ $establecimiento->urlLogo }}</td>
 
       <td>
-        <a href="{{ route('establecimientos.edit', $establecimiento) }}" class="btn btn-link"><img src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>
-
         <form action="{{ route('establecimientos.destroy', $establecimiento) }}" method="POST">
           @csrf
           @method('DELETE')
