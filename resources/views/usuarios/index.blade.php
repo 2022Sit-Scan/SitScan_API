@@ -10,8 +10,7 @@
         </div>
         <div class="col-6 col-md-6 col-lg-2">
             <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion"
-                    src="{{ asset('/imagenes/imagenes/icon_cerrarSesion.png') }}" alt="Botón Cerrar Sesión" height="12"
-                    width="15">CERRAR
+                    src="imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR
                 SESIÓN</a>
 
             <!-- Modal -->
@@ -23,8 +22,7 @@
                             <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
                             <button type="button" id="btn_cerrar" class="close" data-dismiss="modal"
                                 aria-label="Close">
-                                <img src="{{ asset('/imagenes/imagenes/close.png') }}" alt="Botón Close" height="26"
-                                    width="26">
+                                <img src="imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
                             </button>
                         </div>
                         <div class="modal-body">
@@ -38,7 +36,7 @@
                                 class="btn btn-primary-logout col-md-6">
                                 <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button"
                                     aria-haspopup="true" aria-expanded="false" v-pre onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
+                                     document.getElementById('logout-form').submit();">
                                     {{ __('CERRAR SESIÓN') }}
                                     <div class="modal fade" id="ventan">
 
@@ -58,8 +56,7 @@
         <div class="col-6 col-md-6 col-lg-2">
             <p class="btn-end">
                 <a href="{{ route('usuarios.create') }}" class="btn btn-primary" id="addProducto"><img
-                        src="{{ asset('/imagenes/imagenes/icon_add.png') }}" alt="Botón Crear Usuario" height="15"
-                        width="15">NUEVO
+                        src="imagenes/imagenes/icon_add.png" alt="Botón Crear Usuario" height="15" width="15">NUEVO
                     USUARIO</a>
             </p>
         </div>
@@ -92,14 +89,12 @@
                         <td>{{ $usuario->rol }}</td>
                         <td>
                             <a href="{{ route('usuarios.edit', $usuario) }}" class="btn btn-link"><img
-                                    src="{{ asset('/imagenes/imagenes/icon_edit.svg') }}" alt="Editar" height="26"
-                                    width="26"></span></a>
+                                    src="imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>
                             <form action="{{ route('usuarios.destroy', $usuario) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-link"><img
-                                        src="{{ asset('/imagenes/imagenes/icon_delete.svg') }}" alt="Botón Eliminar"
-                                        height="26" width="26"></button>
+                                <button type="submit" class="btn btn-link"><img src="imagenes/imagenes/icon_delete.svg"
+                                        alt="Botón Eliminar" height="26" width="26"></button>
                             </form>
                         </td>
                     </tr>

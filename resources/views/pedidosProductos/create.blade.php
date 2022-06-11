@@ -40,9 +40,9 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion"
-                         src="{{ asset('/imagenes/imagenes/icon_add.png') }}" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
+                        src="./imagenes/imagenes/icon_add.png" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
                 <a href="{{ route('usuarios.index') }}" class="btn btn-link"><img id="img_cerrarSesion"
-                         src="{{ asset('/imagenes/imagenes/icon_add.png') }}" alt="Botón Flecha" height="12" width="15">Regresar al listado
+                        src="./imagenes/imagenes/icon_add.png" alt="Botón Flecha" height="12" width="15">Regresar al listado
                     de pedidos productos</a>
             </form>
         </div>

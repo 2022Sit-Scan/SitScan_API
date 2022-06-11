@@ -22,7 +22,10 @@
 
         <label for="name">Nombre:</label>
         <input type="text" name="name" id="name" placeholder="Pedro Perez" value="{{ old('name', $usuario->name) }}">
-
+        {{-- otra forma de comprobar los errores 
+            @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror --}}
         <br>
         <label for="email">Correo electrónico:</label>
         <input type="email" name="email" id="email" placeholder="pedro@example.com"
@@ -36,5 +39,7 @@
 
     <p>
         <a href="{{ route('usuarios.index') }}">Regresar al listado de usuarios</a>
+        {{-- otra forma 
+        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a> --}}
     </p>
 @endsection
