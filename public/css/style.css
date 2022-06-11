@@ -317,9 +317,18 @@ margin-bottom: 20px;
 .btn-primary:hover {
     background-color: #f6c47e;
     color: #004F57;
-    border-color: none;
-    
+    border-color: none;   
 }
+
+#btn_completados-volver {
+    background-color: #004F57;
+    color: #FFFFFF;
+}
+
+#btn_completados-volver:hover {
+    background-color: #006B67;
+}
+
 #btn_cerrar{
     color: white;
 }
