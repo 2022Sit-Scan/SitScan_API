@@ -3,9 +3,7 @@
 @section('title', 'CREAR MESA')
 
 @section('content')
-    <div class="card">
-        <h4 class="card-header">CREAR MESA</h4>
-        <div class="card-body">
+        <h1 class="pt-3">CREAR MESA</h1>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -21,7 +19,7 @@
             <form method="POST" action="{{ url('mesas') }}">
                 {{ csrf_field() }}
             <div class="form-group">
-                <label for="establecimiento_id">Establecimiento</label>
+                <label for="establecimiento_id">Establecimiento:</label>
                 <select class="form-control" id="establecimiento_id" name="establecimiento_id">
                     <option selected disabled>Elige Establecimiento</option>
                     @foreach ($establecimientos as $establecimiento)
@@ -29,14 +27,8 @@
                     @endforeach
                 </select>
             </div>
-
-
-                <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion"
-                        src="./imagenes/imagenes/icon_add.png" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
-                <a href="{{ route('mesas.index') }}" class="btn btn-link"><img id="img_cerrarSesion"
-                        src="./imagenes/imagenes/icon_add.png" alt="Botón Flecha" height="12" width="15">Regresar al listado
-                    de mesas</a>
+            <button type="submit" class="btn btn-primary btn-add"><img id="img_cerrarSesion" src="{{asset('/imagenes/imagenes/icon_add.svg')}} " alt="Botón Añadir" height="12" width="15">AÑADIR</button>
+            <a href="{{ route('mesas.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="{{asset('/imagenes/imagenes/flecha.png')}}" alt="Botón Flecha" height="15" width="30">Regresar
+                al listado de mesas</a>
             </form>
-        </div>
-    </div>
 @endsection

@@ -5,6 +5,16 @@
     src: url('../tipografia/Karla-Bold.ttf');
 }
 
+.page-item.active .page-link{
+    background-color: #004F57!important;
+    border-color: #004F57!important;
+}
+.page-link{
+    color: #0e8d89;
+}
+.page-link:hover{
+    color: #006B67;
+}
 .menu {
     background-color: #006B67;
 }
@@ -119,6 +129,15 @@ h6 {
 }
 
 /* TABLA */
+
+#enlace-qr{
+    color: #006B67;
+    text-decoration: underline;
+}
+
+#enlace-qr:hover{
+    color: #004F57;
+}
 
 .fila-tabla {
     background-color: #F4E2D4;
