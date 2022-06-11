@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Agua y refrescos',
-            'urlImagen' => '/imagenes/categorias/icon_refrescos.png',
+            'urlImagen' => '/imagenes/categorias/refrescos_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -26,7 +26,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Zumos y batidos',
-            'urlImagen' => '/imagenes/categorias/icon_zumosybatidos.png',
+            'urlImagen' => '/imagenes/categorias/zumosybatidos_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -35,7 +35,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Destilados',
-            'urlImagen' => '/imagenes/categorias/icon_destilados.png',
+            'urlImagen' => '/imagenes/categorias/destilados_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -44,7 +44,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cervezas',
-            'urlImagen' => '/imagenes/categorias/icon_cervezas.png',
+            'urlImagen' => '/imagenes/categorias/cervezas_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -53,7 +53,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Cafes',
-            'urlImagen' => '/imagenes/categorias/icon_cafes.png',
+            'urlImagen' => '/imagenes/categorias/cafes_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -62,7 +62,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => null,
             'nombre' => 'Postres',
-            'urlImagen' => '/imagenes/categorias/icon_postres.png',
+            'urlImagen' => '/imagenes/categorias/postres_cat.png',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -71,7 +71,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Ron',
-            'urlImagen' => 'categorias/ron',
+            'urlImagen' => '/categorias/ron_cat',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -80,7 +80,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Whisky',
-            'urlImagen' => 'categorias/whisky',
+            'urlImagen' => '/categorias/whisky_cat',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -89,7 +89,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Ginebra',
-            'urlImagen' => 'categorias/ginebra',
+            'urlImagen' => '/categorias/ginebra_cat',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -98,7 +98,25 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Vodka',
-            'urlImagen' => 'categorias/Vodka',
+            'urlImagen' => '/categorias/vodka_cat',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 3,
+            'nombre' => 'Bourbon',
+            'urlImagen' => '/categorias/bourbon_cat',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 3,
+            'nombre' => 'Martini',
+            'urlImagen' => '/categorias/martini_cat',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -107,7 +125,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 3,
             'nombre' => 'Licores',
-            'urlImagen' => 'categorias/licores',
+            'urlImagen' => '/categorias/licores_cat',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -116,7 +134,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Coca cola',
-            'urlImagen' => 'categorias/cocacola',
+            'urlImagen' => '/categorias/cocacola',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -125,7 +143,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Fanta',
-            'urlImagen' => 'categorias/fanta',
+            'urlImagen' => '/categorias/fanta',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -134,7 +152,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Kas',
-            'urlImagen' => 'categorias/kas',
+            'urlImagen' => '/categorias/kas',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -143,7 +161,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Schweppes',
-            'urlImagen' => 'categorias/schweppes',
+            'urlImagen' => '/categorias/schweppes',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -152,7 +170,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 6,
             'nombre' => 'Tartas',
-            'urlImagen' => 'categorias/tartas',
+            'urlImagen' => '/categorias/tartas',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -161,7 +179,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 6,
             'nombre' => 'Crepes',
-            'urlImagen' => 'categorias/crepes',
+            'urlImagen' => '/categorias/crepes',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -170,7 +188,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 2,
             'nombre' => 'Zumos',
-            'urlImagen' => 'categorias/zumos',
+            'urlImagen' => '/categorias/zumos',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -179,7 +197,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 2,
             'nombre' => 'Batidos',
-            'urlImagen' => 'categorias/batidos',
+            'urlImagen' => '/categorias/batidos',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -188,7 +206,7 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 5,
             'nombre' => 'Solo',
-            'urlImagen' => 'categorias/solo',
+            'urlImagen' => '//categorias/solo',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -197,9 +215,29 @@ class CategoriaSeeder extends Seeder
         ->insert([
             'categoriaPadre' => 1,
             'nombre' => 'Agua',
-            'urlImagen' => 'categorias/agua',
+            'urlImagen' => '/categorias/agua',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 4,
+            'nombre' => 'Con Alcohol',
+            'urlImagen' => '/categorias/cerveza/alcohol',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        DB::table('categorias')
+        ->insert([
+            'categoriaPadre' => 4,
+            'nombre' => 'Sin Alcohol',
+            'urlImagen' => '/categorias/cerveza/sinalcohol',
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+
     }
 }

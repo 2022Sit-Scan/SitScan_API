@@ -19,7 +19,7 @@ class CreateProductosTable extends Migration
             $table->string('urlImagen');
             $table->string('descripcion')->nullable();
             $table->integer('categoria_id')->unsigned();
-            $table->float('precio')->nullable();
+            $table->float('precio');
             $table->timestamps();
             $table->foreign('categoria_id')
                     ->references('id')

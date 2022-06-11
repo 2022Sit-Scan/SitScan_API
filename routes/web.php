@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth']], function() {
      Route::resource('pedidos', 'Pedido\PedidoController')->except(['show']);
      Route::resource('listaprecios', 'Establecimiento\EstablecimientoProductoController');
      Route::resource('pedidosproductos', 'Pedido\PedidoProductoController');
-
+     Route::resource('pedidosacabados', 'Pedido\PedidoAcabadoController');
     // Route::resource('comments', 'CommentController');
 });
 

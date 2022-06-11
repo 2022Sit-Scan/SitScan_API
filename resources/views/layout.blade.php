@@ -54,20 +54,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
                     </li>
-                    @elseif (Auth::user()->rol == 'GERENTE')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/listaprecios') }}">Lista de Precios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/#') }}">Añadir Producto</a>
-                    </li>
-                    @elseif ( Auth::user()->rol == 'CAMARERO')
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/pedidos') }}">Pedidos</a>
-                    </li>
-
-
                     @endif
                 </ul>
             </div>
@@ -89,7 +75,7 @@
 
     <footer class="footer">
         <div class="container">
-            <img src="/imagenes/imagenes/logo_entero_blanco_1.svg" class="logo-blanco" alt="Logo" />
+            <img src="./imagenes/imagenes/logo_entero_blanco_1.svg" class="logo-blanco" alt="Logo" />
             <span class="text-muted">Si tiene algún tipo de problema técnico, no dude en llamar al <strong>955 85 74 92</strong> le atenderemos enseguida</span>
         </div>
     </footer>

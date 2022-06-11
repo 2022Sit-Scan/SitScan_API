@@ -70,7 +70,7 @@ class DatabaseSeeder extends Seeder
         Producto::all()->each(
             function($product) use ($cartas){
                 $randomestablecimientos = $cartas->pluck('id');
-                $product->cartas()->attach($randomestablecimientos,['precio'=>mt_rand(2.5,10.5)]);
+                $product->cartas()->attach($randomestablecimientos);
             }
         );
 

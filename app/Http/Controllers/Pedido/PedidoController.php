@@ -58,6 +58,7 @@ class PedidoController extends Controller
              
                 $pedido->productos()->syncWithoutDetaching([$productoID=> ['cantidad'=>$cantidad]]);
             }  
+            
          return $this->showOne($pedido,201);
     }
 
@@ -92,11 +93,16 @@ class PedidoController extends Controller
      */
     public function update(Request $request, Pedido $pedido)
     {
-        $validatedData = $request;
-
-        Pedido::where('id',$pedido->id)->update(array('estado' => 1));
-
+        
+      
+        if (!$pedido->estado){
+            Pedido::where('id',$pedido->id)->update(array('estado' => 1));
+        }
+        else{
+            Pedido::where('id',$pedido->id)->update(array('estado' => 0));
+        }
         return redirect()->route('pedidosproductos.index');
+        
     }
     /**
      * Remove the specified resource from storage.

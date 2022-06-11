@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', "Editar usuario")
+@section('title', 'Editar usuario')
 
 @section('content')
     <h1>Editar usuario</h1>
@@ -20,11 +20,11 @@
         {{ method_field('PUT') }}
         {{ csrf_field() }}
 
-        
+
         {{-- otra forma de comprobar los errores 
             @error('name')
                 <div class="alert alert-danger">{{ $message }}</div>
-            @enderror--}}
+            @enderror --}}
         <label for="email">Correo electrónico:</label>
         <input type="email" name="email" id="email" value="{{ old('email', $usuario->email) }}">
         <br>
@@ -32,16 +32,16 @@
         <input type="password" name="password" id="password" placeholder="Mayor a 6 caracteres">
         <br>
         <label for="rol">Rol</label>
-            <select class="form-control" id="rol" name="rol">
-                <option value='GERENTE'>Gerente</option>
-                <option value='CAMARERO'>Camarero</option>
-            </select>
+        <select class="form-control" id="rol" name="rol">
+            <option value='GERENTE'>Gerente</option>
+            <option value='CAMARERO'>Camarero</option>
+        </select>
         <button type="submit">Actualizar usuario</button>
     </form>
 
     <p>
         <a href="{{ route('usuarios.index') }}">Regresar al listado de usuarios</a>
         {{-- otra forma 
-        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a>--}}
+        <a href="{{ url()->previous() }}">Regresar al listado de usuarios</a> --}}
     </p>
 @endsection
