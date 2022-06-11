@@ -95,7 +95,7 @@
                     <td>{{ $producto->precio }} €</td>
                     <td>{{ $producto->categoria->nombre }}</td>
                     {{--  <td>{{ $producto->urlImagen }}</td>  --}}
-                    <td><img src=".{{ $producto->urlImagen }}" /></td>
+                    <td><img src="{{ asset($producto->urlImagen) }}" /></td>
                     <td>
                         <a href="{{ route('productos.edit', $producto) }}" class="btn btn-link"><img
                                 src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="30" width="30"></a>

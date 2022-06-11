@@ -75,6 +75,7 @@ class MesaController extends Controller
             'establecimiento_id' => $validatedData['establecimiento_id'],
            
         ]);
+        
 
         return redirect()->route('mesas.index');
     }
