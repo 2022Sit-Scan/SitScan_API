@@ -4,9 +4,12 @@
     font-family: 'Karla-Bold';
     src: url('../tipografia/Karla-Bold.ttf');
     }
-.fondo{
-    background-color: #971515;
+
+
+.fondo-volver{
+    background-color: #D0D0CE;
 }
+
 html{
     position: relative;
     min-height: 100%;
@@ -59,6 +62,7 @@ h6 {
 
 #HoraActual{
     color: black;
+    font-size: 55px;
 }
 
 /* ----------------------------- */
@@ -214,6 +218,12 @@ td{
     border-radius: 10px!important;
     padding: 5%;
     color: white;
+}
+
+.card-header-carta-volver{
+    border-radius: 10px!important;
+    padding: 5%;
+    color: black;
 }
 
 .card-footer-carta{
@@ -379,6 +389,13 @@ color: #006B67;
 }
 .btn-hecho{
     background-color: #006B67;
+    color: white;
+    width: 100%;
+    padding: 15px;
+}
+
+.btn-hecho-volver{
+    background-color: #E29C7E;
     color: white;
     width: 100%;
     padding: 15px;

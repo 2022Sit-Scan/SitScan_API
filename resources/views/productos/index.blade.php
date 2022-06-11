@@ -61,18 +61,6 @@
     <div class="col-12 col-lg-8">
       <h1 class="pb-1">@yield('title')</h1>
     </div>
-    <div class="col-12 col-lg-4 ">
-  
-      <div class="row ">
-        <div class="col-9 col-lg-9">
-          <input class="form-control buscador" type="search" placeholder="Buscar" aria-label="Search">
-        </div>
-        <div class="col-3 col-lg-3">
-          <button class="btn btn-buscar" type="submit"><img id="img_lupa" src="./imagenes/imagenes/icon_lupa.png" alt="Botón Buscar" height="25" width="25"></button>
-        </div>
-  
-      </div>
-    </div>
   </div>
     
     <table class="table">

@@ -23,7 +23,7 @@
                 @endphp
                 <div class="col-12 col-md-6 col-lg-4 mb-5">
                     <div class="card card-carta">
-                        <div class="card-header card-header-carta fondo">
+                        <div class="card-header card-header-carta-volver fondo-volver">
                             <div class="row justify-content-between">
                                 <div class="col-6">
                                     MESA {{ $pedidoinfo->mesa->numero_mesa }}
@@ -58,9 +58,9 @@
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="card-footer card-footer-carta">
-                                <button type="submit" class="btn btn-primary btn-hecho"><img
-                                        src="./imagenes/imagenes/icon-restaurar.png" alt="Botón Hecho" height="12"
-                                        width="20">RESTAURAR</a></button>
+                                <button type="submit" class="btn btn-primary btn-hecho-volver"><img
+                                        src="./imagenes/imagenes/icon-restaurar.svg" alt="Botón Hecho" height="15"
+                                        width="23">RESTAURAR</a></button>
                             </div>
                         </form>
                     </div>
