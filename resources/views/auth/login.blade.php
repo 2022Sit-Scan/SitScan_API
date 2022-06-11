@@ -1,21 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container cuadrado">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="container cuadrado">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
                 <div class="card-body card-body-login">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group-titulo row">
-                            <label id="label-login" for="email" class="offset-md-3 col-form-label text-center">{{ __('INICIAR SESIÓN') }}</label>
+                            <label id="label-login" for="email"
+                                class="offset-md-3 col-form-label text-center">{{ __('INICIAR SESIÓN') }}</label>
                         </div>
 
                         <div class="form-group row">
 
                             <div class="col-md-12">
-                                <input id="email" type="email" placeholder="Usuario" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="email" placeholder="Usuario"
+                                    class="form-control @error('email') is-invalid @enderror" name="email"
+                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -28,7 +31,9 @@
                         <div class="form-group row">
 
                             <div class="col-md-12">
-                                <input id="password" type="password" placeholder="Contraseña" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" placeholder="Contraseña"
+                                    class="form-control @error('password') is-invalid @enderror" name="password" required
+                                    autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -45,13 +50,12 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    
                                 @endif
                             </div>
                         </div>
                     </form>
                 </div>
+            </div>
         </div>
     </div>
-</div>
 @endsection

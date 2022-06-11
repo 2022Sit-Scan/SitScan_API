@@ -9,7 +9,8 @@
         </div>
         <div class="col-6 col-md-6 col-lg-2">
             <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion"
-                    src="./imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión" height="12" width="15">CERRAR
+                    src="{{ asset('/imagenes/imagenes/icon_cerrarSesion.png') }}" alt="Botón Cerrar Sesión" height="12"
+                    width="15">CERRAR
                 SESIÓN</a>
 
             <!-- Modal -->
@@ -21,7 +22,8 @@
                             <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
                             <button type="button" id="btn_cerrar" class="close" data-dismiss="modal"
                                 aria-label="Close">
-                                <img src="./imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
+                                <img src="{{ asset('/imagenes/imagenes/close.png') }}" alt="Botón Close" height="26"
+                                    width="26">
                             </button>
                         </div>
                         <div class="modal-body">
@@ -35,7 +37,7 @@
                                 class="btn btn-primary-logout col-md-6">
                                 <div id="navbarDropdown" class="btn-primary-logout" href="#" role="button"
                                     aria-haspopup="true" aria-expanded="false" v-pre onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
+                                         document.getElementById('logout-form').submit();">
                                     {{ __('CERRAR SESIÓN') }}
                                     <div class="modal fade" id="ventan">
 
@@ -61,7 +63,8 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">NÚMERO MESA</th>
-                        <th scope="col">CÓDIGO QR <a href="https://www.codigos-qr.com/generador-de-codigos-qr/">Crear codigo QR</a></th>
+                        <th scope="col">CÓDIGO QR <a href="https://www.codigos-qr.com/generador-de-codigos-qr/">Crear codigo
+                                QR</a></th>
                         <th scope="col">ESTABLECIMIENTO</th>
                         <th scope="col">ACCIONES</th>
 
@@ -80,8 +83,8 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-link"><img
-                                            src="./imagenes/imagenes/icon_delete.svg" alt="Botón Eliminar" height="26"
-                                            width="26"></button>
+                                            src="{{ asset('/imagenes/imagenes/icon_delete.svg') }}" alt="Botón Eliminar"
+                                            height="26" width="26"></button>
                                 </form>
                             </td>
                         </tr>
