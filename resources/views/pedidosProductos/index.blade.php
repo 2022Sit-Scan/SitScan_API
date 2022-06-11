@@ -57,7 +57,7 @@
                             <p class="text-right">Precio Total: {{ $ptotal }} €</p>
                         </div>
 
-                        <form method="POST" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
+                        <form method="POST" style="margin:0px;" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="card-footer card-footer-carta">
