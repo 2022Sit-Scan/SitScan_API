@@ -20,7 +20,7 @@ class ProductoController extends Controller
             return $this->showAll(Producto::all());
             }
             else{
-                $productos = Producto::all();
+                $productos = Producto::paginate(10);
              return view('productos.index', compact('productos'));
             }
     }
