@@ -86,7 +86,7 @@
                             @endif
                         </td>
                         <td>{{ $categoria->urlImagen }}</td>
-                        <td><img src="..{{ $categoria->urlImagen }}" /></td>
+                        <td><img src=".{{ $categoria->urlImagen }}" /></td>
                         <td>
                             <a href="{{ route('categorias.edit', $categoria) }}" class="btn btn-link"><img
                                     src="./imagenes/imagenes/icon_edit.svg" alt="Editar" height="26" width="26"></span></a>
