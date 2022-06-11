@@ -50,14 +50,14 @@
                     $ptotal = 0;
                     $ptotalproducto = 0;
                 @endphp
-                <div class="col-4 col-md-4 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
                     <div class="card card-carta">
                         <div class="card-header card-header-carta fondo">
                             <div class="row justify-content-between">
-                                <div class="col-4">
+                                <div class="col-6">
                                     MESA {{ $pedidoinfo->mesa->numero_mesa }}
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6">
                                     {{ $pedidoinfo->created_at }}
                                 </div>
                             </div>
@@ -83,7 +83,7 @@
                             <p class="text-right">Precio Total: {{ $ptotal }} €</p>
                         </div>
 
-                        <form method="POST" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
+                        <form method="POST" style="margin:0px;" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="card-footer card-footer-carta">
