@@ -38,23 +38,19 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#inicio">Home</a>
+              <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#titulo1">Título 1</a>
+              <a class="nav-link active" aria-current="page" href="#producto">PRODUCTO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#titulo2">Título 2</a>
+              <a class="nav-link active" aria-current="page" href="#pedido">PEDIDO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#titulo3">Título 3</a>
+              <a class="nav-link active" aria-current="page" href="#otra-onda">OTRA RONDA</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#titulo4">Título 4</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#footer">Footer</a>
+            <li class="nav-item descarga">
+              <a class="nav-link active" aria-current="page" href="#descarga">DESCARGAR APP</a>
             </li>
           </ul>
         </div>
@@ -62,9 +58,10 @@
     </nav>
     <div class="container-md">
       <div class="row">
-        <div id="parrafo1" class="col-6">
+        <div id="sitScan" class="col-6">
           <h1>¿QUÉ ES <img src="img/logo_entero.png" height="65" alt="Sit&Scan Logo" loading="lazy" />?</h1>
           <p> Es una aplicación orientada a la hosteleria que consiste en escanear un código QR en el que <strong>podrás pedir a través de Sit&Scan.</strong></p>
+          <p><strong>¡Pruébalo!</strong></p>
         </div>
       </div>
 
@@ -74,26 +71,26 @@
 
   <!--Main Navigation-->
 
-  <div id="titulo1" class="container my-5">
+  <div id="producto" class="container my-5">
     <div class="row justify-content-around">
       <h2>¿CÓMO AÑADIR UN PRODUCTO AL PEDIDO?</h2>
-      <div class="col-12 col-lg-6">
-        <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
+      <div class="col-12 col-lg-6 me-2">
+        <div class="bg-image" style="background-image: url('img/producto.png');
             height: 50vh">
         </div>
       </div>
-      <div class="col-12 col-lg-6">
-        <h4> ¡Super Fácil!</h4>
+      <div class="col-12 col-lg-5 ms-5">
+        <h4> ¡<strong>S</strong>uper Fácil <strong>& S</strong>encillo !</h4>
         <p>Después de escanear el QR, aparecerá el menú principal donde tendremos acceso a las diferentes categorías que proporciona el establecimiento.</p>
         <p>Una vez seleccionado la categoría nos aparecerá un listado de productos en el que tendremos la opción de elegir uno de ellos.</p>
-        <p>Añade la cantidad y pulsa <b>ACEPTAR</b></p>
-        <p><strong>¡Listo tu producto ha sido añadido al pedido!</strong></p>
+        <p>Añade la cantidad y pulsa <b>ACEPTAR</b>.</p>
+        <p><strong>¡Listo! Tu producto ha sido añadido a la lista del pedido.</strong></p>
       </div>
     </div>
   </div>
 
   <div id="color" class="container-fluid py-5">
-    <div id="titulo2" class="container-md">
+    <div id="pedido" class="container-md">
       <div class="row justify-content-around">
         <h2>¿CÓMO REALIZAR UN PEDIDO?</h2>
         <div class="col-12 col-lg-6">
@@ -101,8 +98,8 @@
           <p><strong>Pronto llegará tu pedido y será cobrado.</strong></p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
-              height: 50vh">
+          <div class="bg-image" style="background-image: url('img/pedido.png');
+              height: 70vh">
           </div>
 
         </div>
@@ -111,12 +108,12 @@
 
   </div>
 
-  <div id="titulo3" class="container my-5">
+  <div id="otra-ronda" class="container my-5">
     <div class="row justify-content-around">
-      <h2>¿ERES UN FIESTERO?</h2>
+      <h2>¿ERES UN@ FIESTER@?</h2>
       <div class="col-12 col-lg-6">
-        <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
-            height: 50vh">
+        <div class="bg-image" style="background-image: url('img/otra-ronda.png');
+            height: 70vh">
         </div>
       </div>
       <div class="col-12 col-lg-6">
@@ -126,20 +123,10 @@
     </div>
   </div>
 
-  <div id="color-naranja" class="container-fluid py-5">
-    <div id="titulo4" class="container-md">
-      <div class="row">
-        <div id="centrado" class="col-12 pb-5">
-          <h2>¡DESCARGA LA APP!</h2>
-        </div>
-        <div class="col-12 pt-5">
-          <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
-              height: 50vh">
-          </div>
-
-        </div>
-      </div>
+  <div id="image" class="container-fluid py-5">
+    <div id="descarga" class="container-md">
     </div>
+  </div>
 
   </div>
 
@@ -148,21 +135,24 @@
     <div class="container-md py-5">
       <div class="row">
         <div class="col-12 col-md-4">
-          <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
-          <a class="nav-link active" aria-current="page" href="#"></a>
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
+          <a class="nav-link active" aria-current="page" href="producto">PRODUCTO</a>
+          <a class="nav-link active" aria-current="page" href="pedido">PEDIDO</a>
+          <a class="nav-link active" aria-current="page" href="otra-ronda">OTRA RONDA</a>
+        </div>
+        <div class="col-12 col-md-4">
         </div>
         <div class="col-12 col-md-4">
           <p>
-            <img src="img/logo_pequeño.png" height="25" alt="Sit&Scan Logo" loading="lazy" />
+          <i class="far fa-envelope fa-lg"></i>
             luciaserranovargas@gmail.com
           </p>
-          <p> <img src="img/logo_pequeño.png" height="25" alt="Sit&Scan Logo" loading="lazy" />
+          <p>
+          <i class="far fa-envelope fa-lg"></i>
             josemiguelfernandezmarin@gmail.com</p>
-          <p> <img src="img/logo_pequeño.png" height="25" alt="Sit&Scan Logo" loading="lazy" />
+          <p> <i class="far fa-envelope fa-lg"></i>
             robertonavarrosanchez@gmail.com</p>
-          <p> <img src="img/logo_pequeño.png" height="25" alt="Sit&Scan Logo" loading="lazy" />
+          <p> <i class="far fa-envelope fa-lg"></i>
             franciscoismael7.7.2000@gmail.com</p>
         </div>
       </div>
@@ -171,7 +161,7 @@
           <img src="img/logo_pequeño.png" height="50" alt="Sit&Scan Logo" loading="lazy" />
         </div>
         <div class="col-4">
-          <h2><strong>SIT&SCAN</strong></h2>
+          <h2>SIT<strong>&</strong>SCAN</h2>
         </div>
       </div>
     </div>

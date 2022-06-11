@@ -12,8 +12,11 @@
     font-family: 'Karla-Regular';
     src: url('../tipografia/Karla-Regular.ttf');
 }
-
-#titulo1, #titulo2, #titulo3, #titulo4{
+.descarga{
+    border-radius: 10px;
+    background-color: #0D5A55;
+}
+#producto, #pedido, #otra-ronda, #descarga{
     padding: 100px;
 }
 
@@ -50,13 +53,18 @@ header .navbar {
 #color {
     background-color: #F7A52834;
 }
-
-#color-naranja{
-    background-color: #F89100;
+#image {
+    background: url(../img/descarga.png) no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 80vh;
 }
 
 h1{
     color: black;
+}
+h2{
+    color: #043F45;
 }
 
 h1 img{
@@ -86,4 +94,11 @@ p{
 
 footer a {
     padding: 0 0 0.5rem 0!important;
+}
+b,h4{
+    color:#0D5A55;
+}
+#boton{
+    background-color: #d18b23;
+    color: white;
 }
