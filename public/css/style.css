@@ -3,11 +3,17 @@
 @font-face {
     font-family: 'Karla-Bold';
     src: url('../tipografia/Karla-Bold.ttf');
-    }
-.fondo{
+}
+
+.menu {
+    background-color: #006B67;
+}
+
+.fondo {
     background-color: #971515;
 }
-html{
+
+html {
     position: relative;
     min-height: 100%;
 }
@@ -15,10 +21,10 @@ html{
 body {
     font-family: 'Karla-Bold', sans-serif;
     margin-bottom: 60px;
-    overflow-x: hidden;  
+    overflow-x: hidden;
 }
 
-#label-login{
+#label-login {
     vertical-align: middle;
 }
 
@@ -44,9 +50,9 @@ body {
 
 /* H1, H2, H3, H4, H5, H6 */
 
-h1{
-    font-family: 'Karla-Bold', sans-serif; 
-    color: #004F57;  
+h1 {
+    font-family: 'Karla-Bold', sans-serif;
+    color: #004F57;
 }
 
 h2 {
@@ -57,7 +63,7 @@ h6 {
     color: #cc650a;
 }
 
-#HoraActual{
+#HoraActual {
     color: black;
 }
 
@@ -73,18 +79,18 @@ h6 {
     padding: 8px 15px;
     margin-right: 10px;
     font-size: 12px;
-  }
-  
-  .file-message {
+}
+
+.file-message {
     font-size: small;
     font-weight: 300;
     line-height: 1.4;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
-  .file-input {
+}
+
+.file-input {
     position: absolute;
     left: 0;
     top: 0;
@@ -92,10 +98,10 @@ h6 {
     width: 100%;
     cursor: pointer;
     opacity: 0;
-    
-  }
 
-  .file-drop-area {
+}
+
+.file-drop-area {
     position: relative;
     display: flex;
     align-items: center;
@@ -105,12 +111,12 @@ h6 {
     border: 1px dashed rgba(255, 255, 255, 0.4);
     border-radius: 3px;
     transition: 0.2s;
-   
-  }
-  
-  .mt-100{
-      margin-top:100px;
-  }
+
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
 
 /* TABLA */
 
@@ -130,22 +136,28 @@ h6 {
     background-color: #EA710A !important;
 
 }
+
 thead th:first-child {
-   border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
 }
+
 thead th:last-child {
-  border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
 }
-tr th{
-    padding: 20px!important;
+
+tr th {
+    padding: 20px !important;
     text-align: center;
 }
-td{
+
+td {
     text-align: center;
     font-size: 20px;
 }
-.table td, .table th {
-    vertical-align: inherit!important;
+
+.table td,
+.table th {
+    vertical-align: inherit !important;
 }
 
 /* ------- */
@@ -157,12 +169,12 @@ td{
     margin-right: 20%;
 }
 
-#img_cerrarSesion{
+#img_cerrarSesion {
     padding-right: 2px;
     text-align: center;
 }
 
-#img_lupa{
+#img_lupa {
     padding: 20%;
 }
 
@@ -174,7 +186,7 @@ td{
     height: 70%;
 }
 
-.bandeja { 
+.bandeja {
     position: absolute;
     transform: translate(250%, 120%);
     width: 320px;
@@ -207,21 +219,22 @@ td{
 
 /* CARD */
 
-.card-carta{
-    border-radius: 10px!important;
+.card-carta {
+    border-radius: 10px !important;
 }
-.card-header-carta{
-    border-radius: 10px!important;
+
+.card-header-carta {
+    border-radius: 10px !important;
     padding: 5%;
     color: white;
 }
 
-.card-footer-carta{
-    padding: 0px!important;
-    border-radius: 10px!important;
+.card-footer-carta {
+    padding: 0px !important;
+    border-radius: 10px !important;
 }
 
-.card-body{
+.card-body {
     background-color: #F7E5D7;
 }
 
@@ -252,7 +265,7 @@ td{
 }
 
 .form-select {
-    border-radius : 10px;
+    border-radius: 10px;
     font-family: "Karla" sans-serif;
     margin-bottom: 60px;
 }
@@ -265,22 +278,22 @@ td{
 /* ------------- */
 
 /* BOTONES */
-p.btn-centrado{
+p.btn-centrado {
     text-align: end;
 }
 
-#btn-entrar{
-    padding-left:25px;
+#btn-entrar {
+    padding-left: 25px;
     padding-right: 25px;
 }
 
-#centrado{
-text-align: end;
-margin-bottom: 20px;
+#centrado {
+    text-align: end;
+    margin-bottom: 20px;
 }
 
 
-.btn-login{
+.btn-login {
     margin: auto;
 }
 
@@ -297,12 +310,12 @@ margin-bottom: 20px;
     color: #FFFFFF;
 }
 
-#btn_completados{
+#btn_completados {
     background-color: #EA710A;
     color: white;
 }
 
-#btn_completados:hover{
+#btn_completados:hover {
     background-color: #cc650a;
 }
 
@@ -318,9 +331,10 @@ margin-bottom: 20px;
     background-color: #f6c47e;
     color: #004F57;
     border-color: none;
-    
+
 }
-#btn_cerrar{
+
+#btn_cerrar {
     color: white;
 }
 
@@ -335,72 +349,105 @@ margin-bottom: 20px;
     color: #FFFFFF;
 }
 
-.btn-buscar{
+.btn-buscar {
     background-color: #006B67;
     padding-left: 20px;
-    padding-right: 20px;  
+    padding-right: 20px;
 }
 
-.buscador{
+.buscador {
     margin-left: 97px;
-    padding:7px;
+    padding: 7px;
 }
 
-.btn-buscar:hover{
+.btn-buscar:hover {
     background-color: #035c59;
 }
 
-#btn-aceptar-cerrarSesion-categorias, #btn-aceptar-cerrarSesion-listPrecios , #btn-aceptar-cerrarSesion-usuarios, #btn-aceptar-cerrarSesion-alergenos,#btn-aceptar-cerrarSesion-cartas,#btn-aceptar-cerrarSesion-pedidosProductos,#btn-aceptar-cerrarSesion-productos,#btn-aceptar-cerrarSesion-establecimientos{
-background-color: #F8D097;
-color: #006B67;
+#btn-aceptar-cerrarSesion-categorias,
+#btn-aceptar-cerrarSesion-listPrecios,
+#btn-aceptar-cerrarSesion-usuarios,
+#btn-aceptar-cerrarSesion-alergenos,
+#btn-aceptar-cerrarSesion-cartas,
+#btn-aceptar-cerrarSesion-pedidosProductos,
+#btn-aceptar-cerrarSesion-productos,
+#btn-aceptar-cerrarSesion-establecimientos {
+    background-color: #F8D097;
+    color: #006B67;
 }
 
-#btn-aceptar-cerrarSesion-categorias:hover, #btn-aceptar-cerrarSesion-listPrecios:hover, #btn-aceptar-cerrarSesion-usuarios:hover,#btn-aceptar-cerrarSesion-alergenos:hover,#btn-aceptar-cerrarSesion-cartas:hover,#btn-aceptar-cerrarSesion-pedidosProductos:hover,#btn-aceptar-cerrarSesion-productos:hover,#btn-aceptar-cerrarSesion-establecimientos:hover{
+#btn-aceptar-cerrarSesion-categorias:hover,
+#btn-aceptar-cerrarSesion-listPrecios:hover,
+#btn-aceptar-cerrarSesion-usuarios:hover,
+#btn-aceptar-cerrarSesion-alergenos:hover,
+#btn-aceptar-cerrarSesion-cartas:hover,
+#btn-aceptar-cerrarSesion-pedidosProductos:hover,
+#btn-aceptar-cerrarSesion-productos:hover,
+#btn-aceptar-cerrarSesion-establecimientos:hover {
     background-color: #F3C47F;
-    
-    }
 
-#btn-cancelar-cerrarSesion-categorias,#btn-cancelar-cerrarSesion-listPrecios, #btn-cancelar-cerrarSesion-usuarios, #btn-cancelar-cerrarSesion-alergenos,#btn-cancelar-cerrarSesion-cartas,#btn-cancelar-cerrarSesion-pedidosProductos,#btn-cancelar-cerrarSesion-productos,#btn-cancelar-cerrarSesion-establecimientos{
+}
+
+#btn-cancelar-cerrarSesion-categorias,
+#btn-cancelar-cerrarSesion-listPrecios,
+#btn-cancelar-cerrarSesion-usuarios,
+#btn-cancelar-cerrarSesion-alergenos,
+#btn-cancelar-cerrarSesion-cartas,
+#btn-cancelar-cerrarSesion-pedidosProductos,
+#btn-cancelar-cerrarSesion-productos,
+#btn-cancelar-cerrarSesion-establecimientos {
     background-color: #FFF8F2;
     color: #006B67;
-    }
-
-#btn-cancelar-cerrarSesion-categorias:hover,#btn-cancelar-cerrarSesion-listPrecios:hover, #btn-cancelar-cerrarSesion_usuarios:hover, #btn-cancelar-cerrarSesion-alergenos:hover,#btn-cancelar-cerrarSesion-cartas:hover,#btn-cancelar-cerrarSesion-pedidosProductos:hover,#btn-cancelar-cerrarSesion-productos:hover,#btn-cancelar-cerrarSesion-establecimientos:hover{
-        background-color: #cfcecc;
 }
-.btn-hecho{
+
+#btn-cancelar-cerrarSesion-categorias:hover,
+#btn-cancelar-cerrarSesion-listPrecios:hover,
+#btn-cancelar-cerrarSesion_usuarios:hover,
+#btn-cancelar-cerrarSesion-alergenos:hover,
+#btn-cancelar-cerrarSesion-cartas:hover,
+#btn-cancelar-cerrarSesion-pedidosProductos:hover,
+#btn-cancelar-cerrarSesion-productos:hover,
+#btn-cancelar-cerrarSesion-establecimientos:hover {
+    background-color: #cfcecc;
+}
+
+.btn-hecho {
     background-color: #006B67;
     color: white;
     width: 100%;
     padding: 15px;
 }
 
-.btn-hecho:hover{
+.btn-hecho:hover {
     background-color: #004F57;
     color: white;
 }
 
-.btn-hecho img{
-    padding-right:5px ;
+.btn-hecho img {
+    padding-right: 5px;
 }
 
-.link-atras{
+.link-atras {
     color: #006B67;
 }
 
-.link-atras:hover{
+.link-atras:hover {
     color: #004F57;
     text-decoration: none;
 }
-.btn-add{
+
+.btn-add {
     color: #006B67;
 }
-.btn-add:hover{
+
+.btn-add:hover {
     color: #006B67;
 }
-.btn-end{
+
+.btn-end {
     text-align: end;
 }
+
 /* ------ */
 
 /* FORMULARIOS */
@@ -457,11 +504,11 @@ color: #006B67;
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-body > .container {
+body>.container {
     padding: 60px 15px 0;
 }
 
-.footer > .container {
+.footer>.container {
     padding-right: 15px;
     padding-left: 15px;
 }
@@ -470,5 +517,10 @@ code {
     font-size: 80%;
 }
 
-td form{display:inline}
-table th.w-55 { width:55%; }
+td form {
+    display: inline
+}
+
+table th.w-55 {
+    width: 55%;
+}
