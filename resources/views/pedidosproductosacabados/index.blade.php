@@ -1,9 +1,10 @@
 @extends('layout')
 
-@section('title', 'Lista de Pedidos Realizados')
+@section('title', 'PEDIDOS COMPLETADOS')
 
 @section('content')
     <div class="d-flex justify-content-between align-items-end mb-3">
+        
         <h1 class="pb-1">@yield('title')</h1>
         <a href="#ventana1" class="btn btn-primary btn-lg" data-toggle="modal">CERRAR SESION</a>
         <!-- Modal -->
@@ -50,14 +51,14 @@
                     $ptotal = 0;
                     $ptotalproducto = 0;
                 @endphp
-                <div class="col-4 col-md-4 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
                     <div class="card card-carta">
                         <div class="card-header card-header-carta fondo">
                             <div class="row justify-content-between">
-                                <div class="col-4">
+                                <div class="col-6">
                                     MESA {{ $pedidoinfo->mesa->numero_mesa }}
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6">
                                     {{ $pedidoinfo->created_at }}
                                 </div>
                             </div>
@@ -71,8 +72,8 @@
                                                 $ptotalproducto = $productos->pivot->cantidad * $productos->precio;
                                             @endphp
                                             <td> {{ $productos->pivot->cantidad }}</td>
-                                            <td> {{ $productos->nombre }}</td>
-                                            <td>{{ $ptotalproducto }} €</td>
+                                            <td class="producto"> {{ $productos->nombre }}</td>
+                                            <td class="precio">{{ $ptotalproducto }} €</td>
                                             @php
                                                 $ptotal += $ptotalproducto;
                                             @endphp
@@ -83,7 +84,7 @@
                             <p class="text-right">Precio Total: {{ $ptotal }} €</p>
                         </div>
 
-                        <form method="POST" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
+                        <form method="POST" style="margin:0px;" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="card-footer card-footer-carta">

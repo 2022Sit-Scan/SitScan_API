@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="row no-gutters">
-  <div class="col-12 col-md-12 col-lg-8">
+  <div class="col-12 col-md-12 col-lg-7">
     <h1 class="pb-1">@yield('title')</h1>
   </div>
   <div class="col-6 col-md-6 col-lg-2">
@@ -45,8 +45,8 @@
     <!-- MODAL -->
   </div>
 
-  <div class="col-6 col-md-6 col-lg-2">
-    <p>
+  <div class="col-6 col-md-6 col-lg-3">
+    <p class="btn-end">
       <a href="{{ route('establecimientos.create') }}" class="btn btn-primary" id="addProducto"> <img src="./imagenes/imagenes/icon_add.png" alt="Boton Crear Alérgeno" height="15" width="15">NUEVO ESTABLECIMIENTO</a>
     </p>
   </div>

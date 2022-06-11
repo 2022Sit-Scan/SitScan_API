@@ -5,7 +5,7 @@
 @section('content')
     <div class="row no-gutters">
         <div class="col-12 col-md-12 col-lg-8">
-            <h1 class="pb-1">@yield('title')</h1>
+            <h1 id="HoraActual"></h1>
         </div>
         <div class="col-12 col-lg-4 mb-3">
             <p class="btn-centrado">
@@ -14,6 +14,10 @@
                         width="15">COMPLETADOS</a>
             </p>
         </div>
+        <div class="col-12 col-md-12 col-lg-8">
+            <h1 class="pb-1">@yield('title')</h1>
+        </div>
+        
     </div>
 
 
@@ -45,8 +49,8 @@
                                                 $ptotalproducto = $productos->pivot->cantidad * $productos->precio;
                                             @endphp
                                             <td> {{ $productos->pivot->cantidad }}</td>
-                                            <td> {{ $productos->nombre }}</td>
-                                            <td>{{ $ptotalproducto }} €</td>
+                                            <td class="producto"> {{ $productos->nombre }}</td>
+                                            <td class="precio">{{ $ptotalproducto }} €</td>
                                             @php
                                                 $ptotal += $ptotalproducto;
                                             @endphp
@@ -57,7 +61,7 @@
                             <p class="text-right">Precio Total: {{ $ptotal }} €</p>
                         </div>
 
-                        <form method="POST" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
+                        <form method="POST" style="margin:0px;" action="{{ url("pedidos/{$pedidoinfo->id}") }}">
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="card-footer card-footer-carta">

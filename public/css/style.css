@@ -176,10 +176,22 @@ td{
 
 .bandeja { 
     position: absolute;
-    transform: translate(250%, 95%);
+    transform: translate(250%, 120%);
     width: 320px;
     height: 200px;
     flex-direction: 200px;
+}
+
+#HoraActual {
+    margin-top: -10px;
+}
+
+.precio {
+    font-size: 15px;
+}
+
+.producto {
+    width: 65%;
 }
 
 .cuadrado {
@@ -385,6 +397,9 @@ color: #006B67;
 }
 .btn-add:hover{
     color: #006B67;
+}
+.btn-end{
+    text-align: end;
 }
 /* ------ */
 

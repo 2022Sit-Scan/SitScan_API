@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Lista de Mesas')
+@section('title', 'LISTA DE MESAS')
 
 @section('content')
     <div class="row no-gutters">
