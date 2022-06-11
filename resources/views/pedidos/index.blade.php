@@ -12,7 +12,7 @@
             <div class="col-6 col-md-6 col-lg-4">
                 <p class="btn-end">
                     <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img
-                            id="img_cerrarSesion" src="./imagenes/imagenes/icon_cerrarSesion.png" alt="Botón Cerrar Sesión"
+                            id="img_cerrarSesion" src="{{ asset('/imagenes/imagenes/icon_cerrarSesion.png') }}" alt="Botón Cerrar Sesión"
                             height="12" width="15">CERRAR SESIÓN</a>
                 </p>
             </div>
@@ -53,7 +53,7 @@
                         <h5 class="modal-title" id="exampleModalLongTitle">CERRAR SESIÓN</h5>
                         <button type="button" id="btn_cerrar" class="close" data-dismiss="modal"
                             aria-label="Close">
-                            <img src="./imagenes/imagenes/close.png" alt="Botón Close" height="26" width="26">
+                            <img src="{{ asset('/imagenes/imagenes/close.png') }}" alt="Botón Close" height="26" width="26">
                         </button>
                     </div>
                     <div class="modal-body">

@@ -36,8 +36,9 @@
 
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                                                             document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
 
@@ -48,15 +49,15 @@
                 </li>
             @endguest
         </div>
-        
+
         <img src="{{ asset('/imagenes/imagenes/logo_sitandscan.png') }}" class="logo" alt="Logo" />
-        <img src="./imagenes/imagenes/tapa_imagen_1.png" class="tapa" alt="Tapa" />
-                
+        <img src="{{ asset('/imagenes/imagenes/tapa_imagen_1.png') }}" class="tapa" alt="Tapa" />
+
         <main>
-             @yield('content')
+            @yield('content')
         </main>
-                       
-        <img src="/imagenes/imagenes/bandeja_imagen.png" class="bandeja" alt="Bandeja" />
+
+        <img src="{{ asset('/imagenes/imagenes/bandeja_imagen.png') }}" class="bandeja" alt="Bandeja" />
     </div>
 </body>
 

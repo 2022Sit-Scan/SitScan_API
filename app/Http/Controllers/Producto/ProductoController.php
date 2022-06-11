@@ -45,7 +45,7 @@ class ProductoController extends Controller
     {
          $rules = [
             'nombre' => 'required| max:20',
-            'urlImagen' => '', // si no hacemos ninguna validacion para este, debemos ponerle '' aunque sea para tenerlo disponible en la vista
+            'urlImagen' => '', 
             'descripcion' => 'max:1000',
             'categoria_id'=> 'integer',
         ];

@@ -21,26 +21,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        // $administrador = Auth::user();
-        // if ($administrador->rol == "GERENTE"){
-        //     $usuarios = Usuario::all()->where('establecimiento_id',$administrador->establecimiento_id); 
-        // }
-        // else if ($administrador->rol == "ADMINISTRADOR")
-        // {
-        //     $usuarios = Usuario::all();
-        // }
-        // else {
-        //     $usuarios = "";
-        // }
-        // foreach ($usuarios as $usurio){
-        //     $usuario
-        // }
-
-        //$title = 'usuarios List';
- //     return view('usuarios.index')
- //         ->with('usuarios', usuario::all())
- //         ->with('title', 'Listado de usuarios');
-      
+ 
          $usuarios = Usuario::all();
         return view('usuarios.index', compact('usuarios'));
     }
