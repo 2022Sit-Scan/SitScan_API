@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="d-flex justify-content-between align-items-end mb-3">
+        
         <h1 class="pb-1">@yield('title')</h1>
         <a href="#ventana1" class="btn btn-primary btn-lg" data-toggle="modal">CERRAR SESION</a>
         <!-- Modal -->

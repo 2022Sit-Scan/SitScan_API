@@ -6,6 +6,7 @@
 
     <div class="container">
         <div class="row no-gutters">
+            
             <div class="col-12 col-md-12 col-lg-8">
                 <h1 class="pb-1">@yield('title')</h1>
             </div>
