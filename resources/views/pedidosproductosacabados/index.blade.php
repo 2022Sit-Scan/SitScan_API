@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Lista de Pedidos Realizados')
+@section('title', 'PEDIDOS COMPLETADOS')
 
 @section('content')
     <div class="d-flex justify-content-between align-items-end mb-3">
@@ -72,8 +72,8 @@
                                                 $ptotalproducto = $productos->pivot->cantidad * $productos->precio;
                                             @endphp
                                             <td> {{ $productos->pivot->cantidad }}</td>
-                                            <td> {{ $productos->nombre }}</td>
-                                            <td>{{ $ptotalproducto }} €</td>
+                                            <td class="producto"> {{ $productos->nombre }}</td>
+                                            <td class="precio">{{ $ptotalproducto }} €</td>
                                             @php
                                                 $ptotal += $ptotalproducto;
                                             @endphp

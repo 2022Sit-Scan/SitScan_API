@@ -183,7 +183,15 @@ td{
 }
 
 #HoraActual {
-    color: #004F57;
+    margin-top: -10px;
+}
+
+.precio {
+    font-size: 15px;
+}
+
+.producto {
+    width: 65%;
 }
 
 .cuadrado {
