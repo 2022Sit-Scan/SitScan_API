@@ -4,7 +4,7 @@
 
 @section('content')
     <div>
-        <h4>CREAR CARTA</h4>
+        <h1 class="pt-3">CREAR CARTA</h1>
         <div>
 
             @if ($errors->any())

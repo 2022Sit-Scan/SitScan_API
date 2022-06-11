@@ -20,8 +20,8 @@
 
     {{ csrf_field() }}
     <div class="form-group">
-        <label for="nombre">Nombre alérgeno:</label>
-        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre Alérgeno">
+        <label for="nombre">Nombre del alérgeno:</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre del alérgeno">
     </div>
 
     <div class="form-group">
@@ -29,7 +29,7 @@
         <input type="text" class="form-control" name="urlImagen" id="urlImagen" placeholder="/imagenes/alergenos/<nombreimagen>">
     </div>
 
-    <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_add.png" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
-    <a href="{{ route('alergenos.index') }}" class="btn btn-link"><img id="img_cerrarSesion" src="./imagenes/imagenes/icon_add.png" alt="Botón Flecha" height="12" width="15">Regresar al listado de alérgenos</a>
+    <button type="submit" class="btn btn-primary btn-add"><img id="img_cerrarSesion" src="../../imagenes/imagenes/icon_add.svg" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
+    <a href="{{ route('alergenos.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="../../imagenes/imagenes/flecha.png" alt="Botón Flecha" height="15" width="30">Regresar al listado de alérgenos</a>
 </form>
 @endsection

@@ -54,7 +54,7 @@ h2 {
 }
 
 h6 {
-    color: #F7E5D7;
+    color: #cc650a;
 }
 
 #HoraActual{
@@ -372,6 +372,20 @@ color: #006B67;
     padding-right:5px ;
 }
 
+.link-atras{
+    color: #006B67;
+}
+
+.link-atras:hover{
+    color: #004F57;
+    text-decoration: none;
+}
+.btn-add{
+    color: #006B67;
+}
+.btn-add:hover{
+    color: #006B67;
+}
 /* ------ */
 
 /* FORMULARIOS */

@@ -29,7 +29,7 @@
     </div>
     </div>
     @enderror--}}
-    
+
     <br>
     <div class="form-group">
         <label for="urlImagen">UrlImagen:</label>
@@ -37,7 +37,7 @@
     </div>
 
     <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion" src="../../imagenes/imagenes/icon_modificar.png" alt="Botón Modificar" height="12" width="15">MODIFICAR</button>
-    <a href="{{ route('alergenos.index') }}" class="btn btn-link"><img id="img_cerrarSesion" src="../../imagenes/imagenes/flecha-atras.svg" alt="Botón Flecha" height="20" width="25">Regresar al listado de alérgenos</a>
+    <a href="{{ route('alergenos.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="../../imagenes/imagenes/flecha.png" alt="Botón Flecha" height="15" width="30">Regresar al listado de alérgenos</a>
 
 </form>
 
