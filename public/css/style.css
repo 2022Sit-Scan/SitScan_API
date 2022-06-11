@@ -182,6 +182,10 @@ td{
     flex-direction: 200px;
 }
 
+#HoraActual {
+    color: #004F57;
+}
+
 .cuadrado {
     margin-top: 7%;
     width: 260px;
