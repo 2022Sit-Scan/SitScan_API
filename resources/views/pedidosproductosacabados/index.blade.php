@@ -4,13 +4,13 @@
 
 @section('content')
     <div class="d-flex justify-content-between align-items-end mb-3">
-        
+
         <h1 class="pb-1">@yield('title')</h1>
-        
+
         <a href="{{ url()->previous() }}" class="btn btn-primary" id="btn_completados-volver"> <img
-            src="./imagenes/imagenes/flecha-web.png" alt="Botón Completados" height="15"
-            width="22">  VOLVER A PEDIDOS</a>
-        
+                src="{{ asset('/imagenes/imagenes/flecha-web.png') }}" alt="Botón Completados" height="15" width="22">
+            VOLVER A PEDIDOS</a>
+
 
     </div>
 
@@ -59,8 +59,8 @@
                             {{ csrf_field() }}
                             <div class="card-footer card-footer-carta">
                                 <button type="submit" class="btn btn-primary btn-hecho-volver"><img
-                                        src="./imagenes/imagenes/icon-restaurar.svg" alt="Botón Hecho" height="15"
-                                        width="23">RESTAURAR</a></button>
+                                        src="{{ asset('/imagenes/imagenes/icon-restaurar.svg') }}" alt="Botón Hecho"
+                                        height="15" width="23">RESTAURAR</a></button>
                             </div>
                         </form>
                     </div>
