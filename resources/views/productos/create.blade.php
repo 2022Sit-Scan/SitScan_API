@@ -41,7 +41,7 @@
                     </select>
                   </div>
                   <button type="submit" class="btn btn-primary">Crear Producto</button>
-                  <a href="{{ route('productos.index') }}" class="btn btn-link">Regresar al listado de productos</a>
+                  <a href="{{ route('pedidos.index') }}" class="btn btn-link">Regresar al listado de productos</a>
             </form>
         </div>
     </div>

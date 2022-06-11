@@ -4,6 +4,7 @@
 
 @section('content')
     <div class="row no-gutters">
+
         <div class="col-12 col-md-12 col-lg-8">
             <h1 id="HoraActual"></h1>
         </div>
@@ -16,10 +17,25 @@
         </div>
         <div class="col-12 col-md-12 col-lg-8">
             <h1 class="pb-1">@yield('title')</h1>
-        </div>
-        
+        </div>    
     </div>
 
+    @php
+    $fondorandom = [' style="background-color: #E29C7E"', 
+                    ' style="background-color: #380F19"', 
+                    ' style="background-color: #288028"', 
+                    ' style="background-color: #000000"',
+                    ' style="background-color: #F3A114"', 
+                    ' style="background-color: #26BCCB"',
+                    ' style="background-color: #B1CB26"',
+                    ' style="background-color: #3B26CB"',
+                    ' style="background-color: #CB2626"',
+                    ' style="background-color: #C626CB"',
+                    ' style="background-color: #FF0000"',
+                    ' style="background-color: #675050"',
+                    ' style="background-color: #12E37B"',
+                    ' style="background-color: #436152"']
+    @endphp
 
     @if ($pedidoNO != '')
         <div class="row">
@@ -30,7 +46,7 @@
                 @endphp
                 <div class="col-12 col-md-6 col-lg-4 mb-5">
                     <div class="card card-carta">
-                        <div class="card-header card-header-carta fondo">
+                        <div class="card-header card-header-carta" @php echo $fondorandom[rand(0,13)] @endphp>
                             <div class="row justify-content-between">
                                 <div class="col-6">
                                     MESA {{ $pedidoinfo->mesa->numero_mesa }}
