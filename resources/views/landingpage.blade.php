@@ -28,9 +28,7 @@
           <img src="img/logo_pequeño.png" height="50" alt="Sit&Scan Logo" loading="lazy" />
         </a>
         <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-          data-mdb-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -66,10 +64,7 @@
       <div class="row">
         <div id="parrafo1" class="col-6">
           <h1>¿QUÉ ES <img src="img/logo_entero.png" height="65" alt="Sit&Scan Logo" loading="lazy" />?</h1>
-          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
-            Praesentium dolores at quos aperiam sed, sint provident consectetur incidunt, nostrum porro earum commodi,
-            ex
-            architecto.</p>
+          <p> Es una aplicación orientada a la hosteleria que consiste en escanear un código QR en el que <strong>podrás pedir a través de Sit&Scan.</strong></p>
         </div>
       </div>
 
@@ -81,16 +76,18 @@
 
   <div id="titulo1" class="container my-5">
     <div class="row justify-content-around">
-      <h2>TÍTULO 1</h2>
+      <h2>¿CÓMO AÑADIR UN PRODUCTO AL PEDIDO?</h2>
       <div class="col-12 col-lg-6">
         <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
             height: 50vh">
         </div>
       </div>
       <div class="col-12 col-lg-6">
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
-          Praesentium dolores at quos aperiam sed, sint provident consectetur incidunt, nostrum porro earum commodi, ex
-          architecto.</p>
+        <h4> ¡Super Fácil!</h4>
+        <p>Después de escanear el QR, aparecerá el menú principal donde tendremos acceso a las diferentes categorías que proporciona el establecimiento.</p>
+        <p>Una vez seleccionado la categoría nos aparecerá un listado de productos en el que tendremos la opción de elegir uno de ellos.</p>
+        <p>Añade la cantidad y pulsa <b>ACEPTAR</b></p>
+        <p><strong>¡Listo tu producto ha sido añadido al pedido!</strong></p>
       </div>
     </div>
   </div>
@@ -98,12 +95,10 @@
   <div id="color" class="container-fluid py-5">
     <div id="titulo2" class="container-md">
       <div class="row justify-content-around">
-        <h2>TÍTULO 2</h2>
+        <h2>¿CÓMO REALIZAR UN PEDIDO?</h2>
         <div class="col-12 col-lg-6">
-          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
-            Praesentium dolores at quos aperiam sed, sint provident consectetur incidunt, nostrum porro earum commodi,
-            ex
-            architecto.</p>
+          <p> Una vez tengas añadidos todos los productos que desees pulsa <b>FINALIZAR</b>.</p>
+          <p><strong>Pronto llegará tu pedido y será cobrado.</strong></p>
         </div>
         <div class="col-12 col-lg-6">
           <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
@@ -118,29 +113,24 @@
 
   <div id="titulo3" class="container my-5">
     <div class="row justify-content-around">
-      <h2>TÍTULO 3</h2>
+      <h2>¿ERES UN FIESTERO?</h2>
       <div class="col-12 col-lg-6">
         <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
             height: 50vh">
         </div>
       </div>
       <div class="col-12 col-lg-6">
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
-          Praesentium dolores at quos aperiam sed, sint provident consectetur incidunt, nostrum porro earum commodi, ex
-          architecto.</p>
+        <h4> ¡Otra Ronda!</h4>
+        <p> Nuestra aplicación consta de un botón que te permite acceder a tu último pedido sin necesidad de volver a añadir los productos de una manera fácil y rápida.</p>
       </div>
     </div>
   </div>
 
-  <div id="color" class="container-fluid py-5">
+  <div id="color-naranja" class="container-fluid py-5">
     <div id="titulo4" class="container-md">
       <div class="row">
         <div id="centrado" class="col-12 pb-5">
-          <h2>TÍTULO 4</h2>
-          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
-            Praesentium dolores at quos aperiam sed, sint provident consectetur incidunt, nostrum porro earum commodi,
-            ex
-            architecto.</p>
+          <h2>¡DESCARGA LA APP!</h2>
         </div>
         <div class="col-12 pt-5">
           <div class="bg-image" style="background-image: url('img/logo_pequeño.png');
@@ -159,13 +149,9 @@
       <div class="row">
         <div class="col-12 col-md-4">
           <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="#"></a>
           <a class="nav-link active" aria-current="page" href="#">Home</a>
           <a class="nav-link active" aria-current="page" href="#">Home</a>
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </div>
-        <div class="col-12 col-md-4">
-          <p> HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-          <p> HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
         </div>
         <div class="col-12 col-md-4">
           <p>

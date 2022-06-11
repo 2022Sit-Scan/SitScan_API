@@ -51,6 +51,10 @@ header .navbar {
     background-color: #F7A52834;
 }
 
+#color-naranja{
+    background-color: #F89100;
+}
+
 h1{
     color: black;
 }
@@ -62,14 +66,14 @@ h1 img{
 
 h1, h2 {
     font-family: 'Karla-ExtraBold', sans-serif;
-}
-
+}   
 strong{
     color: #F7A528;
 }
 
 p{
     font-family: 'Karla-Regular', sans-serif;
+    font-size: 20px;
 }
 
 #centrado{
