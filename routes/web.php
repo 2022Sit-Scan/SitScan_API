@@ -35,5 +35,5 @@ Route::group(['middleware' => ['auth']], function() {
 });
 
 Auth::routes();
-Route::get('/landing', 'LandigController@index')->name('landing');
+Route::get('/landing', 'LandigController@index');
 Route::get('/home', 'HomeController@index')->name('home');
