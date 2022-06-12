@@ -479,6 +479,10 @@ p.btn-centrado {
     width: 100%;
     padding: 15px;
 }
+.btn-hecho-restaurar:hover{
+    background-color: rgb(208, 134, 102);
+    color: white;
+}
 
 .btn-hecho:hover {
     background-color: #004F57;
