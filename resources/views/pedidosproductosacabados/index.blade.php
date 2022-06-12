@@ -58,7 +58,7 @@
                             {{ method_field('PUT') }}
                             {{ csrf_field() }}
                             <div class="card-footer card-footer-carta">
-                                <button type="submit" class="btn btn-primary btn-hecho-volver"><img
+                                <button type="submit" class="btn btn-primary btn-hecho-restaurar"><img
                                         src="{{ asset('/imagenes/imagenes/icon-restaurar.svg') }}" alt="Botón Hecho"
                                         height="15" width="23">RESTAURAR</a></button>
                             </div>

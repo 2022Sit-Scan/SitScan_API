@@ -30,6 +30,10 @@
     background-color: #971515;
 }
 
+.fondo-volver {
+    background-color: #D0D0CE;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -341,6 +345,16 @@ p.btn-centrado {
     color: white;
 }
 
+#btn_completados-volver {
+    background-color: #004F57;
+    color: white;
+}
+
+#btn_completados-volver:hover {
+    background-color: #006B67;
+    color: white;
+}
+
 #btn_completados:hover {
     background-color: #cc650a;
 }
@@ -439,6 +453,13 @@ p.btn-centrado {
 
 .btn-hecho {
     background-color: #006B67;
+    color: white;
+    width: 100%;
+    padding: 15px;
+}
+
+.btn-hecho-restaurar {
+    background-color: #E29C7E;
     color: white;
     width: 100%;
     padding: 15px;
