@@ -41,6 +41,9 @@
               <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
             </li>
             <li class="nav-item">
+              <a id="texto-resaltado" class="nav-link active" aria-current="page" href="#qr">CÓDIGO QR</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#producto">PRODUCTO</a>
             </li>
             <li class="nav-item">
@@ -60,8 +63,9 @@
       <div class="row">
         <div id="sitScan" class="col-6">
           <h1>¿QUÉ ES <img src="{{asset('img/logo_entero.png')}}" height="65" alt="Sit&Scan Logo" loading="lazy" />?</h1>
-          <p> Es una aplicación orientada a la hosteleria que consiste en escanear el código QR del establecimiento en el que <strong>podrás pedir a través de Sit&Scan.</strong></p>
-          <h4><strong>¡Pruébalo!</strong></h4>
+          <p> <b>SIT&SCAN</b> es una aplicación orientada a la hosteleria que contiene la carta del establecimiento con todos los productos del mismo y un sistema de pedido.</p>
+          <p>Los clientes deberán escanear el código QR de la mesa en la que estén para <strong>poder pedir lo que deseen sin tener que esperar a que venga a atenderlos.</strong></p>
+          <p><strong>¡Siéntate , pruébalo y disfruta!</strong></p>
         </div>
       </div>
 
@@ -70,6 +74,13 @@
   </header>
 
   <!--Main Navigation-->
+
+  <div id="qr" class="container-fluid py-5">
+    <img src="{{asset('img/qr_img.png')}}" class="img-fluid hover-shadow" alt="QR ELVIRIS" />
+    <h2>DESCARGA SIT&SCAN </h2>
+    <h2>Y</h2>
+    <h2>ESCANEAME</h2>
+  </div>
 
   <div id="producto" class="container my-5">
     <div class="row justify-content-around">
@@ -94,8 +105,10 @@
       <div class="row justify-content-around">
         <h2>¿CÓMO REALIZAR UN PEDIDO?</h2>
         <div class="col-12 col-lg-6">
-          <p> Una vez tengas añadidos todos los productos que desees pulsa <b>FINALIZAR</b>.</p>
+          <p> Una vez tengas añadidos todos los productos que desees pulsa <b>FINALIZAR</b> en la pantalla de pedido.</p>
           <p><strong>Pronto llegará tu pedido y será cobrado.</strong></p>
+          <p>Además esta pantalla te proporciona borrar de tu lista de productos, los productos que no quieras pedir o incluso cambiar la cantidad.</p>
+
         </div>
         <div class="col-12 col-lg-6">
           <div class="bg-image" style="background-image: url('{{asset('img/pedido.png')}}');
@@ -117,8 +130,10 @@
         </div>
       </div>
       <div class="col-12 col-lg-6">
-        <h4> ¡Otra Ronda!</h4>
-        <p> Nuestra aplicación consta de un botón que te permite acceder a tu último pedido sin necesidad de volver a añadir los productos de una manera fácil y rápida.</p>
+        <h4> Otra Ronda, ¡será para ti!</h4>
+        <p> Nuestra aplicación consta de un botón que te permite acceder de forma fácil y rápido a tu último pedido sin necesidad de volver a añadir los productos. </p>
+        <p><strong>¿Quieres otra? ¡Pídela!</strong></>
+        <p></p>
       </div>
     </div>
   </div>
@@ -136,6 +151,7 @@
       <div class="row">
         <div class="col-12 col-md-4">
           <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
+          <a id="texto-resaltado" class="nav-link active" aria-current="page" href="#qr">CÓDIGO QR</a>
           <a class="nav-link active" aria-current="page" href="#producto">PRODUCTO</a>
           <a class="nav-link active" aria-current="page" href="#pedido">PEDIDO</a>
           <a class="nav-link active" aria-current="page" href="#otra-ronda">OTRA RONDA</a>

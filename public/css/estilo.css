@@ -12,6 +12,23 @@
     font-family: 'Karla-Regular';
     src: url('../tipografia/Karla-Regular.ttf');
 }
+#texto-resaltado{
+    color: #0D5A55!important;
+    text-decoration: underline;
+}
+
+#texto-resaltado:hover{
+    color: #043F45!important;
+}
+
+#qr{
+    background-color: #0D5A55;
+    text-align: center;
+}
+#qr h2{
+    padding-top: 10px;
+    color: #F7A528;
+}
 .descarga{
     border-radius: 10px;
     background-color: #0D5A55;
