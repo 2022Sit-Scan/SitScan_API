@@ -420,7 +420,7 @@ p.btn-centrado {
 }
 
 #btn-aceptar-cerrarSesion-categorias,
-#btn-aceptar-cerrarSesion-listPrecios,
+#btn-aceptar- src="{{ asset('/imagenes/imagenes/clos-listPrecios,
 #btn-aceptar-cerrarSesion-usuarios,
 #btn-aceptar-cerrarSesion-alergenos,
 #btn-aceptar-cerrarSesion-cartas,

@@ -12,7 +12,7 @@
             <div class="col-6 col-md-6 col-lg-4">
                 <p class="btn-end">
                 <a href="#ventana1" id="cerrarSesion" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion"
-                    src="{{ asset('/imagenes/imagenes/icon_cerrarSesion.png') }}" alt="Botón Cerrar Sesión" height="12"
+                    src="{{ asset('/imagenes/imagenes/icon_cerrarsesion.png') }}" alt="Botón Cerrar Sesión" height="12"
                     width="15">CERRAR
                 SESIÓN</a>
 

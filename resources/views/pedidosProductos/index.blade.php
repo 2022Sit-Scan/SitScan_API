@@ -78,7 +78,7 @@
             @endforeach
             <div id="centrado" class="col-12">
                 <a href="#ventana1" class="btn btn-primary" data-toggle="modal"><img id="img_cerrarSesion"
-                        src="{{ asset('/imagenes/imagenes/icon_cerrarSesion.png') }}" alt="Botón Cerrar Sesión"
+                        src="{{ asset('/imagenes/imagenes/icon_cerrarsesion.png') }}" alt="Botón Cerrar Sesión"
                         height="12" width="15">CERRAR SESIÓN</a>
                 <!-- Modal -->
                 <div class="modal fade" id="ventana1" tabindex="-1" role="dialog"

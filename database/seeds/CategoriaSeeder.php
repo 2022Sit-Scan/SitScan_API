@@ -1,4 +1,4 @@
-<?php
+=2<?php
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -112,14 +112,7 @@ class CategoriaSeeder extends Seeder
             'updated_at' => now(),
         ]);
 
-        DB::table('categorias')
-        ->insert([
-            'categoriaPadre' => 3,
-            'nombre' => 'Martini',
-            'urlImagen' => 'imagenes/categorias/martini_cat.png',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+       
 
         DB::table('categorias')
         ->insert([
