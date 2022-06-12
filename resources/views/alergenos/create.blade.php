@@ -30,12 +30,6 @@
                 placeholder="/imagenes/alergenos/<nombreimagen>">
         </div>
 
-<<<<<<< HEAD
-    <button type="submit" class="btn btn-primary btn-add"><img id="img_cerrarSesion" src="../../imagenes/imagenes/icon_add.svg" alt="Botón Añadir" height="12" width="15">AÑADIR</button>
-    <a href="{{ route('alergenos.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="../../imagenes/imagenes/flecha.png" alt="Botón Flecha" height="15" width="30">Regresar al listado de alérgenos</a>
-</form>
-@endsection
-=======
         <button type="submit" class="btn btn-primary btn-add"><img id="img_cerrarSesion"
                 src="{{ asset('/imagenes/imagenes/icon_add.svg') }}" alt="Botón Añadir" height="12"
                 width="15">AÑADIR</button>
@@ -44,4 +38,3 @@
             listado de alérgenos</a>
     </form>
 @endsection
->>>>>>> parent of 65e51d1 (Revert "limpiar codigo y rutas")

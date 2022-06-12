@@ -25,18 +25,12 @@
             <input type="text" class="form-control" name="nombre" id="nombre"
                 value="{{ old('nombre', $alergeno->nombre) }}">
 
-
-<<<<<<< HEAD
-    <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion" src="../../imagenes/imagenes/icon_modificar.png" alt="Botón Modificar" height="12" width="15">MODIFICAR</button>
-    <a href="{{ route('alergenos.index') }}" class="btn btn-link link-atras"><img id="img_cerrarSesion" src="../../imagenes/imagenes/flecha.png" alt="Botón Flecha" height="15" width="30">Regresar al listado de alérgenos</a>
-=======
             <br>
             <div class="form-group">
                 <label for="urlImagen">UrlImagen:</label>
                 <input type="text" name="urlImagen" class="form-control" id="urlImagen"
                     value="{{ old('urlImagen', $alergeno->urlImagen) }}">
             </div>
->>>>>>> parent of 65e51d1 (Revert "limpiar codigo y rutas")
 
             <button type="submit" class="btn btn-primary"><img id="img_cerrarSesion"
                     src="{{ asset('/imagenes/imagenes/icon_modificar.png') }}" alt="Botón Modificar" height="12"
