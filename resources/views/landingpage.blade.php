@@ -25,7 +25,7 @@
       <!-- Container wrapper -->
       <div class="container-md pt-5">
         <a class="navbar-brand" href="#">
-          <img src="img/logo_pequeño.png" height="50" alt="Sit&Scan Logo" loading="lazy" />
+          <img src="{{asset('img/logo_pequeño.png')}}" height="50" alt="Sit&Scan Logo" loading="lazy" />
         </a>
         <!-- Toggle button -->
         <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,9 +59,9 @@
     <div class="container-md">
       <div class="row">
         <div id="sitScan" class="col-6">
-          <h1>¿QUÉ ES <img src="img/logo_entero.png" height="65" alt="Sit&Scan Logo" loading="lazy" />?</h1>
-          <p> Es una aplicación orientada a la hosteleria que consiste en escanear un código QR en el que <strong>podrás pedir a través de Sit&Scan.</strong></p>
-          <p><strong>¡Pruébalo!</strong></p>
+          <h1>¿QUÉ ES <img src="{{asset('img/logo_entero.png')}}" height="65" alt="Sit&Scan Logo" loading="lazy" />?</h1>
+          <p> Es una aplicación orientada a la hosteleria que consiste en escanear el código QR del establecimiento en el que <strong>podrás pedir a través de Sit&Scan.</strong></p>
+          <h4><strong>¡Pruébalo!</strong></h4>
         </div>
       </div>
 
@@ -75,7 +75,7 @@
     <div class="row justify-content-around">
       <h2>¿CÓMO AÑADIR UN PRODUCTO AL PEDIDO?</h2>
       <div class="col-12 col-lg-6 me-2">
-        <div class="bg-image" style="background-image: url('img/producto.png');
+        <div class="bg-image" style="background-image: url('{{asset('img/producto.png')}}');
             height: 50vh">
         </div>
       </div>
@@ -98,7 +98,7 @@
           <p><strong>Pronto llegará tu pedido y será cobrado.</strong></p>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="bg-image" style="background-image: url('img/pedido.png');
+          <div class="bg-image" style="background-image: url('{{asset('img/pedido.png')}}');
               height: 70vh">
           </div>
 
@@ -112,7 +112,7 @@
     <div class="row justify-content-around">
       <h2>¿ERES UN@ FIESTER@?</h2>
       <div class="col-12 col-lg-6">
-        <div class="bg-image" style="background-image: url('img/otra-ronda.png');
+        <div class="bg-image" style="background-image: url('{{asset('img/otra-ronda.png')}}');
             height: 70vh">
         </div>
       </div>
@@ -136,20 +136,21 @@
       <div class="row">
         <div class="col-12 col-md-4">
           <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
-          <a class="nav-link active" aria-current="page" href="producto">PRODUCTO</a>
-          <a class="nav-link active" aria-current="page" href="pedido">PEDIDO</a>
-          <a class="nav-link active" aria-current="page" href="otra-ronda">OTRA RONDA</a>
+          <a class="nav-link active" aria-current="page" href="#producto">PRODUCTO</a>
+          <a class="nav-link active" aria-current="page" href="#pedido">PEDIDO</a>
+          <a class="nav-link active" aria-current="page" href="#otra-ronda">OTRA RONDA</a>
         </div>
         <div class="col-12 col-md-4">
         </div>
         <div class="col-12 col-md-4">
           <p>
-          <i class="far fa-envelope fa-lg"></i>
+            <i class="far fa-envelope fa-lg"></i>
             luciaserranovargas@gmail.com
           </p>
           <p>
-          <i class="far fa-envelope fa-lg"></i>
-            josemiguelfernandezmarin@gmail.com</p>
+            <i class="far fa-envelope fa-lg"></i>
+            josemiguelfernandezmarin@gmail.com
+          </p>
           <p> <i class="far fa-envelope fa-lg"></i>
             robertonavarrosanchez@gmail.com</p>
           <p> <i class="far fa-envelope fa-lg"></i>
@@ -158,7 +159,7 @@
       </div>
       <div class="row justify-content-between mt-5">
         <div class="col-4">
-          <img src="img/logo_pequeño.png" height="50" alt="Sit&Scan Logo" loading="lazy" />
+          <img src="{{asset('img/logo_pequeño.png')}}" height="50" alt="Sit&Scan Logo" loading="lazy" />
         </div>
         <div class="col-4">
           <h2>SIT<strong>&</strong>SCAN</h2>
