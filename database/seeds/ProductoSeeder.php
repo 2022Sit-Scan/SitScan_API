@@ -18,7 +18,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/cocacola/cocacolaimage.jpg',
             'descripcion' => 'Coca Cola Original',
             'categoria_id' => 14,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -29,7 +29,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/cocacola/colazeroimage.jpg',
             'descripcion' => 'Coca Cola Zero',
             'categoria_id' => 14,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -40,7 +40,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/cocacola/colalightimage.jpg',
             'descripcion' => 'Coca Cola Light',
             'categoria_id' => 14,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -51,7 +51,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/cocacola/colazerosincafeinaimage.jpg',
             'descripcion' => 'Coca Cola Sin Caferia',
             'categoria_id' => 14,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -62,7 +62,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/fanta/fantanaranjaimage.jpg',
             'descripcion' => 'Fanta Naranja',
             'categoria_id' => 15,
-             'precio' => 2.5,
+             'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -73,7 +73,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/fanta/fantalimonimage.jpg',
             'descripcion' => 'Fanta Limon',
             'categoria_id' => 15,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -84,7 +84,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/kas/kasnaranjaimage.jpg',
             'descripcion' => 'Kas Naranja',
             'categoria_id' => 16,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -95,7 +95,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/kas/kaslimonimage.jpg',
             'descripcion' => 'Kas Limon',
             'categoria_id' => 16,
-             'precio' => 2.5,
+             'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -106,7 +106,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/schweppes/schweppeslimonimage.jpg',
             'descripcion' => 'Schweppes Limon',
             'categoria_id' => 17,
-             'precio' => 2.5,
+             'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -117,7 +117,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/schweppes/schweppesimage.jpg',
             'descripcion' => 'Schweppes Tonica',
             'categoria_id' => 17,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -128,7 +128,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/zumos/zumopiñaimage.jpg',
             'descripcion' => 'Zumo Piña',
             'categoria_id' => 20,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -139,7 +139,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/zumos/zumomelocotonimage.jpg',
             'descripcion' => 'Zumo Melocoton',
             'categoria_id' => 20,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -150,7 +150,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/batidos/batidofresaimage.jpg',
             'descripcion' => 'Batido Fresa',
             'categoria_id' => 21,
-            'precio' => 2.5,
+            'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -161,7 +161,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/batidos/batidovainillaimage.jpg',
             'descripcion' => 'Batido Vainilla',
             'categoria_id' => 21,
-             'precio' => 2.5,
+             'precio' => 2.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -169,10 +169,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Brugal',
-            'urlImagen' => '/imagenes/destilados/ron/brugalimage.jpg',
+            'urlImagen' => '/imagenes/destilados/ron/brugalimage.png',
             'descripcion' => 'Brugal',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -183,7 +183,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/brugalimage-coca-cola.png',
             'descripcion' => 'Brugal con Coca Cola',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -194,7 +194,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/brugalimage-coca-cola-zero.png',
             'descripcion' => 'Brugal con Coca Cola Zero',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -205,7 +205,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/brugalimage-fanta-naranja.png',
             'descripcion' => 'Brugal con Fanta de Naranja',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -216,7 +216,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/brugalimage-fanta-limon.png',
             'descripcion' => 'Brugal con Fanta de Limon',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -227,7 +227,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/brugalimage-schweppes.png',
             'descripcion' => 'Brugal con Schweppes',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -238,7 +238,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage.jpg',
             'descripcion' => 'Barcelo',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -249,7 +249,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage-coca-cola.png',
             'descripcion' => 'Barcelo con Coca Cola',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -260,7 +260,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage-coca-cola-zero.png',
             'descripcion' => 'Barcelo con Coca Cola Zero',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -271,7 +271,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage-fanta-naranja.png',
             'descripcion' => 'Barcelo con Fanta de Naranja',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -282,7 +282,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage-fanta-limon.png',
             'descripcion' => 'Barcelo con Fanta de Limon',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -293,7 +293,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/ronbarceloimage-schweppes.png',
             'descripcion' => 'Barcelo con Schweppes',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -304,7 +304,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/santateresaimage.jpg',
             'descripcion' => 'Santa Teresa',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -315,7 +315,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/santateresa-coca-cola.png',
             'descripcion' => 'Santa Teresa con Coca Cola',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -326,7 +326,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/santateresa-coca-cola-zero.png',
             'descripcion' => 'Santa Teresa con Coca Cola Zero',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -337,7 +337,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/santateresa-fanta-naranja.png',
             'descripcion' => 'Santa Teresa con Fanta Naranja',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -348,7 +348,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/santateresa-fanta-limon.png',
             'descripcion' => 'Santa Teresa con Fanta Limon',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -359,7 +359,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/santateresa-schweppes.png',
             'descripcion' => 'Santa Teresa con Schweppes',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -367,10 +367,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Red Label',
-            'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage.jpg',
+            'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage.png',
             'descripcion' => 'Red Label',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -381,7 +381,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage-coca-cola.png',
             'descripcion' => 'Red Label con Coca Cola',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -392,7 +392,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage-coca-cola-zero.png',
             'descripcion' => 'Red Label con Coca Cola Zero',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -403,7 +403,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage-fanta-naranja.png',
             'descripcion' => 'Red Label con Fanta de Naranja',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -414,7 +414,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage-fanta-limon.png',
             'descripcion' => 'Red Label con Fanta de Limon',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -425,7 +425,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/redlabelimage-schweppes.png',
             'descripcion' => 'Red Label con Schweppes',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -433,10 +433,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Legendario',
-            'urlImagen' => '/imagenes/destilados/ron/legendarioimage.jpg',
+            'urlImagen' => '/imagenes/destilados/ron/legendarioimage.png',
             'descripcion' => 'Legendario',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -447,7 +447,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/legendarioimage-coca-cola.png',
             'descripcion' => 'Legendario con Coca Cola',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -458,7 +458,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/legendarioimage-coca-cola-zero.png',
             'descripcion' => 'Legendario con Coca Cola Zero',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -469,7 +469,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/legendarioimage-fanta-naranja.png',
             'descripcion' => 'Legendario con Fanta de Naranja',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -480,7 +480,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/legendarioimage-fanta-limon.png',
             'descripcion' => 'Legendario con Fanta de Limon',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -491,7 +491,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ron/legendarioimage-schweppes.png',
             'descripcion' => 'Legendario con Schweppes',
             'categoria_id' => 7,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -502,7 +502,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/jbimage.jpg',
             'descripcion' => 'JB',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -513,7 +513,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/jbimage-coca-cola.png',
             'descripcion' => 'JB con Coca Cola',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -524,7 +524,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/jbimage-coca-cola-zero.png',
             'descripcion' => 'JB con Coca Cola Zero',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -535,7 +535,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/jbimage-fanta-naranja.png',
             'descripcion' => 'JB con Fanta de Naranja',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -546,7 +546,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/jbimage-fanta-limon.png',
             'descripcion' => 'JB con Fanta de Limon',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -557,7 +557,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/jbimage-schweppes.png',
             'descripcion' => 'JB con Schweppes',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -565,10 +565,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'DYC8',
-            'urlImagen' => '/imagenes/destilados/whiskey/dyc8image.jpg',
+            'urlImagen' => '/imagenes/destilados/whiskey/dyc8image.png',
             'descripcion' => 'DYC8',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -579,7 +579,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/dyc8image-coca-cola.png',
             'descripcion' => 'DYC8 con Coca Cola',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -590,7 +590,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/dyc8image-coca-cola-zero.png',
             'descripcion' => 'DYC8 con Coca Cola Zero',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -601,7 +601,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/dyc8image-fanta-naranja.png',
             'descripcion' => 'DYC8 con Fanta de Naranja',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -612,7 +612,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/dyc8image-fanta-limon.png',
             'descripcion' => 'DYC8 con Fanta de Limon',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -623,7 +623,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/dyc8image-schweppes.png',
             'descripcion' => 'DYC8 con Schweppes',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -631,10 +631,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Ballantines',
-            'urlImagen' => '/imagenes/destilados/whiskey/ballantinesimage.jpg',
+            'urlImagen' => '/imagenes/destilados/whiskey/ballantinesimage.png',
             'descripcion' => 'Ballantines',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -645,7 +645,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/ballantinesimage-coca-cola.png',
             'descripcion' => 'Ballantines con Coca Cola',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -656,7 +656,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/ballantinesimage-coca-cola-zero.png',
             'descripcion' => 'Ballantines con Coca Cola Zero',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -667,7 +667,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/ballantinesimage-fanta-naranja.png',
             'descripcion' => 'Ballantines con Fanta de Naranja',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -678,7 +678,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/ballantinesimage-fanta-limon.png',
             'descripcion' => 'Ballantines con Fanta de Limon',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -689,7 +689,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/whiskey/ballantinesimage-schweppes.png',
             'descripcion' => 'Ballantines con Schweppes',
             'categoria_id' => 8,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -700,7 +700,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/lariosimage.jpg',
             'descripcion' => 'Larios',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -711,7 +711,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/lariosimage-coca-cola.png',
             'descripcion' => 'Larios con Coca Cola',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -722,7 +722,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/lariosimage-coca-cola-zero.png',
             'descripcion' => 'Larios con Coca Cola Zero',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -733,7 +733,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/lariosimage-fanta-naranja.png',
             'descripcion' => 'Larios con Fanta de Naranja',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -744,7 +744,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/lariosimage-fanta-limon.png',
             'descripcion' => 'Larios con Fanta de Limon',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -755,7 +755,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/lariosimage-schweppes.png',
             'descripcion' => 'Larios con Schweppes',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -763,10 +763,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bombay Shapphire',
-            'urlImagen' => '/imagenes/destilados/ginebra/bombayshapphireimage.jpg',
+            'urlImagen' => '/imagenes/destilados/ginebra/bombayshapphireimage.png',
             'descripcion' => 'Bombay Shapphire',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -777,7 +777,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/bombayshapphireimage-coca-cola.png',
             'descripcion' => 'Bombay Shapphire con Coca Cola',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -788,7 +788,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/bombayshapphireimage-coca-cola-zero.png',
             'descripcion' => 'Bombay Shapphire con Coca Cola Zero',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -799,7 +799,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/bombayshapphireimage-fanta-naranja.png',
             'descripcion' => 'Bombay Shapphire con Fanta de Naranja',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -810,7 +810,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/bombayshapphireimage-fanta-limon.png',
             'descripcion' => 'Bombay Shapphire con Fanta de Limon',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -821,7 +821,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/bombayshapphireimage-schweppes.png',
             'descripcion' => 'Bombay Shapphire con Schweppes',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -829,10 +829,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Tanqueray',
-            'urlImagen' => '/imagenes/destilados/ginebra/tanquerayimage.jpg',
+            'urlImagen' => '/imagenes/destilados/ginebra/tanquerayimage.png',
             'descripcion' => 'Tanqueray',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -843,7 +843,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/tanquerayimage-coca-cola.png',
             'descripcion' => 'Tanqueray con Coca Cola',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -854,7 +854,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/tanquerayimage-coca-cola-zero.png',
             'descripcion' => 'Tanqueray con Coca Cola Zero',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -865,7 +865,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/tanquerayimage-fanta-naranja.png',
             'descripcion' => 'Tanqueray con Fanta de Naranja',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -876,7 +876,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/tanquerayimage-fanta-limon.png',
             'descripcion' => 'Tanqueray con Fanta de Limon',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -887,7 +887,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/tanquerayimage-schweppes.png',
             'descripcion' => 'Tanqueray con Schweppes',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -898,7 +898,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage.jpg',
             'descripcion' => 'Puerto de Indias',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -906,10 +906,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Puerto de Indias con Coca Cola',
-            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-coca-cola.png',
+            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-coca-cola.jpg',
             'descripcion' => 'Puerto de Indias con Coca Cola',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -917,10 +917,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Puerto de Indias con Coca Cola Zero',
-            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-coca-cola-zero.png',
+            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-coca-cola-zero.jpg',
             'descripcion' => 'Puerto de Indias con Coca Cola Zero',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -928,10 +928,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Puerto de Indias con Fanta de Naranja',
-            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-fanta-naranja.png',
+            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-fanta-naranja.jpg',
             'descripcion' => 'Puerto de Indias con Fanta de Naranja',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -939,10 +939,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Puerto de Indias con Fanta de Limon',
-            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-fanta-limon.png',
+            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-fanta-limon.jpg',
             'descripcion' => 'Puerto de Indias con Fanta de Limon',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -950,10 +950,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Puerto de Indias con Schweppes',
-            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-schweppes.png',
+            'urlImagen' => '/imagenes/destilados/ginebra/puertodeindiasimage-schweppes.jpg',
             'descripcion' => 'Puerto de Indias con Schweppes',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -961,10 +961,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Beefeater',
-            'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage.jpg',
+            'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage.png',
             'descripcion' => 'Beefeater',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -975,7 +975,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage-coca-cola.png',
             'descripcion' => 'Beefeater con Coca Cola',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -986,7 +986,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage-coca-cola-zero.png',
             'descripcion' => 'Beefeater con Coca Cola Zero',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -997,7 +997,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage-fanta-naranja.png',
             'descripcion' => 'Beefeater con Fanta de Naranja',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1008,7 +1008,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage-fanta-limon.png',
             'descripcion' => 'Beefeater con Fanta de Limon',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1019,7 +1019,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/ginebra/beefeaterimage-schweppes.png',
             'descripcion' => 'Beefeater con Schweppes',
             'categoria_id' => 9,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1027,10 +1027,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Belvedere',
-            'urlImagen' => '/imagenes/destilados/vodka/belvedereimage.jpg',
+            'urlImagen' => '/imagenes/destilados/vodka/belvedereimage.png',
             'descripcion' => 'Belvedere',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1041,7 +1041,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/belvedereimage-coca-cola.png',
             'descripcion' => 'Belvedere con Coca Cola',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1052,7 +1052,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/belvedereimage-coca-cola-zero.png',
             'descripcion' => 'Belvedere con Coca Cola Zero',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1063,7 +1063,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/belvedereimage-fanta-naranja.png',
             'descripcion' => 'Belvedere con Fanta de Naranja',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1074,7 +1074,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/belvedereimage-fanta-limon.png',
             'descripcion' => 'Belvedere con Fanta de Limon',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1085,7 +1085,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/belvedereimage-schweppes.png',
             'descripcion' => 'Belvedere con Schweppes',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1093,10 +1093,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Absolut',
-            'urlImagen' => '/imagenes/destilados/vodka/absolutimage.jpg',
+            'urlImagen' => '/imagenes/destilados/vodka/absolutimage.png',
             'descripcion' => 'Absolut',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1107,7 +1107,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/absolutimage-cola-cola.png',
             'descripcion' => 'Absolut con Coca Cola',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1118,7 +1118,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/absolutimage-coca-cola-zero.png',
             'descripcion' => 'Absolut con Coca Cola Zero',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1129,7 +1129,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/absolutimage-fanta-naranja.png',
             'descripcion' => 'Absolut con Fanta de Naranja',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1140,7 +1140,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/absolutimage-fanta-limon.png',
             'descripcion' => 'Absolut con Fanta de Limon',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1151,7 +1151,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/absolutimage-schweppes.png',
             'descripcion' => 'Absolut con Schweppes',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1159,10 +1159,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Smirnoff',
-            'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage.jpg',
+            'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage.png',
             'descripcion' => 'Smirnoff',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1173,7 +1173,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage-coca-cola.png',
             'descripcion' => 'Smirnoff con Coca Cola',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1184,7 +1184,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage-coca-cola-zero.png',
             'descripcion' => 'Smirnoff con Coca Cola Zero',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1195,7 +1195,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage-fanta-naranja.png',
             'descripcion' => 'Smirnoff con Fanta de Naranja',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1206,7 +1206,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage-fanta-limon.png',
             'descripcion' => 'Smirnoff con Fanta de Limon',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1217,7 +1217,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/smirnoffimage-schweppes.png',
             'descripcion' => 'Smirnoff con Schweppes',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1225,10 +1225,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Stolichnaya',
-            'urlImagen' => '/imagenes/destilados/vodka/stalichnayaimage.jpg',
+            'urlImagen' => '/imagenes/destilados/vodka/stalichnayaimage.png',
             'descripcion' => 'Stolichnaya',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1239,7 +1239,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/stalichnayaimage-coca-cola.png',
             'descripcion' => 'Stolichnaya con Coca Cola',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1250,7 +1250,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/stalichnayaimage-coca-cola-zero.png',
             'descripcion' => 'Stolichnaya con Coca Cola Zero',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1261,7 +1261,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/stalichnayaimage-fanta-naranja.png',
             'descripcion' => 'Stolichnaya con Fanta de Naranja',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1272,7 +1272,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/stalichnayaimage-fanta-limon.png',
             'descripcion' => 'Stolichnaya con Fanta de Limon',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1283,7 +1283,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/vodka/stalichnayaimage-schweppes.png',
             'descripcion' => 'Stolichnaya con Schweppes',
             'categoria_id' => 10,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1291,10 +1291,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Bullet',
-            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage.jpg',
+            'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage.png',
             'descripcion' => 'Bullet',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1305,7 +1305,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-coca-cola.png',
             'descripcion' => 'Bullet con Coca Cola',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1316,7 +1316,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-coca-cola-zero.png',
             'descripcion' => 'Bullet con Coca Cola Zero',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1327,7 +1327,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-fanta-naranja.png',
             'descripcion' => 'Bullet con Fanta de Naranja',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1338,7 +1338,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-fanta-limon.png',
             'descripcion' => 'Bullet con Fanta de Limon',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1349,7 +1349,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/bulleitimage-schweppes.png',
             'descripcion' => 'Bullet con Schweppes',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1360,7 +1360,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/fourrosesimage.jpg',
             'descripcion' => 'Fourroses',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1371,7 +1371,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/fourrosesimage-coca-cola.png',
             'descripcion' => 'Fourroses con Coca Cola',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1382,7 +1382,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/fourrosesimage-coca-cola-zero.png',
             'descripcion' => 'Fourroses con Coca Cola Zero',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1393,7 +1393,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/fourrosesimage-fanta-naranja.png',
             'descripcion' => 'Fourroses con Fanta de Naranja',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1404,7 +1404,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/fourrosesimage-fanta-limon.png',
             'descripcion' => 'Fourroses con Fanta de Limon',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1415,7 +1415,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/fourrosesimage-schweppes.png',
             'descripcion' => 'Fourroses con Schweppes',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1426,7 +1426,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage.jpg',
             'descripcion' => 'JackDaniel',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1437,7 +1437,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-coca-cola.png',
             'descripcion' => 'JackDaniel con Coca Cola',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1448,7 +1448,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-coca-cola-zero.png',
             'descripcion' => 'JackDaniel con Coca Cola Zero',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1459,7 +1459,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-fanta-naranja.png',
             'descripcion' => 'JackDaniel con Fanta de Naranja',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1470,7 +1470,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-fanta-limon.png',
             'descripcion' => 'JackDaniel con Fanta de Limon',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1481,7 +1481,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jackdanielimage-schweppes.png',
             'descripcion' => 'JackDaniel con Schweppes',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1489,10 +1489,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Jim Beam',
-            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage.jpg',
+            'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage.png',
             'descripcion' => 'Jim Beam',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1503,7 +1503,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-coca-cola.png',
             'descripcion' => 'Jim Beam con Coca Cola',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1514,7 +1514,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-coca-cola-zero.png',
             'descripcion' => 'Jim Beam con Coca Cola Zero',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1525,7 +1525,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-fanta-naranja.png',
             'descripcion' => 'Jim Beam con Fanta de Naranja',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1536,7 +1536,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-fanta-limon.png',
             'descripcion' => 'Jim Beam con Fanta de Limon',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1547,7 +1547,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/bourbon/jimbeamimage-schweppes.png',
             'descripcion' => 'Jim Beam con Schweppes',
             'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1555,10 +1555,10 @@ class ProductoSeeder extends Seeder
         DB::table('productos')
         ->insert([
             'nombre' => 'Martini',
-            'urlImagen' => '/imagenes/destilados/licores/martiniimage.jpg',
+            'urlImagen' => '/imagenes/destilados/licores/martiniimage.png',
             'descripcion' => 'Martini',
             'categoria_id' => 12,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1569,7 +1569,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/licores/martiniimage-coca-cola.png',
             'descripcion' => 'Martini con Coca Cola',
             'categoria_id' => 12,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1580,7 +1580,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/licores/martiniimage-coca-cola-zero.png',
             'descripcion' => 'Martini con Coca Cola Zero',
             'categoria_id' => 12,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1591,7 +1591,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/licores/martiniimage-fanta-naranja.png',
             'descripcion' => 'Martini con Fanta de Naranja',
             'categoria_id' => 12,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1602,7 +1602,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/licores/martiniimage-fanta-limon.png',
             'descripcion' => 'Martini con Fanta de Limon',
             'categoria_id' => 12,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1613,40 +1613,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/destilados/licores/martiniimage-schweppes.png',
             'descripcion' => 'Martini con Schweppes',
             'categoria_id' => 12,
-            'precio' => 5,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
-        DB::table('productos')
-        ->insert([
-            'nombre' => 'Jagermeister',
-            'urlImagen' => '/imagenes/destilados/chupitos/jagermeister.jpg',
-            'descripcion' => 'Jagermeister',
-            'categoria_id' => 11,
-            'precio' => 5,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
-        DB::table('productos')
-        ->insert([
-            'nombre' => 'Jagerbomb',
-            'urlImagen' => '/imagenes/destilados/chupitos/jagerbomb.jpg',
-            'descripcion' => 'Jagerbomb',
-            'categoria_id' => 11,
-            'precio' => 5,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
-        DB::table('productos')
-        ->insert([
-            'nombre' => 'ThunderBitch',
-            'urlImagen' => '/imagenes/destilados/chupitos/thunderbitch.jpg',
-            'descripcion' => 'ThunderBitch',
-            'categoria_id' => 11,
-            'precio' => 5,
+            'precio' => 5.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1657,7 +1624,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/postres/tartadequesoimage.jpg',
             'descripcion' => 'Tarta de Queso',
             'categoria_id' => 18,
-            'precio' => 3.5,
+            'precio' => 3.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1668,7 +1635,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/postres/tartadecremaimage.jpg',
             'descripcion' => 'Tarta de Crema',
             'categoria_id' => 18,
-            'precio' => 3.5,
+            'precio' => 3.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1679,7 +1646,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/postres/tartachocolateimage.jpg',
             'descripcion' => 'Tarta de Chocolate',
             'categoria_id' => 18,
-             'precio' => 3.5,
+             'precio' => 3.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1690,7 +1657,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/postres/tartafresaimage.jpg',
             'descripcion' => 'Tarta de Fresa',
             'categoria_id' => 18,
-            'precio' => 3.5,
+            'precio' => 3.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1701,7 +1668,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/postres/crepechocolateimage.jpg',
             'descripcion' => 'Crepes de Chocolate',
             'categoria_id' => 19,
-            'precio' => 3.5,
+            'precio' => 3.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1712,7 +1679,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/postres/crepevainillaimage.jpg',
             'descripcion' => 'Crepes de Vainilla',
             'categoria_id' => 19,
-            'precio' => 3.5,
+            'precio' => 3.50,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1767,7 +1734,7 @@ class ProductoSeeder extends Seeder
             'urlImagen' => '/imagenes/refrescos/botelladeagua.jpg',
             'descripcion' => 'Botella de agua',
             'categoria_id' => 23,
-            'precio' => 1,
+            'precio' => 1.00,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
