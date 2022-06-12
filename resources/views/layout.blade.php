@@ -24,7 +24,7 @@
 
     <header>
         <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top navegacion">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,10 +41,10 @@
                             <a class="nav-link" href="{{ url('/productos') }}">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/categorias') }}">Categorias</a>
+                            <a class="nav-link" href="{{ url('/categorias') }}">Categorías</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/alergenos') }}">Alergenos</a>
+                            <a class="nav-link" href="{{ url('/alergenos') }}">Alérgenos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/cartas') }}">Cartas</a>

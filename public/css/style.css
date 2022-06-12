@@ -5,6 +5,12 @@
     src: url('../tipografia/Karla-Bold.ttf');
 }
 
+/* NAVEGACIÓN */
+.navegacion{
+    background-color: #0e8d89;
+}
+/* NAVEGACIÓN */
+
 /* PAGINACIÓN */
 .pagination{
     justify-content: center;
@@ -21,6 +27,15 @@
 }
 
 /* PAGINACIÓN */
+
+#link-qr{
+    color: #006B67;
+    text-decoration: underline;
+}
+
+#link-qr:hover{
+    color: #004F57;
+}
 
 .menu {
     background-color: #006B67;
