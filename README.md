@@ -14,7 +14,7 @@ Sistema de gestión de pedidos para establecimientos de hostelería que permite 
 
 ### Modelo de Datos Multi-Tenant
 
-El sistema está diseñado con una arquitectura multi-tenant donde cada `Establecimiento` opera independientemente con sus propias tablas, usuarios, pedidos y menú [1](#0-0) .
+El sistema está diseñado con una arquitectura multi-tenant donde cada `Establecimiento` opera independientemente con sus propias tablas, usuarios, pedidos y menú.
 
 ### Entidades Principales
 
@@ -110,4 +110,4 @@ resources/
     ├── layouts/
     └── landingpage.blade.php
 ```
-
+Mas informacion del proyecto en https://deepwiki.com/2022Sit-Scan/SitScan_API
