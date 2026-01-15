@@ -111,19 +111,3 @@ resources/
     └── landingpage.blade.php
 ```
 
-## Licencia
-
-MIT License
-
----
-
-### Citations
-
-**File:** resources/views/landingpage.blade.php (L64-68)
-```php
-        <div id="sitScan" class="col-6">
-          <h1>¿QUÉ ES <img src="{{asset('img/logo_entero.png')}}" height="65" alt="Sit&Scan Logo" loading="lazy" />?</h1>
-          <p> <b>SIT&SCAN</b> es una aplicación orientada a la hosteleria que contiene la carta del establecimiento con todos los productos del mismo y un sistema de pedido.</p>
-          <p>Los clientes deberán escanear el código QR de la mesa en la que estén para <strong>poder pedir lo que deseen sin tener que esperar a que venga a atenderlos.</strong></p>
-          <p><strong>¡Siéntate , pruébalo y disfruta!</strong></p>
-```
