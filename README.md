@@ -1,61 +1,129 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# SitScan API - Sistema de Pedidos por QR para Hostelería
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Sistema de gestión de pedidos para establecimientos de hostelería que permite a los clientes realizar pedidos escaneando códigos QR en sus mesas.
 
-## About Laravel
+## Características Principales
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Sistema Multi-Establecimiento**: Gestión independiente de múltiples locales con datos aislados
+- **Pedidos por QR**: Los clientes escanean el código QR de su mesa para acceder a la carta y realizar pedidos
+- **Gestión de Productos**: Catálogo jerárquico de productos con categorías anidadas
+- **Control de Roles**: Sistema de permisos con roles de Administrador, Gerente y Camarero
+- **Gestión de Alérgenos**: Etiquetado de productos con información de alérgenos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Arquitectura
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Modelo de Datos Multi-Tenant
 
-## Learning Laravel
+El sistema está diseñado con una arquitectura multi-tenant donde cada `Establecimiento` opera independientemente con sus propias tablas, usuarios, pedidos y menú [1](#0-0) .
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Entidades Principales
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Establecimientos**: Locales físicos (restaurantes, bares)
+- **Mesas**: Mesas dentro de cada establecimiento con códigos QR únicos
+- **Productos**: Catálogo de items con categorías jerárquicas
+- **Pedidos**: Órdenes asociadas a mesa y establecimiento
+- **Usuarios**: Personal con roles diferenciados
 
-## Laravel Sponsors
+```mermaid
+erDiagram
+    establecimientos ||--o{ mesas : "contains"
+    establecimientos ||--o{ usuarios : "employs"
+    establecimientos ||--o{ pedidos : "receives"
+    establecimientos ||--|| cartas : "owns"
+    
+    mesas ||--o{ pedidos : "generates"
+    
+    cartas }o--o{ productos : "carta_producto"
+    
+    categorias ||--o{ productos : "classifies"
+    categorias ||--o{ categorias : "categoriaPadre"
+    
+    productos }o--o{ alergenos : "alergeno_producto"
+    productos }o--o{ pedidos : "pedido_producto"
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Instalación
 
-### Premium Partners
+### Prerrequisitos
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+- PHP >= 7.2|^8.0
+- MySQL
+- Composer
 
-## Contributing
+### Pasos
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Clonar el repositorio
+2. Instalar dependencias:
+   ```bash
+   composer install
+   ```
+3. Configurar archivo `.env` con credenciales de base de datos
+4. Ejecutar migraciones:
+   ```bash
+   php artisan migrate
+   ```
+5. Ejecutar seeders para datos iniciales:
+   ```bash
+   php artisan db:seed
+   ```
 
-## Code of Conduct
+## Uso
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Flujo de Pedido
 
-## Security Vulnerabilities
+1. El cliente escanea el código QR de la mesa
+2. Accede a la carta del establecimiento
+3. Selecciona productos y añade al pedido
+4. El pedido aparece en el panel de gestión del personal
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Roles de Usuario
 
-## License
+- **ADMINISTRADOR**: Acceso a todos los establecimientos
+- **GERENTE**: Gestión completa de su establecimiento
+- **CAMARERO**: Visualización y actualización de pedidos
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Tecnologías
+
+- **Backend**: Laravel Framework
+- **Base de Datos**: MySQL con Eloquent ORM
+- **Frontend**: Blade templates con Bootstrap/MDB
+- **Autenticación**: Laravel UI
+
+## Estructura del Proyecto
+
+```
+app/
+├── Http/Controllers/
+│   └── Producto/
+├── Models/
+│   ├── Establecimiento.php
+│   ├── Mesa.php
+│   ├── Producto.php
+│   ├── Categoria.php
+│   ├── Pedido.php
+│   └── Carta.php
+database/
+├── migrations/
+└── seeds/
+resources/
+└── views/
+    ├── layouts/
+    └── landingpage.blade.php
+```
+
+## Licencia
+
+MIT License
+
+---
+
+### Citations
+
+**File:** resources/views/landingpage.blade.php (L64-68)
+```php
+        <div id="sitScan" class="col-6">
+          <h1>¿QUÉ ES <img src="{{asset('img/logo_entero.png')}}" height="65" alt="Sit&Scan Logo" loading="lazy" />?</h1>
+          <p> <b>SIT&SCAN</b> es una aplicación orientada a la hosteleria que contiene la carta del establecimiento con todos los productos del mismo y un sistema de pedido.</p>
+          <p>Los clientes deberán escanear el código QR de la mesa en la que estén para <strong>poder pedir lo que deseen sin tener que esperar a que venga a atenderlos.</strong></p>
+          <p><strong>¡Siéntate , pruébalo y disfruta!</strong></p>
+```
